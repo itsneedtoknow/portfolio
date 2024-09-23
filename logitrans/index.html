@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LogiTrans</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,400;1,300&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/template_styles.css">
+    <link rel="stylesheet" href="./css/responsive-styles.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <script src="https://api-maps.yandex.ru/2.0-stable/?apikey=d1c174a2-a5f2-4edb-914c-ff22a986da60&load=package.full&lang=ru-RU"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar/index.global.min.js'></script>
+    <script src='fullcalendar/core/locales-all.global.js'></script>
+    <link rel="stylesheet" href="css/eventCalendar.css">
+    <link rel="stylesheet" href="css/eventCalendar_theme_responsive.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.15.2/css/selectize.default.min.css"
+    integrity="sha512-pTaEn+6gF1IeWv3W1+7X7eM60TFu/agjgoHmYhAfLEU8Phuf6JKiiE8YmsNC0aCgQv4192s4Vai8YZ6VNM6vyQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.15.2/js/selectize.min.js"
+    integrity="sha512-IOebNkvA/HZjMM7MxL0NYeLYEalloZ8ckak+NDtOViP7oiYzG5vn6WVXyrJDiJPhl4yRdmNAG49iuLmhkUdVsQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script src="selectize.js"></script>
+<link rel="stylesheet" type="text/css" href="selectize.css" />
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+  
+   
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
+  <script src="https://unpkg.com/tippy.js@6"></script>
+<script>
+  $(function () {
+    $("select").selectize({
+        plugins: ["remove_button","clear_button"]
+    });
+  });
+</script>
+</head>
+<body>
+
+    <header>
+        <!-- Шапка сайта -->
+         <div class="_container">
+                <div class="row header__top">
+                    <!-- Логотип -->
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="./images/img/logo_horizontal.png" alt="main logo">
+                        </a>
+                    </div>
+                    <div class="options">
+                        <!-- Социальные сети -->
+                        <div class="social">
+                            <a href="#" class="telegram"></a>
+                        </div>
+                        <!-- Поиск -->
+                        <div class="search">
+                            <div class="btn-search"></div>
+                            <form class="search-form" action="/search/">
+                            <input type="text" name="q" placeholder="введите запрос">
+                            <button type="submit">
+                            </button>
+                            </form>
+                        </div>
+                        <!-- Языковые версии -->
+                        <div class="langs">
+                            <a href="/">РУС</a>
+                            <a href="/be/">БЕЛ</a>
+                            <a href="/eng/">ENG</a>
+                        </div>
+                        <!-- Версия для слабовидящих -->
+                        <div class="oko">
+                            <a id="specialButton">
+                            <img src="./images/icons/eye.svg" alt="oko" title="Версия для слабовидящих">
+                            </a>
+                        </div>
+                    </div>
+                    
+                </div>
+                <nav class="row navbar">
+                      <div class="menu">
+                            <div class="hamburger-menu">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M1 5C0.447715 5 0 5.44772 0 6C0 6.55228 0.447715 7 1 7H23C23.5523 7 24 6.55228 24 6C24 5.44772 23.5523 5 23 5H1ZM0 12C0 11.4477 0.447715 11 1 11H23C23.5523 11 24 11.4477 24 12C24 12.5523 23.5523 13 23 13H1C0.447715 13 0 12.5523 0 12ZM0 18C0 17.4477 0.447715 17 1 17H23C23.5523 17 24 17.4477 24 18C24 18.5523 23.5523 19 23 19H1C0.447715 19 0 18.5523 0 18Z" fill="#1B1B1B"/>
+                                </svg>
+                            </div>
+                            <div class="mobile-home">
+                                <div class="icon-to-text">
+                                    <a href="index.html">Главная</a>
+                                </div>
+                            </div>
+                            <div class="mobile-search">
+                            </div>
+                            <ul class="nav-menu">
+                                <li class="nav-close"></li>
+                                <li class="icon-to-text">
+                                    <a href="index.html">Главная</a>
+                                </li>
+                                <li class="drop-down"><a href="">О предприятии</a>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="19" height="18" viewBox="0 0 19 18" fill="none">
+                                        <path d="M1.28571 5L9.28571 13L17.2857 5" stroke="#6E6E6E" stroke-width="2"/>
+                                    </svg>
+                                    <div class="drop-down-menu">
+                                        <ul>
+                                            <li><a href="">История развития</a></li>
+                                            <li><a href="">Подразделения</a></li>
+                                            <li><a href="">Административные процедуры </a></li>
+                                            <li><a href="">Политика конфиденциальности</a></li>
+                                            <li><a href="">Медиагалерея</a></li>
+                                            <li><a href="">Структура</a></li>
+                                            <li><a href="sklad.html">Склад</a></li>
+                                            <li><a href="">Противодействие корупции</a></li>
+                                            <li><a href="">Условия обработки персональных данных</a></li>
+                                            <li><a href="novosti-all.html">Архив новостей</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="drop-down">
+                                    <a href="services-all.html">Услуги</a>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="19" height="18" viewBox="0 0 19 18" fill="none">
+                                        <path d="M1.28571 5L9.28571 13L17.2857 5" stroke="#6E6E6E" stroke-width="2"/>
+                                        </svg>
+                                    <div class="drop-down-menu">
+                                        <ul>
+                                            <li><a href="">Орган по сертификации</a></li>
+                                            <li><a href="services-all.html">Каталог услуг</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="nav-menu-item">
+                                    <a href="conferences.html">Конференции</a>
+                                </li>
+
+                                <li class="nav-menu-item drop-down">
+                                <a href=" products-all.html">Виды грузов</a>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="19" height="18" viewBox="0 0 19 18" fill="none">
+                                        <path d="M1.42853 5L9.42853 13L17.4285 5" stroke="#6E6E6E" stroke-width="2"/>
+                                    </svg>
+                                        <div class="drop-down-menu">
+                                        <ul>
+                                            <li class="nav-menu-item">
+                                                <a href="product-details.html">Оборудование</a>
+                                            </li>
+                                            <li class="nav-menu-item">
+                                                <a href="">Станки</a>
+                                            </li>
+                                            <li class="nav-menu-item">
+                                                <a href="">Техника</a>
+                                            </li>
+                                            <li class="nav-menu-item">
+                                                <a href="">Комплектующие</a>
+                                            </li>
+                                            <li class="nav-menu-item">
+                                                <a href="">Мебель</a>
+                                            </li>
+                                            <li class="nav-menu-item">
+                                                <a href="">Сельхозтехника</a>
+                                            </li>
+                                            <li class="nav-menu-item">
+                                                <a href="">Сырье</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="nav-menu-item drop-down">
+                                        <a href="">Контакты</a>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="19" height="18" viewBox="0 0 19 18" fill="none">
+                                                <path d="M1.42853 5L9.42853 13L17.4285 5" stroke="#6E6E6E" stroke-width="2"/>
+                                            </svg>
+                                                <div class="drop-down-menu">
+                                                    <ul>
+                                                        <li class="nav-menu-item">
+                                                            <a href="">Контактные данные</a>
+                                                        </li>
+                                                        <li class="nav-menu-item">
+                                                            <a href="">Приём граждан</a>
+                                                        </li>
+                                                        <li class="nav-menu-item">
+                                                            <a href="">Обращения граждан и юрлиц</a>
+                                                        </li>
+                                                        <li class="nav-menu-item">
+                                                            <a href="">Электронное обращение</a>
+                                                        </li>
+                                                    </ul>
+                                            </div>
+                                </li>
+                            </ul>
+                        </div>
+                </nav>
+            </div>
+            
+         <!-- </div> -->
+    </header>
+    <main>
+        <section class="about ">
+            <div class="_container">
+                <div class="single-item">
+                    <!-- Слайдер -->
+                    <div class="slider item__image">
+                        <div class="slide">
+                            <img src="./images/img/dostavka_sbornih_gruzov-main.jpg" alt="Slide Image">
+                            
+                            <div class="slogan">
+                                <p>Сборные грузы</p>
+                            </div>
+                            
+                        </div>
+                        <div class="slide">
+                            <img src="./images/img/konteinernie_gruzoperevozki_main.jpg" alt="Slide Image">
+                            <!-- <img class="slogan" src="./images/img/motto.png" alt=""> -->
+                            <div class="slogan">
+                                <p>Контейнерные перевозки</p>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <img src="./images/img/dostavka_krupnogabaritnih_gruzov-main.jpg" alt="Slide Image">
+                            <!-- <img class="slogan" src="./images/img/motto.png" alt=""> -->
+                            <div class="slogan">
+                                <p>Крупногабаритные грузы</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item__content">
+                        <div class="content__text">
+                            <p class="item__header">ЛогиТранс Глобал</p>
+                            
+                            <div class="item__description">
+                                <p>Мы - команда профессионалов в области логистики и транспортных услуг, стремящаяся предоставить нашим клиентам высококачественные и надежные решения. Наша миссия - обеспечить эффективное и безопасное перемещение грузов по всему миру.</p>
+                                    <!-- Контакты -->
+                                    <ul class="contacts">
+                                        <li><a class="address" href="https://yandex.by/maps/-/CDS4qKi-">Республика Беларусь,  г. Минск, 220085, Рокоссовского пр-т, 107 </a></li>
+                                        <li><a class="phone" href="tel:375172555555">+375 (17) 259-82-05</a></li>
+                                        <li><a class="email" href="mailto:globaltrans@globaltrans.by">globaltrans@globaltrans.by</a></li>
+                                    </ul>
+                                   
+                            </div>
+                        </div>
+                        <div class="content__buttons buttons">
+                            
+                            <a class="button secondary-button icon" href="" title="История">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.75 2.25H5.25C6.90685 2.25 8.25 3.59315 8.25 5.25V14.25H9.75V5.25C9.75 3.59315 11.0931 2.25 12.75 2.25H17.25V13.75C17.25 14.8546 16.3546 15.75 15.25 15.75H10.2993C10.04 16.1984 9.55521 16.5 9 16.5C8.44479 16.5 7.96003 16.1984 7.70067 15.75H2.75C1.64543 15.75 0.75 14.8546 0.75 13.75V2.25Z" fill="#101E0B"/>
+                                </svg>
+                                История	
+                            </a>
+                            <a class="button secondary-button icon" href="" title="Серитификаты">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2.69999 0.225006C1.70588 0.225006 0.899994 1.03089 0.899994 2.02501V4.27501H2.7V14.625V15.3H3.375H6.75V13.95H4.05V4.27501H13.725V2.70001C13.725 2.20295 14.1279 1.80001 14.625 1.80001C15.1221 1.80001 15.525 2.20295 15.525 2.70001L15.525 4.27501V15.3H16.875L16.875 4.27501L16.875 3.23805L16.875 2.02501C16.875 1.03089 16.0691 0.225006 15.075 0.225006H2.69999ZM6.07499 7.20001H13.275V8.55001H6.07499V7.20001ZM7.42499 10.35H6.07499V11.7H7.42499V10.35ZM12.6 14.4969C13.0175 14.0708 13.275 13.4873 13.275 12.8435C13.275 11.5388 12.2173 10.481 10.9125 10.481C9.60772 10.481 8.54999 11.5388 8.54999 12.8435C8.54999 13.4873 8.80744 14.0708 9.22499 14.4969V17.775L10.9125 16.7691L12.6 17.775V14.4969ZM11.7829 12.8435C11.7829 13.3242 11.3932 13.7139 10.9125 13.7139C10.4318 13.7139 10.0421 13.3242 10.0421 12.8435C10.0421 12.3628 10.4318 11.9731 10.9125 11.9731C11.3932 11.9731 11.7829 12.3628 11.7829 12.8435Z" fill="#101E0B"/>
+                                </svg>
+                                Сертификаты	
+                            </a>
+                            <button class="button secondary-button icon open-modal" title="Календарь" data-modal="calendar-modal">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5 1H6V2H12V1H13V2H15C16.1046 2 17 2.89543 17 4V6V15C17 16.1046 16.1046 17 15 17H3C1.89543 17 1 16.1046 1 15V6V4C1 2.89543 1.89543 2 3 2H5V1ZM16 6H2V15C2 15.5523 2.44772 16 3 16H15C15.5523 16 16 15.5523 16 15V6Z" fill="#101E0B"/>
+                                </svg>
+                                Календарь мероприятий	
+                            </button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="video-presentation modal" id="video-presentation" >
+                        <iframe src="https://www.youtube.com/embed/vQMVMqDGkSI?si=oayx-Q-a8vXaSRG6" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                   <div class="close-modal" data-modal="video-presentation">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <g clip-path="url(#clip0_1814_6148)">
+                        <path d="M1 1L23 23M23 1L1 23" stroke="#454545" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </g>
+                        <defs>
+                        <clipPath>
+                        <rect width="24" height="24" fill="white"/>
+                        </clipPath>
+                        </defs>
+                        </svg>
+                   </div>
+              </div>
+              <div class="events-calendar modal" id="calendar-modal" >
+                <h6 class="calendar-title">Календарь мероприятий</h6>
+                <div id="calendar"></div>
+                <input type="text" id="datepicker">
+                <div class="close-modal" data-modal="calendar-modal">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <g clip-path="url(#clip0_1814_6148)">
+                        <path d="M1 1L23 23M23 1L1 23" stroke="#454545" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </g>
+                        <defs>
+                        <clipPath>
+                        <rect width="24" height="24" fill="white"/>
+                        </clipPath>
+                        </defs>
+                    </svg>
+                </div>
+                </div>
+        </section>
+        
+        <!-- <section class="call-to-action buttons">
+            <div class="_container">
+                <a class="button primary-button icon " href="">Оставить заявку </a>
+                <a class="button secondary-button" href="" title="Каталог услуг">Каталог услуг</a>
+            </section>
+        </div> -->
+        
+        <section class="main-news">
+            <div class="_container">
+                <div class="news-block column">
+                    <div class="news">
+                        <h2>Новости</h2>
+                            <ul class="news__list">
+                                <li class="news__item single-item">
+                                    <div class="item__image">
+                                        <img src="./images/img/news_1.png" alt="news-preview">
+                                    </div>
+                                    <div class="item__content">
+                                        <div class="content__text">
+                                            <div class="item__header">
+                                                <p class="header">Ежегодные соревнования санитарных формирований гражданской обороны организаций Фрунзенского района г. Минска</p>
+                                                <p class="date">27.05.2024</p>
+                                            </div>
+                                            
+                                            <div class="item__description">
+                                                <p>24 мая 2024 года санитарное звено Государственного предприятия  «ЛогиТранс Глобал» приняло участие в районных соревнованиях санитарных формирований гражданской обороны.</p>
+                                                <p>Среди участвующих 21 команд Фрунзенского района г. Минска санитарное звено предприятия заняло 4 место!</p>
+                                            </div>
+                                        </div>
+                                        <div class="content__buttons">
+                                            <a href="#" class="read-more"></a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="news__item single-item">
+                                    <div class="item__image">
+                                        <img src="./images/img/news_2.png" alt="news-preview">
+                                    </div>
+                                    <div class="item__content">
+                                        <div class="content__text">
+                                            <div class="item__header">
+                                                <p class="header">Победители выставки детского рисунка «9 Мая - День Победы»</p>
+                                                <p class="date">27.05.2024</p>
+                                            </div>
+                                            <div class="item__description">
+                                               <p>17 мая 2024 года в государственном предприятии «ЛогиТранс Глобал» профсоюзным комитетом совместно с администрацией предприятия состоялось вручение подарков детям членов первичной профсоюзной организации государственного предприятия «ЛогиТранс Глобал» за принятие участия в выставке детского рисунка «9 Мая - День Победы».</p> 
+                                                <p>Данное мероприятие организовано с целью патриотического воспитания и повышения интереса детей к изучению истории Великой Отечественной войны, значения Победы в истории Республики Беларусь.</p>
+                                            </div>
+                                        </div>
+                                        <div class="content__buttons">
+                                            <a href="#" class="read-more"></a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="news__item single-item">
+                                    <div class="item__image">
+                                        <img src="./images/img/news_3.png" alt="news-preview">
+                                    </div>
+                                    <div class="item__content">
+                                        <div class="content__text">
+                                            <div class="item__header">
+                                                <p class="header">Ежегодные соревнования санитарных формирований гражданской обороны организаций Фрунзенского района г. Минска</p>
+                                                <p class="date">27.05.2024</p>
+                                            </div>
+                                            
+                                            <div class="item__description">
+                                                <p>24 мая 2024 года санитарное звено Государственного предприятия  «ЛогиТранс Глобал» приняло участие в районных соревнованиях санитарных формирований гражданской обороны.</p>
+                                                <p>Среди участвующих 21 команд Фрунзенского района г. Минска санитарное звено предприятия заняло 4 место!</p>
+                                            </div>
+                                        </div>
+                                        <div class="content__buttons">
+                                            <a href="#" class="read-more"></a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                       <div class="buttons">
+                            <a href="novosti-all.html" class="button secondary-button archive" title="Архив новостей">Архив новостей</a>
+                       </div>
+                       
+                    </div>
+                   
+                </div>
+                
+                <div class="ads-block column">
+                    
+                        <div class="advertisement__item single-item">
+                            <div class="item__image">
+                                <img src="./images/img/conference.png" alt="conference" >
+                            </div>
+                            <div class="item__content">
+                                <div class="content__text">
+                                    <p class="item__header">Конференция </p>
+                                    <div class="item__description">
+                                        <p>Логистика Будущего в Минске</p>
+                                        
+                                    </div>
+                                </div>
+                                <div class="buttons">
+                                    <button class="button primary-button icon open-modal" data-modal="conferenceApplication">
+                                        Записаться
+                                    </button>
+                                    <a class="button secondary-button" href="conferences.html" title="Фотоотчеты">
+                                        Фотоотчеты</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="advertisement__item single-item">
+                            <div class="item__image">
+                                <img src="./images/img/journal.jpg" alt="journal" >
+                                <a class="button thirdy-button" href="" title=" ">
+                                    Содержание</a>
+                            </div>
+                            <div class="item__content">
+                                <div class="content__text">
+                                    <p class="item__header">Следите за обновлениями </p>
+                                    <div class="item__description">
+                                        <p>Печатного издания научно-технического журнала «Склад и техника»</p>
+                                        
+                                    </div>
+                                </div>
+                                <div class="buttons">
+                                    <a class="button primary-button icon" href="#">
+                                        Купить
+                                    </a>
+                                    <a class="button secondary-button" href="" title="Архив номеров">
+                                        Архив номеров</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                </div>
+            </div>
+            
+        </section>
+         
+        <section class="products">
+            <div class="_container">
+                <div class="products-block">
+                    <h2>
+                        Грузы
+                    </h2>
+                    <div class=" banner-links">
+                        <div class="single-item">
+                            <div class="item__image">
+                                <img alt="" src="./images/img/cargo_1.jpg">
+                            </div>
+                            <div class="item__content">
+                                    <p class="item__header">Контейнерные перевозки опасных грузов</p>
+                            </div>
+                        </div>
+                        <div class="single-item">
+                            <div class="item__image">
+                                <img alt="" src="./images/img/cargo_2.jpg">
+                            </div>
+                            <div class="item__content">
+                                    <p class="item__header">Контейнерные перевозки наливных грузов</p>
+                            </div>
+                        </div>
+                        <div class="single-item">
+                            <div class="item__image">
+                                <img alt="" src="./images/img/cargo_3.jpg">
+                            </div>
+                            <div class="item__content">
+                                    <p class="item__header">Контейнерные перевозки грузов с температурным режимом</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="buttons">
+                        <a class="button secondary-button" href="services-all.html" title="Перейти в каталог ">Перейти в каталог</a>
+                    </div>
+                </div>
+                <div class="ads-block products-block">
+                    <div class="single-item">
+                        <div class="item__image">
+                            <img src="./images/img/additional-insurance.png" alt="product" >
+                        </div>
+                        <div class="item__content">
+                                <p class="item__header">Страхование грузов</p>
+                        </div>
+                    </div>
+                    <div class="single-item">
+                        <div class="item__image">
+                            <img src="./images/img/skladskie.jpg" alt="product" >
+                        </div>
+                        <div class="item__content">
+                                <p class="item__header">Складские услуги</p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+        </section>
+        <section class="services">
+            <div class="_container">
+                    <h2>Услуги</h2>
+                    <div class="services__list">
+                        <div class="single-item">
+                            <div class="item__image">
+                                <img src="./images/img/service_1.png" alt="certification">
+                            </div>
+                            <div class="item__content">
+                                <div class="content__text">
+                                    <h5 class="item__header">Управление складскими запасами</h5>
+                                    <div class="item__description">
+                                        <p>Оптимизация и контроль складских запасов для обеспечения бесперебойной работы</p>
+                                        
+                                    </div>
+                                </div>
+                                <div class="content__buttons">
+                                    <a href="#" class="button read-more"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="single-item">
+                            <div class="item__image">
+                                <img src="./images/img/service_1.png" alt="certification">
+                            </div>
+                            <div class="item__content">
+                                <div class="content__text">
+                                    <h5 class="item__header">Авиационные перевозки</h5>
+                                    <div class="item__description">
+                                        <p>Быстрая и надежная доставка грузов по воздуху, включая срочные и ценные грузы.</p>
+                                        
+                                    </div>
+                                </div>
+                                <div class="content__buttons">
+                                    <a href="#" class="button read-more"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="single-item">
+                            <div class="item__image">
+                                <img src="./images/img/service_2.png" alt="routes">
+                            </div>
+                            <div class="item__content">
+                                <div class="content__text">
+                                    <h5 class="item__header">Внутренние перевозки</h5>
+                                    <div class="item__description">
+                                        <p>Надежная доставка грузов по всей территории страны.</p>
+                                    </div>
+                                </div>
+                                <div class="content__buttons">
+                                    <a href="#" class="button read-more"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="single-item">
+                            <div class="item__image">
+                                <img src="./images/img/service_3.png" alt="projects">
+                            </div>
+                            <div class="item__content">
+                                <div class="content__text">
+                                    <h5 class="item__header">Перевозка негабаритных грузов</h5>
+                                    <div class="item__description">
+                                        <p>Специализированные услуги по перевозке крупногабаритных и тяжеловесных грузов.</p>
+                                    </div>
+                                </div>
+                                <div class="content__buttons">
+                                    <a href="#" class="button read-more"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <button class="button primary-button icon open-modal" data-modal="serviceApplication">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M1 11.92C1 12.1409 1.17909 12.32 1.4 12.32C1.17909 12.32 1 12.4991 1 12.72V15.2C1 15.8627 1.53726 16.4 2.2 16.4H15.8C16.4627 16.4 17 15.8627 17 15.2V12.72C17 12.4991 16.8209 12.32 16.6 12.32C16.8209 12.32 17 12.1409 17 11.92V3.2C17 2.53726 16.4627 2 15.8 2H2.2C1.53726 2 1 2.53726 1 3.2V11.92ZM2.4 3.6H15.6V11.4H2.4V3.6ZM13.2919 15.1C13.789 15.1 14.1919 14.6971 14.1919 14.2C14.1919 13.7029 13.789 13.3 13.2919 13.3C12.7949 13.3 12.3919 13.7029 12.3919 14.2C12.3919 14.6971 12.7949 15.1 13.2919 15.1ZM10.8 13.4H2.4V15H10.8V13.4Z" fill="#101E0B"/>
+                            </svg>
+                            Оставить заявку
+                        </button>
+                        <a class="button secondary-button" href="services-all.html" title=" ">
+                            Каталог услуг</a>
+                    </div>
+                    
+            </div>
+                
+            <!-- </div> -->
+            
+        </section>
+        <section class="departments">
+            <div class="_container">
+                <div class="department-block">
+                    <h2>Отдел международных перевозок</h2>
+                    <div class="description">
+                        <p>Отдел международных перевозок аккредитован на международные перевозки по странам Европы.
+                        </p>
+                        <p>Подробный перечень стран указан в разделе "Отдел международных перевозок".
+                        </p>
+                    </div>
+                    <div class="buttons">
+                        <button class="button primary-button icon open-modal" data-modal="serviceApplication">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M1 11.92C1 12.1409 1.17909 12.32 1.4 12.32C1.17909 12.32 1 12.4991 1 12.72V15.2C1 15.8627 1.53726 16.4 2.2 16.4H15.8C16.4627 16.4 17 15.8627 17 15.2V12.72C17 12.4991 16.8209 12.32 16.6 12.32C16.8209 12.32 17 12.1409 17 11.92V3.2C17 2.53726 16.4627 2 15.8 2H2.2C1.53726 2 1 2.53726 1 3.2V11.92ZM2.4 3.6H15.6V11.4H2.4V3.6ZM13.2919 15.1C13.789 15.1 14.1919 14.6971 14.1919 14.2C14.1919 13.7029 13.789 13.3 13.2919 13.3C12.7949 13.3 12.3919 13.7029 12.3919 14.2C12.3919 14.6971 12.7949 15.1 13.2919 15.1ZM10.8 13.4H2.4V15H10.8V13.4Z" fill="#101E0B"/>
+                            </svg>
+                            Оставить заявку
+                        </button>
+                        <a class="button secondary-button" href="services-all.html" title=" ">
+                            Каталог услуг</a>
+                    </div>
+                    
+                    <ul class="services__list">
+                        <li class="single-item">
+                            <div class="item__content">
+                                
+                                <div class="content__text">
+                                    <h6 class="item__header"><a href="#">Морские перевозки</a></h6>
+                                </div>
+                            </div>
+                            <div class="content__buttons">
+                                <a href="#" class="button read-more"></a>
+                            </div>
+                        </li>
+                        <li class="single-item">
+                            <div class="item__content">
+                                <div class="content__text">
+                                    <h6 class="item__header"><a href="#">Авиационные перевозки</a></h6>
+                                </div>
+                            </div>
+                                <div class="content__buttons">
+                                    <a href="#" class="button read-more"></a>
+                                </div>
+                         </li>
+                        <li class="single-item">
+                            <div class="item__content">
+                                <div class="content__text">
+                                    <h6 class="item__header"><a href="#">Железнодорожные перевозки</a></h6>
+                                </div>
+                            </div>
+                            <div class="content__buttons">
+                                <a href="#" class="button read-more"></a>
+                            </div>
+                        </li>
+                        <li class="single-item">
+                            <div class="item__content">
+                                <div class="content__text">
+                                    <h6 class="item__header"><a href="#">Автомобильные перевозки</a></h6>
+                                </div>
+                                </div>
+                                <div class="content__buttons">
+                                    <a href="#" class="button read-more"></a>
+                                </div>
+                        
+                        <li class="single-item">
+                            <div class="item__content">
+                                <div class="content__text">
+                                    <h6 class="item__header"><a href="#">Экспресс-доставка</a></h6>
+                                </div>
+                                </div>
+                                <div class="content__buttons">
+                                    <a href="#" class="button read-more"></a>
+                                </div>
+                        </li>
+                        <li class="single-item">
+                            <div class="item__content">
+                                <div class="content__text">
+                                    <h6 class="item__header"><a href="#"> Перевозка негабаритных грузов</a></h6>
+                                </div>
+                                </div>
+                                <div class="content__buttons">
+                                    <a href="#" class="button read-more"></a>
+                                </div>
+                        </li>
+                        <li class="single-item">
+                            <div class="item__content">
+                                <div class="content__text">
+                                    <h6 class="item__header"><a href="#">Таможенное декларирование</a></h6>
+                                </div>
+                                </div>
+                                <div class="content__buttons">
+                                    <a href="#" class="button read-more"></a>
+                                </div>
+                        </li>
+                        <li class="single-item">
+                            <div class="item__content">
+                                <div class="content__text">
+                                    <h6 class="item__header"><a href="#">Оптимизация логистических процессов</a></h6>
+                                </div>
+                                </div>
+                                <div class="content__buttons">
+                                    <a href="#" class="button read-more"></a>
+                                </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="department-block">
+                    <h4 class="block-header">Подразделения</h4>
+                    <ul class="departments__list">
+                        <li class="single-item">
+                            <div class="item__image">
+                                <img src="./images/img/department-1.jpg" alt="road-laboratory">
+                            </div>
+                            <div class="item__content">
+                                <div class="content__text">
+                                    <a href="department-details.html"><h6 class="item__header">Отдел логистики и транспортировки</h6></a>
+                                </div>
+                                <div class="content__buttons">
+                                    <a href="department-details.html" class="button read-more"></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="single-item">
+                            <div class="item__image">
+                                <img src="./images/img/department-2.jpg" alt="standartization-department">
+                            </div>
+                            <div class="item__content">
+                                <div class="content__text">
+                                    <a href=""><h6 class="item__header">Отдел клиентской поддержки</h6></a>
+                                </div>
+                                <div class="content__buttons">
+                                    <a href="#" class="button read-more"></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="single-item">
+                            <div class="item__image">
+                                <img src="./images/img/department-3.jpg" alt="labour-safety-department">
+                            </div>
+                            <div class="item__content">
+                                <div class="content__text">
+                                    <a href=""><h6 class="item__header">Отдел международных перевозок</h6></a>
+                                </div>
+                                <div class="content__buttons">
+                                    <a href="#" class="button read-more"></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="single-item">
+                            <div class="item__image">
+                                <img src="./images/img/department-4.jpg" alt="laboratory">
+                            </div>
+                            <div class="item__content">
+                                <div class="content__text">
+                                    <a href=""><h6 class="item__header">Отдел складской логистики</h6></a>
+                                </div>
+                                <div class="content__buttons">
+                                    <a href="#" class="button read-more"></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="single-item">
+                            <div class="item__image">
+                                <img src="./images/img/department-5" alt="madikor">
+                            </div>
+                            <div class="item__content">
+                                <div class="content__text">
+                                    <a href=""><h6 class="item__header">Отдел IT и инноваций</h6></a>
+                                </div>
+                                <div class="content__buttons">
+                                    <a href="#" class="button read-more"></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="single-item">
+                            <div class="item__image">
+                                <img src="./images/img/technical-information.png" alt="technical-information department">
+                            </div>
+                            <div class="item__content">
+                                <div class="content__text">
+                                    <a href=""><h6 class="item__header">Отдел маркетинга и продаж</h6></a>
+                                </div>
+                                <div class="content__buttons">
+                                    <a href="#" class="button read-more"></a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    </div>
+            </div>
+            
+        </section>
+        <section class="activities">
+            <div class="_container">
+                <div class="activities-block">
+                    <h2>направления деятельности</h2>
+                    
+                    <ul class="activities__list">
+                        <li class="single-item">
+                            <div class="item__image">
+                                <img src="./images/icons/building.svg" alt="building">
+                            </div>
+                            <div class="item__content">
+                                <div class="content__text">
+                                    <p class="item__description">Организация международных и внутренних перевозок</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="single-item">
+                            <div class="item__image">
+                                <img src="./images/icons/bridge.svg" alt="bridge">
+                            </div>
+                            <div class="item__content">
+                                <div class="content__text">
+                                    <p class="item__description">Управление цепочками поставок</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="single-item">
+                            <div class="item__image">
+                                <img src="./images/icons/cars.svg" alt="cars">
+                            </div>
+                            <div class="item__content">
+                                <div class="content__text">
+                                    <p class="item__description">Экспресс-доставка и перевозка негабаритных грузов</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="single-item">
+                            <div class="item__image">
+                                <img src="./images/icons/documents.svg" alt="documents">
+                            </div>
+                            <div class="item__content">
+                                <div class="content__text">
+                                    <p class="item__description">Хранение и управление складскими запасами</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="single-item">
+                            <div class="item__image">
+                                <img src="./images/icons/engineer.svg" alt="engineer">
+                            </div>
+                            <div class="item__content">
+                                <div class="content__text">
+                                    <p class="item__description">Комплектация и упаковка товаров</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="single-item">
+                            <div class="item__image">
+                                <img src="./images/icons/guarantee.svg" alt="guarantee">
+                            </div>
+                            <div class="item__content">
+                                <div class="content__text">
+                                    <p class="item__description">Обработка и распределение грузов</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="single-item">
+                            <div class="item__image">
+                                <img src="./images/icons/road-material.svg" alt="road-material">
+                            </div>
+                            <div class="item__content">
+                                <div class="content__text">
+                                    <p class="item__description">Подготовка и подача таможенных деклараций</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                
+            </div>
+                <div class="achievements-block">
+                    <h4 class="block-header">Наши достижения</h4>
+                    <ul class="certification-standarts">
+                        <li><img src="./images/img/certification-standart-ISO-9001.png" alt="standart ISO-9001"></li>
+                        <li><img src="./images/img/certification-standart-ISO-45001.png" alt=" standart ISO-45001"></li>
+                        <li><img src="./images/img/certification-standart-ISO-17065.png" alt="standart ISO-17065"></li>
+                        
+                    </ul>
+                    <ul class="achievements__list">
+                        <li class="single-item">
+                            <div class="item__image">
+                                <img src="./images/img/certificate.png" alt="road-laboratory">
+                            </div>
+                            <div class="item__content">
+                                <div class="content__text">
+                                    <h6 class="item__header">Сертификат на соответствие требованиям ГОСТ ISO/IEC 17065-2013</h6>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="single-item">
+                            <div class="item__image">
+                                <img src="./images/img/certificate.png" alt="road-laboratory">
+                            </div>
+                            <div class="item__content">
+                                <div class="content__text">
+                                    <h6 class="item__header">Сертификат на соответствие требованиям ГОСТ ISO/IEC 17065-2013</h6>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="single-item">
+                            <div class="item__image">
+                                <img src="./images/img/certificate.png" alt="road-laboratory">
+                            </div>
+                            <div class="item__content">
+                                <div class="content__text">
+                                    <h6 class="item__header">Сертификат на соответствие требованиям ГОСТ ISO/IEC 17065-2013</h6>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    </div>
+            </div>
+        </section>
+        <div class="modal " id="serviceApplication" >
+             <form action="" id="serviceForm" method="POST" >
+                <h5 class="contact-form__title">Закажите услугу</h5>
+                
+                <div>
+                    <div>
+                        <input type="text" name="company" placeholder="Организация">
+                        <label>Укажите название организации</label>
+                    </div>
+                </div>
+                
+                <div>
+                    <div>
+                        <select name="departments" id="department-select">
+                            <option value="">Подразделение</option>
+                            <option value="Отраслевая дорожная лаборатория">Отраслевая дорожная лаборатория</option>
+                            <option value="Отдел стандартизации и метрологии">Отдел стандартизации и метрологии</option>
+                            <option value="Лаборатория охраны труда">Лаборатория охраны труда</option>
+                            <option value="Отраслевая мостовая лаборатория">Отраслевая мостовая лаборатория</option>
+                            <option value="Производственный участок «Мадикор»">Производственный участок «Мадикор»</option>
+                            <option value="Отдел научно-технической информации">Отдел научно-технической информации</option>
+                          </select>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <select name="services" id="service-select">
+                            <option value="">Услуга</option>
+                            <option value="Разработка нормативной документации">Разработка нормативной документации</option>
+                            <option value="Разработка новых, совершенствование существующих технологий и материалов">Разработка новых, совершенствование существующих технологий и материалов</option>
+                            <option value="Проведение обучающих семинаров и консультаций">Проведение обучающих семинаров и консультаций</option>
+                            <option value="Контроль качества ">Контроль качества </option>
+                            <option value="Опытное производство">Опытное производство</option>
+                            <option value="Проведение испытаний">Проведение испытаний</option>
+                          </select>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button type="submit" class="button primary-button">
+                            Отправить заявку</button>
+                </div>
+            
+            </form> 
+            <div class="close-modal">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <g clip-path="url(#clip0_1814_6148)">
+                <path d="M1 1L23 23M23 1L1 23" stroke="#454545" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_1814_6148">
+                <rect width="24" height="24" fill="white"/>
+                </clipPath>
+                </defs>
+                </svg></div>
+        </div>
+        <div class="modal" id="conferenceApplication">
+            <form action="" id="conferenceForm" method="POST" >
+                <h5 class="contact-form__title">Форма записи на конференцию</h5>
+                <div>
+                    <fieldset>
+                        <legend>Выберите статус:</legend>
+                        <div class="radio">
+                            <input class="btn" type="radio" id="company" name="status" value="Юридическое лицо" checked />
+                            <label for="company">Юридическое лицо</label>
+                          </div>
+                        
+                          <div class="radio">
+                            <input class="btn" type="radio" id="person" name="status" value="Физическое лицо" />
+                            <label for="person">Физическое лицо</label>
+                          </div>
+                    </fieldset>
+                </div>
+                
+                <div>
+                    <div>
+                        <input type="text" name="fullname" placeholder="Ф. И. О.">
+                        <label>Укажите своё полное имя</label>
+                    </div>
+                    
+                    <div>
+                        <input type="text" name="company" placeholder="Организация">
+                        <label>Укажите название организации, которую представляете</label>
+                    </div>
+                </div>
+                
+                <div>
+                    <fieldset>
+                        <legend>Выберите тип участия:</legend>
+                        <div class="radio">
+                            <input class="btn" type="radio" id="perform" name="activity" value="Выступающий" checked />
+                            <label for="perform">Выступающий</label>
+                          </div>
+                        
+                          <div class="radio">
+                            <input class="btn" type="radio" id="listen" name="activity" value="Слушатель" />
+                            <label for="listen">Слушатель</label>
+                          </div>
+                    </fieldset>
+                </div>
+                <div>
+                    <div class="check">
+                        <input class="btn" type="checkbox" id="agreement" name="agreement">
+                        <label for="agreement">Ознакомлен с публичным договором оферты</label>
+                    </div>
+                </div>
+                
+                <div class="buttons">
+                    <button type="submit" class="button primary-button icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M13.7838 14.5468L11.34 15.75L10.118 13.3437L12.4836 4.60919L16.4843 5.68351L13.7838 14.5468ZM17.1556 3.48039L16.746 4.82464L12.778 3.52231L13.1091 2.2999C13.2558 1.75824 13.8194 1.44331 14.3576 1.60228L16.4823 2.22989C17.0151 2.38729 17.3175 2.94889 17.1556 3.48039ZM6.9868 12.8352C6.88636 12.7342 6.88636 12.5333 6.88636 12.1339C6.88636 11.3304 5.65909 11.3304 4.84091 11.7322C4.52839 11.8856 4.27556 12.0391 4.05961 12.1702C3.71021 12.3823 3.45738 12.5357 3.20455 12.5357C2.79545 12.5357 2.38636 12.1339 2.38636 10.9286C2.38636 8.11609 4.02273 6.10716 4.84091 6.10716C5.65909 6.10716 6.06818 6.80576 6.06818 7.31252V8.11609L7.29545 8.91966C7.32765 8.82481 7.36744 8.72996 7.40944 8.62983C7.54538 8.30579 7.70455 7.92639 7.70455 7.31252C7.70455 6.50895 6.88636 4.50002 4.84091 4.50002C2.79545 4.50002 0.75 7.31252 0.75 10.5268C0.75 13.7411 2.79545 14.1429 3.20455 14.1429C3.85112 14.1429 4.38014 13.6802 4.83603 13.2814C4.98093 13.1547 5.11845 13.0344 5.25 12.9375C5.25 13.6072 5.25 14.9464 6.06818 14.9464C6.44849 14.9464 6.7404 14.7728 6.98502 14.6274C7.26667 14.4598 7.48561 14.3296 7.70455 14.5447C8.11364 14.9464 8.93182 15.75 9.75 15.75C9.34091 14.8125 8.35909 12.9375 7.70455 12.9375C7.293 12.9375 7.08846 12.9375 6.9868 12.8352Z" fill="#101E0B"/>
+                            </svg>
+                            Отправить заявку</button>
+                </div>
+            
+            </form>
+            <div class="close-modal">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <g clip-path="url(#clip0_1814_6148)">
+                <path d="M1 1L23 23M23 1L1 23" stroke="#454545" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+                <defs>
+                <clipPath>
+                <rect width="24" height="24" fill="white"/>
+                </clipPath>
+                </defs>
+                </svg></div>
+        </div>
+    </main>
+    <footer>
+        <div class="_container">
+            <div class="top row">
+                <div class="partners">
+                    <div class="_container">
+                        
+                            
+                            <ul class="partners__list">
+                                <li class="single-item">
+                                    <div class="item__image">
+                                        <img src="./images/img/partner-1.png" alt="partner">
+                                    </div>
+                                    <div class="item__content">
+                                            <p class="item__description">Maersk</p>
+                                    </div>
+                                </li>
+                                <li class="single-item">
+                                    <div class="item__image">
+                                        <img src="./images/img/partner-2.png" alt="partner">
+                                    </div>
+                                    <div class="item__content">
+                                            <p class="item__description">TLS</p>
+                                    </div>
+                                </li>
+                                <li class="single-item">
+                                    <div class="item__image">
+                                        <img src="./images/img/partner-3.png" alt="partner">
+                                    </div>
+                                    <div class="item__content">
+                                            <p class="item__description">Grada logistics</p>
+                                    </div>
+                                </li>
+                                <li class="single-item">
+                                    <div class="item__image">
+                                        <img src="./images/img/partner-.png" alt="partner">
+                                    </div>
+                                    <div class="item__content">
+                                            <p class="item__description">Unistore</p>
+                                    </div>
+                                </li>
+                                <li class="single-item">
+                                    <div class="item__image">
+                                        <img src="./images/img/partner-.jpg" alt="partner">
+                                    </div>
+                                    <div class="item__content">
+                                            <p class="item__description">MSC</p>
+                                    </div>
+                                </li>
+                                <li class="single-item">
+                                    <div class="item__image">
+                                        <img src="./images/img/partner-7.png" alt="partner">
+                                    </div>
+                                    <div class="item__content">
+                                            <p class="item__description">БелДорТяжТранс</p>
+                                    </div>
+                                </li>
+                                <li class="single-item">
+                                    <div class="item__image">
+                                        <img src="./images/img/partner-8.png" alt="partner">
+                                    </div>
+                                    <div class="item__content">
+                                            <p class="item__description">Светлогорский целлюлозно-карторнный комбинат</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        
+                    </div>
+             </div>
+            <div class="map">
+                    <div id="myMap" style="height: 380px;"></div>
+            </div>
+        </div>
+            <div class="bottom row">
+                <div class="footer__block">
+                    <p class="copyright">©ЛогиТранс, 2024</p>
+                </div>
+                <div class="footer__block social">
+                    <a href="#" class="telegram"></a>
+                </div>
+                <div class="footer__block buttons">
+                    <a class="button secondary-button e-message" href="https://xn--80abnmycp7evc.xn--90ais/" >
+                        Электронное обращение</a>
+                        <a class="button secondary-button" href="" >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M6.88889 1C6.3366 1 5.88889 1.44771 5.88889 2V6.22222C5.88889 6.77451 6.3366 7.22222 6.88889 7.22222H8.5V8.5H5C4.17157 8.5 3.5 9.17157 3.5 10V10.7778H2C1.44772 10.7778 1 11.2255 1 11.7778V16C1 16.5523 1.44771 17 2 17H6.22222C6.77451 17 7.22222 16.5523 7.22222 16V11.7778C7.22222 11.2255 6.77451 10.7778 6.22222 10.7778H4.5V10C4.5 9.72386 4.72386 9.5 5 9.5H9H13C13.2761 9.5 13.5 9.72386 13.5 10V10.7778H11.7778C11.2255 10.7778 10.7778 11.2255 10.7778 11.7778V16C10.7778 16.5523 11.2255 17 11.7778 17H16C16.5523 17 17 16.5523 17 16V11.7778C17 11.2255 16.5523 10.7778 16 10.7778H14.5V10C14.5 9.17157 13.8284 8.5 13 8.5H9.5V7.22222H11.1111C11.6634 7.22222 12.1111 6.77451 12.1111 6.22222V2C12.1111 1.44772 11.6634 1 11.1111 1H6.88889Z" fill="#101E0B"/>
+                            </svg>
+                            Карта сайта</a>
+                </div>
+            </div>
+            
+        </div>
+    </footer>
+    <div class="overlay"></div>
+    <div class="scrollUp" title="К началу страницы" style="display: block;">
+		<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M12 21V4M12 4L18.5 11M12 4L5.5 11" stroke="#1B1B1B" stroke-width="2"/>
+        </svg>
+	</div>
+   
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="./js/slick.min.js"></script>
+    <script src="./js/script.js"></script>
+
+</body>
+</html>
