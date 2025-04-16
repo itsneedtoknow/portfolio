@@ -118,7 +118,8 @@ $('.about .slider').slick({
     autoplay: true,
     slidesToScroll: 1,
     easing: 'ease',
-    arrows: true
+    arrows: true,
+    
   });
 
 // Яндекс Карта (использован API ключ с сайта https://roo.mozyrroo.by/)

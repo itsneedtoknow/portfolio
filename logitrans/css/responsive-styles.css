@@ -7,8 +7,11 @@
     .banner-links .item__header{
         font-size: 20px;
         line-height: 26px;
-        right: 16px;
-        left: 16px;
+        /* right: 16px;
+        left: 16px; */
+        right: 0;
+        left: 0;
+        padding: 8px;
     }
     .product-page .text-block__image{
         max-width: 350px;

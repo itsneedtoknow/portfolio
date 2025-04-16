@@ -51,6 +51,10 @@ body.modal-open,
 body.menu-open {
   overflow: hidden;
 }
+body p{
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
 /* Color palette */
 :root {
 	--Main-0: #66B946;

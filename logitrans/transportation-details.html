@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LogiTrans-Архив новостей</title>
+    <title>LogiTrans-страница вида перевозки</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,400;1,300&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/template_styles.css">
@@ -19,31 +19,6 @@
 
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar/index.global.min.js'></script>
     <script src='fullcalendar/core/locales-all.global.js'></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.10.1/main.min.js"></script>
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.15.2/css/selectize.default.min.css"
-    integrity="sha512-pTaEn+6gF1IeWv3W1+7X7eM60TFu/agjgoHmYhAfLEU8Phuf6JKiiE8YmsNC0aCgQv4192s4Vai8YZ6VNM6vyQ=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.15.2/js/selectize.min.js"
-    integrity="sha512-IOebNkvA/HZjMM7MxL0NYeLYEalloZ8ckak+NDtOViP7oiYzG5vn6WVXyrJDiJPhl4yRdmNAG49iuLmhkUdVsQ=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  ></script>
-  <script type="text/javascript" src="selectize.js"></script>
-<link rel="stylesheet" type="text/css" href="selectize.css" />
-
-<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
-  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-  <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
-  
-   
-  <script src="https://unpkg.com/@popperjs/core@2"></script>
-  <script src="https://unpkg.com/tippy.js@6"></script>
-
 
 </head>
 <body class="inner-page">
@@ -220,201 +195,80 @@
         <div class="breadcrumbs-menu">
             <ul>
                 <li><a href="index.html">Главная</a></li>
-                <li><a href="o-predpriatii.html">О предприятии</a></li>
-                <li class="active">Архив новостей</li>
+                <li><a href=" products-all.html">Виды перевозок</a></li>
+                <li class="active">Сборные грузы</li>
             </ul>
         </div>
     </div>
 </div>
     <main>
-        
         <div class="_container">
             <div class="content-wrapper">
                 <aside>
-                    <!-- Боковое меню -->
-                    <nav class="menu-sidebar">
-                        <ul>
-                            <li><a href="">История развития</a></li>
-                            <li><a href="">Подразделения</a></li>
-                            <li><a href="">Административные процедуры </a></li>
-                            <li><a href="">Политика конфиденциальности</a></li>
-                            <li><a href="">Медиагалерея</a></li>
-                            <li><a href="">Структура</a></li>
-                            <li><a href="sklad.html">Склад</a></li>
-                            <li><a href="">Противодействие корупции</a></li>
-                            <li><a href="">Условия обработки персональных данных</a></li>
-                            <li class="current"><a href="novosti-all.html">Архив новостей</a></li>
-                        </ul>
-                    </nav>
+                        <!-- Боковое меню -->
+                        <nav class="menu-sidebar">
+                            <ul>
+                                <li class="current"><a href="transportation-details.html">Сборные </a></li>
+                                <li><a href="transportation-details.html">Автомобильные </a></li>
+                                <li><a href="transportation-details.html">Контейнерные </a></li>
+                                <li><a href="transportation-details.html">Морские </a></li>
+                                <li><a href="transportation-details.html">Авиа </a></li>
+                                <li><a href="transportation-details.html">Мультимодальные</a></li>
+                                <li><a href="transportation-details.html">Негабаритные</a></li>
+                                <li><a href="transportation-details.html">Железнодорожные</a></li>
+                            </ul>
+                        </nav>
                 </aside>
-                <div class=" content">
-                 <section class="page">
-                    <div class="content__body news-all lenta content-list">
-                        <h4>Архив новостей</h4>
-                        <div class="row row-flex">
-                            <div class="flex-block">
-                                <ul  class="lenta__list">
-                                    <li class="single-item">
-                                        <div class="item__image">
-                                            <img src="./images/img/news-6.png" alt="news-preview">
+                <div class="content">
+                    <section class="page-content_inner product-page">
+                        <!-- Основной контент -->
+                        <div class="content__body">
+                            <div class="row">
+                                    <div class="text-block">
+                                        <h5>Сборные перевозки</h5>
+                                        <div class="gallery-block text-block__image">
+                                            <div class="gallery__item"><img src="./images/img/dostavka_sbornih_gruzov-main.jpg" alt="сборные перевозки"></div>
                                         </div>
-                                        <div class="item__content">
-                                            <div class="content__text">
-                                                <div class="item__header">
-                                                    <h6 class="header"><a href="news-details.html">Заседание научно-технического совета государственного предприятия «ЛогиТранс»</a></h6>
-                                                    <p class="date">27.06.2024</p>
-                                                </div>
+                                        <div class="text-block__text">
+                                            <p>
+                                                Перевозка сборных грузов по праву считается одним из самых удобных и экономичных способов транспортировки небольших партий товара. 
+                                                Стоит отметить, что компания «Logitrans» сотрудничает с большим количеством компаний-грузоотправителей, которым сборные перевозки необходимы на постоянной основе. 
+                                                Это позволяет нам поддерживать высокую грузооборачиваемость и, как следствие, Ваш груз будет отправлен в самый минимальный срок.
+                                            </p>
+                                            <div class="item__description ">
                                                 
-                                                <div class="item__description">
-                                                    <p>25 июня 2024 года состоялось заседание научно-технического совета государственного предприятия «ЛогиТранс» по рассмотрению научно-исследовательских работ и работ по реализации мероприятия «Типовое проектирование», выполненных во II квартале 2024 года по заказам Главного управления автомобильных дорог Министерства транспорта и коммуникаций Республики Беларусь. Традиционно работа проходила по двум секциям: дорожной и мостовой; на заседаниях секций присутствовали представители дорожных предприятий и организаций.</p>
+                                                <div>
+                                                    <ul><strong>Виды грузов</strong>
+                                                    <li>Строительные материалы</li>
+                                                    <li>Запчасти</li>
+                                                    <li>Фармацевтика</li>
+                                                    <li>Электроника</li>
+                                                    <li>Фурнитура</li>
+                                                    <li>Косметические средства</li>
+                                                </ul>
                                                 </div>
-                                            </div>
-                                            <div class="content__buttons">
-                                                <a href="news-details.html" class="button read-more">Читать далее</a>
+                                                <div>
+                                                    <ul><strong>Направления</strong>
+                                                    <li>Европа</li>
+                                                    <li>Азия</li>
+                                                    <li>СНГ</li>
+                                                    <li>Россия</li>
+                                                    <li>Америка</li>
+                                                    </ul>
+                                                </div>
+                                               
                                             </div>
                                         </div>
-                                    </li>
-                                    <li class="single-item">
-                                        <div class="item__image">
-                                            <img src="./images/img/news-6.png" alt="news-preview">
-                                        </div>
-                                        <div class="item__content">
-                                            <div class="content__text">
-                                                <div class="item__header">
-                                                    <h6 class="header"><a href="news-details.html">Заседание научно-технического совета государственного предприятия «ЛогиТранс»</a></h6>
-                                                    <p class="date">27.06.2024</p>
-                                                </div>
-                                                
-                                                <div class="item__description">
-                                                    <p>25 июня 2024 года состоялось заседание научно-технического совета государственного предприятия «ЛогиТранс» по рассмотрению научно-исследовательских работ и работ по реализации мероприятия «Типовое проектирование», выполненных во II квартале 2024 года по заказам Главного управления автомобильных дорог Министерства транспорта и коммуникаций Республики Беларусь. Традиционно работа проходила по двум секциям: дорожной и мостовой; на заседаниях секций присутствовали представители дорожных предприятий и организаций.</p>
-                                                </div>
-                                            </div>
-                                            <div class="content__buttons">
-                                                <a href="news-details.html" class="button read-more">Читать далее</a>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="single-item">
-                                        <div class="item__image">
-                                            <img src="./images/img/news-1.png" alt="news-preview">
-                                        </div>
-                                        <div class="item__content">
-                                            <div class="content__text">
-                                                <div class="item__header">
-                                                    <h6 class="header">Круглый стол по теме «2024 – Год качества в республике Беларусь: работы по стандартизации в сфере автомобильных дорог»</h6>
-                                                    <p class="date">27.06.2024</p> 
-                                                </div>
-                                                
-                                                <div class="item__description">
-                                                    <p></p>
-                                                </div>
-                                            </div>
-                                            <div class="content__buttons">
-                                                <a href="news-details.html" class="button read-more">Читать далее</a>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="single-item">
-                                        <div class="item__image">
-                                            <img src="./images/img/news-2.png" alt="news-preview">
-                                        </div>
-                                        <div class="item__content">
-                                            <div class="content__text">
-                                                <div class="item__header">
-                                                    <h6 class="header">Международная конференция «BITUMEN AND ROAD CONFERENCE (BITUROAD 2024)»</h6>
-                                                    <p class="date">27.06.2024</p>
-                                                </div>
-                                                
-                                                <div class="item__description">
-                                                    <p>21–25 мая 2024 года в г. Тбилиси (Грузия) состоялась международная конференция «BITUMEN AND ROAD CONFERENCE (BITUROAD 2024)» (далее – конференция).</p>
-                                                </div>
-                                            </div>
-                                            <div class="content__buttons">
-                                                <a href="news-details.html" class="button read-more">Читать далее</a>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="single-item">
-                                        <div class="item__image">
-                                            <img src="./images/img/news-3.png" alt="news-preview">
-                                        </div>
-                                        <div class="item__content">
-                                            <div class="content__text">
-                                                <div class="item__header">
-                                                    <h6 class="header">Ежегодные соревнования санитарных формирований гражданской обороны организаций Фрунзенского района г. Минска</h6>
-                                                    <p class="date">27.06.2024</p>
-                                                </div>
-                                                
-                                                <div class="item__description">
-                                                    <p></p>
-                                                </div>
-                                            </div>
-                                            <div class="content__buttons">
-                                                <a href="#" class="button read-more">Читать далее</a>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="single-item">
-                                        <div class="item__image">
-                                            <img src="./images/img/news-4.png" alt="news-preview">
-                                        </div>
-                                        <div class="item__content">
-                                            <div class="content__text">
-                                                <div class="item__header">
-                                                    <h6 class="header">Победители выставки детского рисунка «9 Мая - День Победы»</h6>
-                                                    <p class="date">27.06.2024</p>
-                                                </div>
-                                                
-                                                <div class="item__description">
-                                                    <p>17 мая 2024 года в государственном предприятии «ЛогиТранс» профсоюзным комитетом совместно с администрацией предприятия состоялось вручение подарков детям членов первичной профсоюзной организации государственного предприятия «ЛогиТранс» за принятие участия в выставке детского рисунка «9 Мая - День Победы».</p>
-                                                </div>
-                                            </div>
-                                            <div class="content__buttons">
-                                                <a href="#" class="button read-more">Читать далее</a>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="single-item">
-                                        <div class="item__image">
-                                            <img src="./images/img/news-5.png" alt="news-preview">
-                                        </div>
-                                        <div class="item__content">
-                                            <div class="content__text">
-                                                <div class="item__header">
-                                                    <h6 class="header">12 Мая – День Государственного флага, Государственного герба и Государственного гимна Республики Беларусь</h6>
-                                                    <p class="date">27.06.2024</p>
-                                                </div>
-                                                
-                                                <div class="item__description">
-                                                    <p>12 Мая – День Государственного флага, Государственного герба и Государственного гимна Республики Беларусь</p>
-                                                </div>
-                                            </div>
-                                            <div class="content__buttons">
-                                                <a href="#" class="button read-more">Читать далее</a>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="flex-block">
-                                <div class="events-calendar">
-                                    <h6 class="calendar-title">Календарь мероприятий</h6>
-                                    <div id='calendar'></div>
-                                    <input type="text" id="datepicker">
-                                </div>
-                                
+                                       
+                                    </div>
+
+                                    <!-- <div class="gallery-block">
+                                        <div class="gallery__item"><img src="./images/img/t-65.png" alt="t-65"></div>
+                                    </div> -->
                             </div>
                         </div>
-                     </div>
-                 </section>
-                 <div class="pagination">
-                    <button class="start-btn"></button>
-                    <button class="prev-btn"></button>
-                    <button>1</button>
-                    <button>2</button>
-                    <button class="next-btn"></button>
-                    <button class="end-btn"></button>
-                </div>
+                    </section>
+                
                 </div>
             </div>
         </div>
@@ -509,7 +363,6 @@
         </div>
     </footer>
     <div class="overlay"></div>
-
     <div class="scrollUp" title="К началу страницы" style="display: block;">
 		<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
             <path d="M12 21V4M12 4L18.5 11M12 4L5.5 11" stroke="#1B1B1B" stroke-width="2"/>
@@ -518,5 +371,7 @@
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="./js/slick.min.js"></script>
     <script src="./js/script.js"></script>
+    
+    
 </body>
 </html>
