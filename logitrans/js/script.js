@@ -223,21 +223,7 @@ $('.about .slider').slick({
           }
       },
         initialView: 'dayGridMonth',
-        events: [
-          {
-            title: 'Круглый стол по теме «2024 – Год качества в республике Беларусь: работы по стандартизации в сфере автомобильных дорог»',
-            start: '2024-07-15',
-            display: 'background',
-            url: 'event-details.html'
-          },
-          {
-            title: 'Мероприятие 2',
-            start: '2024-07-20',
-            display: 'background',
-             href: 'event-details.html',
-            url: 'event-details.html'
-          }
-        ],
+        events: 'events.json',
 
         eventDidMount: function(info) {
           
