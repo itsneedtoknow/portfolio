@@ -182,8 +182,21 @@ $('.about .slider').slick({
           myMap.setZoom(8);
         }
     }
+    //let promise = fetch('events.json');
     
-
+   
+    async function loadEvents(params) {
+      try{
+        let response = await fetch('events.json');
+        let events = await response.json();
+        if(response.ok){
+          return events;
+        }
+      }catch (err) {
+        console.error('Ошибка загрузки:', err);
+      }
+    }
+    
     document.addEventListener('DOMContentLoaded', function(){
 
       // КАЛЕНДАРЬ СОБЫТИЙ
@@ -191,6 +204,7 @@ $('.about .slider').slick({
         var calendarEl = document.getElementById('calendar');
     
       var calendar = new FullCalendar.Calendar(calendarEl, {
+        
         initialView: 'dayGridMonth',
         locale: 'ru',
         height: 280,
@@ -223,7 +237,14 @@ $('.about .slider').slick({
           }
       },
         initialView: 'dayGridMonth',
-        events: 'events.json',
+        //events: 'events.json',
+        events: function(fetchInfo, successCallback, failureCallback){
+          loadEvents()
+          .then(events => successCallback(events))
+          .catch(err => {
+            failureCallback(err); 
+          });
+        },
 
         eventDidMount: function(info) {
           
