@@ -1,42 +1,98 @@
 [
   {
     "title": "Международный форум транспортной инфраструктуры «Логистика будущего»",
-    "start": "2025-02-05",
-    "url": "event-details.html"
+    "start": "2025-01-05",
+    "url": "event-details.html",
+    "rrule": {
+      "freq": "yearly"
+    }
   },
   {
     "title": "Практический семинар: «Цифровизация складов и автоматизация цепочек поставок»",
     "start": "2025-02-12",
-    "url": "event-details.html"
+    "url": "event-details.html",
+    "rrule": {
+      "freq": "yearly"
+    }
   },
   {
     "title": "Воркшоп «Современные грузоперевозки: скорость, контроль, безопасность»",
-    "start": "2025-02-20",
-    "url": "event-details.html"
+    "start": "2025-03-20",
+    "url": "event-details.html",
+    "rrule": {
+      "freq": "yearly"
+    }
   },
   {
     "title": "Круглый стол «Транспортная логистика ЕАЭС: вызовы и решения»",
-    "start": "2025-03-03",
-    "url": "event-details.html"
+    "start": "2025-04-03",
+    "url": "event-details.html",
+    "rrule": {
+      "freq": "yearly"
+    }
   },
   {
     "title": "Конференция «Устойчивое развитие цепочек поставок: зелёная логистика»",
-    "start": "2025-03-15",
-    "url": "event-details.html"
+    "start": "2025-05-15",
+    "url": "event-details.html",
+    "rrule": {
+      "freq": "yearly"
+    }
   },
   {
     "title": "Презентация инноваций: «Дроны и автопилоты в грузовых перевозках»",
-    "start": "2025-04-10",
-    "url": "event-details.html"
+    "start": "2025-06-10",
+    "url": "event-details.html",
+    "rrule": {
+      "freq": "yearly"
+    }
   },
   {
     "title": "Бизнес-встреча партнёров: «Маршруты Европы и Азии — новые возможности»",
-    "start": "2025-04-25",
-    "url": "event-details.html"
+    "start": "2025-07-25",
+    "url": "event-details.html",
+    "rrule": {
+      "freq": "yearly"
+    }
+  },
+  {
+    "title": "Бизнес-встреча партнёров: «Маршруты Европы и Азии — новые возможности»",
+    "start": "2025-08-25",
+    "url": "event-details.html",
+    "rrule": {
+      "freq": "yearly"
+    }
+  },
+  {
+    "title": "Бизнес-встреча партнёров: «Маршруты Европы и Азии — новые возможности»",
+    "start": "2025-09-25",
+    "url": "event-details.html",
+    "rrule": {
+      "freq": "yearly"
+    }
+  },
+  {
+    "title": "Бизнес-встреча партнёров: «Маршруты Европы и Азии — новые возможности»",
+    "start": "2025-10-25",
+    "url": "event-details.html",
+    "rrule": {
+      "freq": "yearly"
+    }
+  },
+  {
+    "title": "Бизнес-встреча партнёров: «Маршруты Европы и Азии — новые возможности»",
+    "start": "2025-11-25",
+    "url": "event-details.html",
+    "rrule": {
+      "freq": "yearly"
+    }
   },
   {
     "title": "Тренинг «Управление логистическими рисками»",
-    "start": "2025-05-07",
-    "url": "event-details.html"
+    "start": "2025-12-07",
+    "url": "event-details.html",
+    "rrule": {
+      "freq": "yearly"
+    }
   }
 ]
