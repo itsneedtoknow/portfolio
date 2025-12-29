@@ -526,10 +526,53 @@ searchBtn.addEventListener('click',function(){
       searchform.querySelector('.search-form').classList.remove('open');
   }
   })
+const registrationForm = document.getElementById('conferenceForm')
 
+function validateForm(formData) {
+  for (let [key, value] of formData.entries()) {
+    if (value.trim() === '') return false; // пустое поле
+  }
+  return true;
+}
+async function submitForm(e) {
+  e.preventDefault();
 
+  const formData = new FormData(registrationForm);
+  if (!validateForm(formData)) {
+      alert('Заполните все поля');
+      return;
+    }
 
+  let hasValue = false;
+  for (let value of formData.values()) {
+    if (value.trim() !== '') {
+      hasValue = true;
+      break;
+    }
+  }
 
+  if (!hasValue) {
+    alert('Заполните хотя бы одно поле');
+    return; // останавливаем функцию
+  }
+  try{
+    let response = await fetch('https://jsonplaceholder.typicode.com/posts', {
+          method: 'POST',
+          body: formData
+        });
+        if (!response.ok) throw new Error(`Ошибка: ${response.status}`);
+         let result = await response.json();
+         alert('Успешно')
+         
+  }
+  catch(err){
+    
+    alert('Ошибка при отправке формы');
+  }
+   
+}
+
+registrationForm.addEventListener('submit', submitForm);
 
 
 
