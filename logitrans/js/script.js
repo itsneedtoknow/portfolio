@@ -486,7 +486,7 @@ $(document).click(function(event) {
 
 // мобильное меню
 
-  let navMenuBtns = document.querySelectorAll('svg');
+  //let navMenuBtns = document.querySelectorAll('svg');
 
   //  let dropDownMenu = document.querySelectorAll('.nav-menu-item');
 
