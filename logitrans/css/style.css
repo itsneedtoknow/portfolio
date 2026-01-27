@@ -48,7 +48,7 @@
     object-fit: contain;
 }
 .about .slogan p{
-  font-family: "Syncopate";
+  font-family: "Syncopate", sans-serif;
   color: #FFF;
   font-size: 24px;
     font-style: normal;
@@ -361,7 +361,7 @@
     justify-content: space-between;
   }
    .main-news .ads-block .item__header{
-    font-family: "Syncopate";
+    font-family: "Syncopate", sans-serif;
     font-size: 24px;
     font-style: normal;
     font-weight: 400;
@@ -791,7 +791,7 @@
   color: var(--neitral-2);
   text-align: center;
   /* Заголовок 4 */
-  font-family: "Syncopate";
+  font-family: "Syncopate", sans-serif;
   font-size: 24px;
   font-weight: 400;
   line-height: 32px; /* 133.333% */
