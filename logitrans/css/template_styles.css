@@ -92,6 +92,9 @@ html, body {
   display: flex;
   flex-direction: column;
   scrollbar-gutter: stable;
+  height: 100% !important;
+  align-items: stretch !important;
+  justify-content: flex-start !important;
 }
 body a,
 body a:hover {
