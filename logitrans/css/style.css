@@ -831,6 +831,7 @@
     align-items: center;
 }
 .services__list h6,
+.services__list h3,
 .departments__list h6{
     font-size: 16px;
     font-style: normal;
