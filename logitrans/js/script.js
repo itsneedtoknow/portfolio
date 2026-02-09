@@ -387,11 +387,7 @@ $('.about .slider').slick({
 });
       });
       
-    }
-    )
-
-
-    // МОБИЛЬНАЯ ФОРМА ПОИСКА
+      // МОБИЛЬНАЯ ФОРМА ПОИСКА
     let searchBtn = document.querySelector('.btn-search');
     let searchform = document.querySelector('.search');
 
@@ -573,6 +569,11 @@ async function submitForm(e) {
 }
 
 registrationForm.addEventListener('submit', submitForm);
+    }
+    )
+
+
+    
 
 
 

@@ -400,7 +400,7 @@ header nav > div > ul > li.icon-to-text{
 header nav > div > ul > li.current{
   background: var(--Main-0);
 }
-header nav > div > ul > li a{
+header nav > div > ul > li span{
   color: var(--neitral-3);
   font-weight: 700;
   letter-spacing: 0.024px;

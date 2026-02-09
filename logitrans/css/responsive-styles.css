@@ -164,6 +164,7 @@ max-width: unset;
         width: 304px;
         height: 100dvh;
         overflow-y: auto;
+        justify-content: center;
     }
     .nav-menu.open {
         transform: translate(0);
