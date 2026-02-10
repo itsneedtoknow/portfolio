@@ -1,37 +1,5 @@
 import { createElement } from "../utils/dom.js";
 
-export const menuItems = [
-    { name: 'Главная', link: 'index.html' },
-    {
-         name: 'О компании', 
-         submenu: [
-            { name: 'Наша история', link: 'history.html' },
-            { name: 'Отделы', link: 'departments.html' },
-            { name: 'Медиацентр', link: 'mediagallery.html' },
-            { name: 'Наши новости', link: 'news.html' },
-         ] },
-    { name: 'Услуги', link: 'services.html' },
-    { name: 'Виды перевозок',
-        submenu: [
-            {name: 'Сборные', link: 'transportation-detail.html'},
-            {name: 'Автомобильные', link: 'transportation-detail.html'},
-            {name: 'Контейнерные', link: 'transportation-detail.html'},
-            {name: 'Авиаперевозки', link: 'transportation-detail.html'},
-            {name: 'Морские', link: 'transportation-detail.html'},
-            {name: 'Железнодорожные', link: 'transportation-detail.html'}
-        ]
-     },
-     { name: 'Виды грузов',
-        submenu: [
-            {name: 'Крупногабаритные', link: 'products-detail.html'},
-            {name: 'Промышленные', link: 'products-detail.html'},
-            {name: 'Продукты', link: 'products-detail.html'},
-            {name: 'Техника', link: 'products-detail.html'},
-            {name: 'Товары народного потребления', link: 'products-detail.html'}
-        ]
-     }
-];
-
 export function initNavigation(menuItems){
 let finalHTML = '';
 let menuItem;
