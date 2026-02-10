@@ -147,6 +147,29 @@ section.page{
   max-width: 1528px;
   position: relative;
 }
+.f-row{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.f-column{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.g-8{
+  gap: 32px;
+}
+.g-16{
+  gap: 32px;
+}
+.g-24{
+  gap: 32px;
+}
+.g-32{
+  gap: 32px;
+}
 .btn-search{
   display: none;
 }
@@ -292,17 +315,6 @@ img{
 }
 
 
-
-.item__image {
-}
-.item__content {
-}
-.content__text {
-}
-.item__header {
-}
-.item__date {
-}
 .content__text,
 .item__description,
 .department .content__body {
