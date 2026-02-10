@@ -140,7 +140,7 @@ section.page{
 .page .content__body{
   padding-bottom: 32px;
 }
-._container {
+.container-wrapper {
   padding: 0 16px;
   margin: 0 auto;
   width: 100%;
@@ -189,7 +189,7 @@ img{
 
 
 .buttons,
-.buttons ._container{
+.buttons .container-wrapper{
   display: flex;
   gap: 8px;
   margin-top: 24px;
@@ -310,43 +310,43 @@ img{
 }
 .content__buttons {
 }
-header ._container,
+header .container-wrapper,
 header .row,
 .search,
-header .options,
-header .social,
-footer .social{
+header .header__options,
+header .socials,
+footer .socials{
   display: flex;
 }
 footer .block{
   flex-shrink: 0;
 }
-header ._container{
+header .container-wrapper{
 flex-direction: column;
 }
 header .row,
-header .options,
-header .social{
+header .header__options,
+header .socials{
   justify-content: space-between;
   align-items: center;
 }
-header .logo{
+header .header__logo{
   height: 80px;
 }
-header .options{
+header .header__options{
   gap: 24px;
   padding-right: 16px;
 }
-header .options .search{
+header .header__options .search{
 margin-right: 16px;
 }
-.social .telegram{
+.socials .telegram{
   padding: 12px;
   background-color: var(--Neitral--2);
   width: 48px;
   height: 48px;
 }
-.social .telegram::before{
+.socials .telegram::before{
   content: url('../images/icons/telegram.svg');
   background-position: center;
   

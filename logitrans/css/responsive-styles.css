@@ -65,7 +65,7 @@
         max-width: 280px;
         width: 100%;
     }
-    .products ._container{
+    .products .container-wrapper{
         flex-direction: column;
     }
     .products .ads-block{
@@ -90,7 +90,7 @@
     .gallery-block .slick-list{
         width: 560px;
       }
-      .main-news ._container{
+      .main-news .container-wrapper{
         flex-wrap: wrap;
       }
       .main-news .ads-block{
@@ -124,7 +124,7 @@ max-width: unset;
     }
 }
 @media(max-width: 992px){
-    header .logo{
+    header .header__logo{
         height: auto;
     }
     .inner-page main .content-wrapper{
@@ -317,8 +317,8 @@ max-width: unset;
         position: static;
     }
     /* .about .single-item, */
-    .main-news ._container,
-    .activities ._container{
+    .main-news .container-wrapper,
+    .activities .container-wrapper{
         flex-direction: column;
     }
     
@@ -348,7 +348,7 @@ max-width: unset;
     .services .item__image{
         height: 278px;
     }
-    .departments ._container{
+    .departments .container-wrapper{
         flex-wrap: wrap;
     }
     .department-block:nth-child(2) .departments__list{
@@ -364,7 +364,7 @@ max-width: unset;
         position: relative;
         gap: 12px;
     }
-    footer .social{
+    footer .socials{
         position: absolute;
         top: 0;
         right: 0;
@@ -396,7 +396,7 @@ max-width: unset;
         position: absolute;
         top: 0;
     } */
-    header .social .telegram{
+    header .socials .telegram{
         background-color: transparent;
         padding: 0;
         width: 24px;
@@ -481,7 +481,7 @@ max-width: unset;
     .oko{
         display: none;
     }
-    .options{
+    .header__options{
         width: 100%;
         justify-content: space-between;
     }
@@ -492,10 +492,10 @@ max-width: unset;
      
 }
 @media(max-width: 640px){
-    header ._container{
+    header .container-wrapper{
         gap: 4px;
     }
-    header .options{
+    header .header__options{
         padding-right: 0;
         padding-bottom: 8px;
     }
@@ -580,7 +580,7 @@ max-width: unset;
     footer .buttons{
         flex-direction: column;
     }
-    footer .social .telegram{
+    footer .socials .telegram{
         width: 40px;
         height: 40px;
         padding: 8px;
@@ -801,7 +801,7 @@ max-width: unset;
      .main-news h2::after{
         background-size: auto !important;
      }
-     .main-news ._container{
+     .main-news .container-wrapper{
         padding-top: 280px;
         padding-bottom: 250px;
      }
@@ -881,7 +881,7 @@ max-width: unset;
     margin-left: 0;
     
   }
-  .products ._container,
+  .products .container-wrapper,
   .products .ads-block{
     gap: 16px;
   }
@@ -920,7 +920,7 @@ max-width: unset;
     padding-top: 0;
     padding-bottom: 0;
   }
-  .departments ._container{
+  .departments .container-wrapper{
     gap: 16px;
   }
   .departments h2{
@@ -949,7 +949,7 @@ gap: 14px;  }
     padding-top: 0;
     padding-bottom: 0;
   }
-  .activities ._container{
+  .activities .container-wrapper{
     flex-direction: column-reverse;
     }
     .activities .slick-slider .slick-next{
@@ -1026,7 +1026,7 @@ gap: 14px;  }
         padding-right: 0;
         gap: 24px;
     }
-    footer .social{
+    footer .socials{
         top: 16px;
     }
     footer .buttons{
@@ -1088,7 +1088,7 @@ gap: 14px;  }
     }
 }
 @media(max-width: 360px){
-    header .logo{
+    header .header__logo{
         height: 60px;
     }
     .header__top{
