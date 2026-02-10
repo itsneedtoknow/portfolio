@@ -283,7 +283,7 @@ img{
 .single-item,
 .item__content,
 .content__text,
-.item__description,
+.single-item__description,
 .department .content__body {
   display: flex;
 }
@@ -316,7 +316,7 @@ img{
 
 
 .content__text,
-.item__description,
+.single-item__description,
 .department .content__body {
   flex-direction: column;
 }
