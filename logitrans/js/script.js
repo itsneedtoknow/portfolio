@@ -19,16 +19,16 @@ jQuery(document).ready(function () {
     return false;
   });
 });
-
+document.addEventListener('DOMContentLoaded', function(){
 // слайдеры
-$('.about .slider').slick({
-    infinite: true,
-    slidesToShow: 1,
-    autoplay: true,
-    slidesToScroll: 1,
-    easing: 'ease',
-    arrows: true,
-  });
+// $('.about .slider').slick({
+//     infinite: true,
+//     slidesToShow: 1,
+//     autoplay: true,
+//     slidesToScroll: 1,
+//     easing: 'ease',
+//     arrows: true,
+//   });
   $('.products .banner-links').slick({
     infinite: true,
     slidesToShow: 2,
@@ -121,7 +121,7 @@ $('.about .slider').slick({
     arrows: true,
     
   });
-
+})
 // Яндекс Карта (использован API ключ с сайта https://roo.mozyrroo.by/)
   ymaps.ready(init);
 

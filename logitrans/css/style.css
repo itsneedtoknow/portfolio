@@ -9,10 +9,11 @@
   cursor: pointer;
 }
 /* ABOUT */
-.about .slide{
+
+.about .slider__slide-item{
     position: relative;
 }
-.about .slide{
+.about .slider__slide-item{
     position: relative;
     height: 384px;
 }
@@ -29,7 +30,7 @@
   color: transparent;
 }
 
-.about .slogan{
+.about .slide-item__slogan{
     /* position: absolute;
     z-index: 2;
     max-width: 400px;
@@ -47,7 +48,7 @@
     transform: translateX(-50%) translateY(-50%);
     object-fit: contain;
 }
-.about .slogan p{
+.about .slide-item__slogan p{
   font-family: "Syncopate", sans-serif;
   color: #FFF;
   font-size: 24px;
@@ -57,7 +58,7 @@
     letter-spacing: 0.06px;
     text-transform: uppercase;
 }
-.about .slide .buttons{
+.about .slider__slide-item .buttons{
     position: absolute;
     z-index: 2;
     left: 50%;
