@@ -531,7 +531,7 @@ max-width: unset;
     .main-news .ads-block .advertisement__item:first-child .single-item__description{
         padding-top: 8px;
     }
-    .secondary-button,
+    .button--secondary,
     .primary-button{
         padding: 10px 16px;
     }

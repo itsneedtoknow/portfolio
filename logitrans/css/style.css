@@ -1039,7 +1039,7 @@ footer .buttons{
 footer .button{
   height: 38px;
 }
-.secondary-button,
+.button--secondary,
 .primary-button{
   position: relative;
 }

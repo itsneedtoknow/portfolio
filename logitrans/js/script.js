@@ -335,7 +335,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
       //ОТКРЫТИЕ МОДАЛЬНЫХ ОКОН
       let modalWindows = document.querySelectorAll('.modal');
-      let openModalBtn = document.querySelectorAll('.open-modal');
+      let openModalBtn = document.querySelectorAll('.button--open-modal');
       let closeModalBtn = document.querySelectorAll('.close-modal');
 
       openModalBtn.forEach(button => {

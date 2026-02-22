@@ -1,22 +1,20 @@
 import { renderHeader } from "./components/header.js";
 import { renderSlider } from "./components/slider.js"; 
 import { LoadJSON } from "./utils/api.js";
+import { renderAbout } from "./modules/about.js";
 
 
 
 
 async function init() {
     try{
+        let aboutSectionContainer = document.querySelector('#about');
+        let aboutSection = await renderAbout();
+        aboutSectionContainer.append(aboutSection);
+
         let menuItems = await LoadJSON('./data/menu.json');
         renderHeader(menuItems);
-
-        let sliderData = await LoadJSON('./data/slider.json');
-        let slider = renderSlider(sliderData);
-        const sliderContainer = document.querySelector('.about .slider');
-        if (sliderContainer) {
-            sliderContainer.innerHTML = '';
-            sliderContainer.append(...slider);
-        }
+        
         $('.about .slider').slick({
             infinite: true,
             slidesToShow: 1,

@@ -257,7 +257,7 @@ img{
   visibility: visible;
   opacity: 1;
 }
-.primary-button.icon, .secondary-button.icon, .thirdy-button.icon{
+.primary-button.button--icon, .button--secondary.button--icon, .thirdy-button.button--icon{
   position: relative;
 }
 .primary-button {
@@ -265,20 +265,23 @@ img{
     background: var(--Main-0);
 }
 
-.secondary-button{
+.button--secondary{
   border: 1px solid var(--main-3);
 }
-.primary-button.icon,
-.secondary-button.icon{
+.primary-button.button--icon,
+.button--secondary.button--icon{
   padding: 10px 16px;
 }
-.secondary-button:active::before{
+.button--secondary:active::before{
   background-color: var(--Neitral--1);
 }
 .thirdy-button{
   background: rgba(255, 255, 255, 0.90);
 }
-
+.button--icon img{
+  max-width: 24px;
+  height: 24px;
+}
 /* preview items */
 .single-item,
 .item__content,
@@ -292,10 +295,10 @@ img{
     background-color: var(--Main-0);
     box-shadow: 4px 4px 16px 0px rgba(0, 0, 0, 0.10), 1px 1px 4px 0px rgba(0, 0, 0, 0.25);
   }
-  .secondary-button:hover{
+  .button--secondary:hover{
     border-color: transparent;
   }
-  .secondary-button:hover::before{
+  .button--secondary:hover::before{
     border: solid 2px var(--Main-0);
     background-color: white;
     box-shadow: 4px 4px 16px 0px rgba(0, 0, 0, 0.10), 1px 1px 4px 0px rgba(0, 0, 0, 0.25);
@@ -406,7 +409,7 @@ header nav > div > ul > li{
   position: relative;
   height: 48px;
 }
-header nav > div > ul > li.icon-to-text{
+header nav > div > ul > li.button--icon-to-text{
   padding: 12px;
 }
 header nav > div > ul > li.current{
@@ -418,7 +421,7 @@ header nav > div > ul > li span{
   letter-spacing: 0.024px;
   position: relative;
 }
-header nav .icon-to-text > a{
+header nav .button--icon-to-text > a{
     font-size: 0;
     background: url(../images/icons/home.svg) center center no-repeat;
     width: 24px;
@@ -426,7 +429,7 @@ header nav .icon-to-text > a{
     cursor: pointer;
     display: block;
 }
-header nav .icon-to-text{
+header nav .button--icon-to-text{
   background: var(--neitral-1);
 }
 .hamburger-menu{
