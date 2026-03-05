@@ -15,7 +15,7 @@ export async function renderMainNews(){
        newsCardsContainer.append(card);
     }
     let buttonAllContainer = createElement('div', 'buttons');
-    let buttonAllBtn = createElement('a', 'button secondary-button archive');
+    let buttonAllBtn = createElement('a', 'button button--secondary archive');
     buttonAllBtn.href = "novosti-all.html";
     buttonAllBtn.title = "Архив новостей";
     buttonAllBtn.innerHTML = "Архив новостей";

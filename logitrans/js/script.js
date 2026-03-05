@@ -127,10 +127,10 @@ document.addEventListener('DOMContentLoaded', function(){
 
     function init() {
         var myMap = new ymaps.Map ('myMap', {
-            center: [53.889219, 28.034168],
-            zoom: 9
+            center: [53.858729, 27.611661],
+            zoom: 13
         });
-        var mainOffice = new ymaps.Placemark([53.907435, 27.509100], {
+        var mainOffice = new ymaps.Placemark([53.858729, 27.611661], {
           
             balloonContentBody: [
                 '<div class="map__item">',
@@ -150,28 +150,28 @@ document.addEventListener('DOMContentLoaded', function(){
             ].join('')
         },
            {
-            preset: 'twirl#greenIcon'
+            preset: 'twirl#pinkIcon'
         });
-        var productionOffice = new ymaps.Placemark([53.812507, 28.842065], { 
-            balloonContentBody: [
-                '<div class="map__item">',
-                '<p class="item__header">',
-                'Склад Логитранс',
-                '</p>',
-                '<p class="address">',
-                'Минская область, Березинский район',
-                '</p>',
-                '<p class="phone">',
-                '+375 (17) 222-22-22',
-                '</p>',
-                '<p class="email">',
-                'logitrans@logitrans.by',
-                '</p>',
-                '</div>'
-            ].join('')
-        }, {
-            preset: 'twirl#greenIcon'
-        });
+        // var productionOffice = new ymaps.Placemark([53.812507, 28.842065], { 
+        //     balloonContentBody: [
+        //         '<div class="map__item">',
+        //         '<p class="item__header">',
+        //         'Склад Логитранс',
+        //         '</p>',
+        //         '<p class="address">',
+        //         'Минская область, Березинский район',
+        //         '</p>',
+        //         '<p class="phone">',
+        //         '+375 (17) 222-22-22',
+        //         '</p>',
+        //         '<p class="email">',
+        //         'logitrans@logitrans.by',
+        //         '</p>',
+        //         '</div>'
+        //     ].join('')
+        // }, {
+        //     preset: 'twirl#greenIcon'
+        // });
         myMap.geoObjects.add(mainOffice)
                         .add(productionOffice);
         if(window.innerWidth < 640){

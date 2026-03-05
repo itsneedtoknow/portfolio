@@ -5,13 +5,13 @@
 }
 @media(max-width: 1340px){
     .banner-links .single-item__title{
-        font-size: 20px;
+        font-size: 1.25rem;
         line-height: 26px;
-        /* right: 16px;
-        left: 16px; */
+        /* right: 1rem;
+        left: 1rem; */
         right: 0;
         left: 0;
-        padding: 8px;
+        padding: 0.5rem;
     }
     .product-page .text-block__image{
         max-width: 350px;
@@ -62,7 +62,7 @@
         
     }
     .search-form{
-        max-width: 280px;
+        max-width: 17.5rem;;
         width: 100%;
     }
     .products .container-wrapper{
@@ -73,7 +73,7 @@
         width: 100%;
     }
     .row-grid ul{
-        gap: 16px;
+        gap: 1rem;
     }
     .row-grid ul .single-item__title{
         display: -webkit-box;
@@ -120,7 +120,7 @@ max-width: unset;
         max-height: 64px;
     }
     .lenta .row ul.tag-links{
-        gap: 8px;
+        gap: 0.5rem;
     }
 }
 @media(max-width: 992px){
@@ -146,7 +146,7 @@ max-width: unset;
     }
     .hamburger-menu,
     .icon-to-text{
-        padding: 12px;
+        padding: 0.75rem;
     }
     .btn-search{
         display: flex;
@@ -161,7 +161,7 @@ max-width: unset;
         z-index: 2000;
         background: #FFF;
         box-shadow: 4px 0px 16px 0px rgba(0, 0, 0, 0.10), 1px 0px 4px 0px rgba(0, 0, 0, 0.25);
-        width: 304px;
+        width: 19rem;
         height: 100dvh;
         overflow-y: auto;
         justify-content: center;
@@ -171,17 +171,17 @@ max-width: unset;
     }
     header nav > div > ul > li{
         flex-direction: column;
-        margin-top: 8px;
-        margin-bottom: 8px;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
     }
     header nav > div > ul > li a{
         width: 100%;
-        padding-left: 16px;
-        padding-right: 16px;
-        font-size: 16px;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        font-size: 1rem;
         font-weight: 700;
-        line-height: 20px; /* 125% */
-        letter-spacing: 0.024px;
+        line-height: 1.25rem; /* 125% */
+        letter-spacing: 0.01.5rem;
     }
     header nav > div > ul > li > div > ul > li a{
         padding: 8px 0;
@@ -193,7 +193,7 @@ max-width: unset;
         transform: rotateX(180deg);
     }
     .header__top{
-        padding-top: 16px;
+        padding-top: 1rem;
     }
     .nav-menu .icon-to-text{
         display: none;
@@ -204,11 +204,11 @@ max-width: unset;
     .menu{
         justify-content: space-between;
         position: relative;
-        height: 48px;
+        height: 3rem;
     }
     header nav > div > ul > li{
-        padding: 16px;
-        gap: 8px;
+        padding: 1rem;
+        gap: 0.5rem;
         justify-content: space-between;
         padding-right: 0;
         padding-left: 0;
@@ -218,11 +218,11 @@ max-width: unset;
         display: block;
         height: 1px;
         width: 100%;
-        margin-bottom: 8px;
+        margin-bottom: 0.5rem;
         background: var(--Neitral--3);
     }
     header nav > div > ul > li > svg{
-        margin: 16px;
+        margin: 1rem;
         right: 0;
         top: 0;
         position: absolute;
@@ -271,7 +271,7 @@ max-width: unset;
     .search.mobile .search-form.open{
         /* transform: translateX(0%); */
         /* display: flex; */
-        width: 280px;
+        width: 17.5rem;;
         transition: 0.5s;
         opacity: 1;
     }
@@ -304,9 +304,9 @@ max-width: unset;
     }
     .search-form.open{}
     .search-form button{
-        font-size: 14px;
+        font-size: 0.875rem;
         font-weight: 500;
-        line-height: 14px; /* 100% */
+        line-height: 0.875rem; /* 100% */
         letter-spacing: 0.175px;
         text-transform: uppercase;
         background: var(--Main-0);
@@ -330,10 +330,10 @@ max-width: unset;
     } */
     .main-news .ads-block .single-item__title{
         font-size: 19px;
-        line-height: 24px;
+        line-height: 1.5rem;
     }
     .main-news .ads-block .advertisement__item:first-child .single-item__description{
-        font-size: 20px;
+        font-size: 1.25rem;
         line-height: 26px;
     }
     .ads-block .buttons{
@@ -356,13 +356,13 @@ max-width: unset;
         grid-template-columns: repeat(2, 1fr);
     }
     .activities-block ul{
-        row-gap: 16px;
+        row-gap: 1rem;
     }
     footer .bottom{
         flex-direction: column;
         align-items: flex-start;
         position: relative;
-        gap: 12px;
+        gap: 0.75rem;
     }
     footer .socials{
         position: absolute;
@@ -399,19 +399,19 @@ max-width: unset;
     header .socials .telegram{
         background-color: transparent;
         padding: 0;
-        width: 24px;
-        height: 24px;
+        width: 1.5rem;
+        height: 1.5rem;
     }
     .services-all .single-item ul.single-item__description,
     .services-all .tag-links{
-        font-size: 14px;
+        font-size: 0.875rem;
         line-height: 16px
     }
     .services-all .single-item ul.single-item__description{
         gap: unset;
     }
     .main-news .ads-block{
-        gap: 16px;
+        gap: 1rem;
     }
     .news .content__text{
         padding-top: 0;
@@ -452,7 +452,7 @@ max-width: unset;
         flex-wrap: wrap;
     }
     .page .banner-links .single-item__title{
-        font-size: 20px;
+        font-size: 1.25rem;
         line-height: 26px;
         /* left: unset; */
     }
@@ -460,7 +460,7 @@ max-width: unset;
     .slick-arrow{
         height: 40px;
         width: 40px;
-        padding: 8px;
+        padding: 0.5rem;
     }
     .services .single-item__title{
         font-size: 20px !important;
@@ -497,27 +497,27 @@ max-width: unset;
     }
     header .header__options{
         padding-right: 0;
-        padding-bottom: 8px;
+        padding-bottom: 0.5rem;
     }
     .about .about__content{
         padding-right: 0;
     }
     .about .single-item{
-        gap: 16px;
+        gap: 1rem;
     }
     .about .single-item__title{
-        font-size: 20px;
+        font-size: 1.25rem;
         font-weight: 700;
         line-height: 26px;
     }
     .about .slider__slide-item .buttons{
-        bottom: 16px;
+        bottom: 1rem;
     }
     .about .single-item__description{
         gap: 17px;
     }
     .about .single-item__description ul{
-        gap: 16px;
+        gap: 1rem;
     }
     .about .single-item__content{
     gap: 30px;
@@ -529,11 +529,11 @@ max-width: unset;
         width: 80px;
     }
     .main-news .ads-block .advertisement__item:first-child .single-item__description{
-        padding-top: 8px;
+        padding-top: 0.5rem;
     }
     .button--secondary,
-    .primary-button{
-        padding: 10px 16px;
+    .button--primary{
+        padding: 10px 1rem;
     }
     .about .single-item__content .buttons{
         margin-top: 0;
@@ -552,14 +552,14 @@ max-width: unset;
     }
     .departments .buttons{
         flex-wrap: wrap;
-        gap: 12px;
+        gap: 0.75rem;
     }
     .department-block:first-child ul{
         display: flex;
         flex-direction: column;
     }
     .departments__list h6{
-        font-size: 14px;
+        font-size: 0.875rem;
         line-height: 18px;
     }
     .department-block:nth-child(2) .single-item__image{
@@ -568,8 +568,8 @@ max-width: unset;
     }
     .department-block:first-child .services__list .single-item{
         height: 64px;
-        padding-top: 12px;
-        padding-bottom: 12px;
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
     }
     .department-block:first-child .services__list .single-item .single-item__content{
         max-width: 264px;
@@ -583,12 +583,12 @@ max-width: unset;
     footer .socials .telegram{
         width: 40px;
         height: 40px;
-        padding: 8px;
+        padding: 0.5rem;
     }
     .copyright{
-        font-size: 16px;
+        font-size: 1rem;
         font-weight: 400;
-        line-height: 20px;
+        line-height: 1.25rem;
         margin-right: 62px
     }
     
@@ -615,9 +615,9 @@ max-width: unset;
         max-width: 95%;
     }
     /* footer .button{
-        font-size: 14px;
+        font-size: 0.875rem;
         font-weight: 500;
-        line-height: 14px;
+        line-height: 0.875rem;
     } */
     .inner-page .services-all .single-item,
     .inner-page .news-all .single-item {
@@ -648,12 +648,12 @@ max-width: unset;
      .read-more{
         width: 40px;
         height: 40px;
-        padding: 8px;
+        padding: 0.5rem;
      }
      .news .read-more,
      .department-block:nth-child(2) .read-more{
-        width: 48px;
-        height: 48px;
+        width: 3rem;
+        height: 3rem;
         padding: 12px !important;
         
      }
@@ -676,7 +676,7 @@ max-width: unset;
      .inner-page .news-all .single-item .single-item__image,
      .news .single-item .single-item__image{
         float: left;
-        margin-right: 16px;
+        margin-right: 1rem;
      }
      .news .single-item:not(:last-child)::after,
      .news-all .single-item:not(:last-child)::after{
@@ -684,18 +684,18 @@ max-width: unset;
         display: block;
         background-color: var(--Neitral--2);
         height: 1px;
-        margin-top: 16px;
-        margin-bottom: 16px;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
         width: 100%;
      }
      .news .single-item:last-child,
      .news-all .single-item:last-child{
-        padding-bottom: 20px;
+        padding-bottom: 1.25rem;
      }
      .inner-page .news-all .single-item .single-item__title,
      .news .single-item .single-item__title{
-        font-size: 16px;
-        line-height: 20px;
+        font-size: 1rem;
+        line-height: 1.25rem;
         min-height: 80px;
         display: flex;
 
@@ -708,7 +708,7 @@ max-width: unset;
         flex-direction: column;
      }
      .main-news .ads-block .advertisement__item:nth-child(2){
-        padding-bottom: 16px;
+        padding-bottom: 1rem;
         padding-top: 13px;
      }
      .main-news .ads-block .advertisement__item:nth-child(2) .single-item__image{
@@ -716,14 +716,14 @@ max-width: unset;
         display: block;
         float: right;
         margin-top: 54px;
-        margin-left: 16px;
+        margin-left: 1rem;
      }
      .main-news .ads-block .advertisement__item:nth-child(2) .content__text{
         justify-content: initial;
         height: auto;
      }
      /* .news .single-item .single-item__title{
-        padding-right: 12px;
+        padding-right: 0.75rem;
      } */
      .news .single-item__content,
      .news-all .single-item__content{
@@ -736,15 +736,15 @@ max-width: unset;
     
      .news .single-item .single-item__description,
      .news-all .single-item .single-item__description{
-        padding-right: 48px;
+        padding-right: 3rem;
      }
      .news-all .single-item__description{
-        font-size: 14px;
-        line-height: 16px;
+        font-size: 0.875rem;
+        line-height: 1rem;
      }
      .lenta .single-item h6{
-        font-size: 16px;
-        line-height: 20px;
+        font-size: 1rem;
+        line-height: 1.25rem;
      }
      .news .content__buttons,
      .news-all .content__buttons{
@@ -756,7 +756,7 @@ max-width: unset;
      .news .single-item .item__date{
         padding-left: 96px;
         display: flex;
-        margin-top: 8px;
+        margin-top: 0.5rem;
      }
      .inner-page .services-all .single-item .single-item__content,
      .inner-page .news-all .single-item .single-item__content,
@@ -765,12 +765,12 @@ max-width: unset;
      }
      .inner-page .services-all .single-item .single-item__content .content__buttons{
         position: absolute;
-        right: 8px;
+        right: 0.5rem;
         bottom: 0;
-        margin-bottom: -16px;
+        margin-bottom: -1rem;
      }
      .inner-page .services-all .single-item .single-item__description{
-        margin-bottom: 24px;
+        margin-bottom: 1.5rem;
      }
      .inner-page .services-all .single-item .tag-links{
         max-width: 264px;
@@ -783,7 +783,7 @@ max-width: unset;
         max-width: calc(100% - 64px);
      }
      .content__body h5{
-        font-size: 20px;
+        font-size: 1.25rem;
         line-height: 26px;
      }
      .inner-page .department-page .banner-links .single-item{
@@ -791,9 +791,9 @@ max-width: unset;
         width: 100%;
      }
      .inner-page h4{
-        font-size: 24px;
+        font-size: 1.5rem;
         font-weight: 700;
-        line-height: 32px;
+        line-height: 2rem;
      }
      .breadcrumbs ul{
         flex-wrap: wrap;
@@ -802,7 +802,7 @@ max-width: unset;
         background-size: auto !important;
      }
      .main-news .container-wrapper{
-        padding-top: 280px;
+        padding-top: 17.5rem;;
         padding-bottom: 250px;
      }
      .main-news .ads-block .single-item{
@@ -812,12 +812,12 @@ max-width: unset;
         left: 0; */
     }
     main section h2{
-        font-size: 20px;
+        font-size: 1.25rem;
         line-height: 22px;
     }
     .main-news .ads-block .single-item:first-child{
         top: 0;
-        gap: 16px;
+        gap: 1rem;
     }
     .main-news .ads-block .single-item:last-child{
         bottom: 0;
@@ -828,14 +828,14 @@ max-width: unset;
         height: 253px;
     }
     .main-news .ads-block .advertisement__item:first-child .single-item__description{
-        font-size: 20px;
+        font-size: 1.25rem;
         font-weight: 700;
         line-height: 26px;
     }
     main section.main-news h2{
         max-width: 160px;
         height: auto;
-        padding-bottom: 24px;
+        padding-bottom: 1.5rem;
     }
     .main-news h2::after,
   .products h2::after,
@@ -847,35 +847,35 @@ max-width: unset;
     
   }
   .products{
-    padding-top: 8px;
+    padding-top: 0.5rem;
   }
   .products .banner-links .item-image{
-    width: 248px;
-    height: 248px;
+    width: 23rem;
+    height: 23rem;
     flex-shrink: 0;
   }
   .products h2,
   .products h2::after{
     height: 30px;
-    margin-bottom: 16px;
-    margin-top: 16px;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
   }
   
   .news ul{
-    gap: 8px;
+    gap: 0.5rem;
   }
   .news .single-item{
     max-height: 211px;
     overflow: hidden;
   }
   .products-block .banner-links{
-    margin-top: 16px;
+    margin-top: 1rem;
   }
   .products .banner-links .single-item__image{
     margin-left: 0;
     margin-right: 0;
     min-height: auto;
-    height: 248px;
+    height: 23rem;
   }
   .products-block .banner-links .single-item__title{
     margin-left: 0;
@@ -883,10 +883,10 @@ max-width: unset;
   }
   .products .container-wrapper,
   .products .ads-block{
-    gap: 16px;
+    gap: 1rem;
   }
   .products .buttons{
-    margin-bottom: 8px;
+    margin-bottom: 0.5rem;
   }
   .products .ads-block .single-item__image{
     width: 129px;
@@ -897,7 +897,7 @@ max-width: unset;
     height: 161px;
   }
   .products .ads-block .single-item__title{
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 800;
     line-height: 18px;
   }
@@ -910,8 +910,8 @@ max-width: unset;
     margin-left: 0;
   }
   /* .services h2{
-    padding-bottom: 24px;
-    padding-top: 24px;
+    padding-bottom: 1.5rem;
+    padding-top: 1.5rem;
   } */
   .services .buttons{
     flex-wrap: wrap;
@@ -921,25 +921,25 @@ max-width: unset;
     padding-bottom: 0;
   }
   .departments .container-wrapper{
-    gap: 16px;
+    gap: 1rem;
   }
   .departments h2{
-    margin-bottom: 16px;
+    margin-bottom: 1rem;
   }
   .departments h2::after{
-    height: 24px;
+    height: 1.5rem;
   }
   .department-block:first-child ul{
-gap: 14px;  }
+gap: 0.875rem;  }
 .department-block .block-header{
-    margin-bottom: 24px;
+    margin-bottom: 1.5rem;
 }
   .department-block:nth-child(2) .single-item{
     height: 78px;
     min-width: 320px;
   }
   .achievements-block{
-    padding-top: 20px;
+    padding-top: 1.25rem;
   }
   
   .department-block:nth-child(2) .departments__list{
@@ -953,14 +953,14 @@ gap: 14px;  }
     flex-direction: column-reverse;
     }
     .activities .slick-slider .slick-next{
-        right: 16px;
-        width: 48px;
-        height: 48px;
+        right: 1rem;
+        width: 3rem;
+        height: 3rem;
     }
     .activities .slick-slider .slick-prev{
-        left: 16px;
-        width: 48px;
-        height: 48px;
+        left: 1rem;
+        width: 3rem;
+        height: 3rem;
     }
     .activities-block{
         margin-top: -8px;
@@ -970,7 +970,7 @@ gap: 14px;  }
         font-weight: 500;
     }
     .activities .slick-slider .slick-arrow{
-        padding: 12px;
+        padding: 0.75rem;
     }
     .achievements-block .certification-standarts li{
         width: 40px;
@@ -987,24 +987,24 @@ gap: 14px;  }
         background-size: cover;
     }
     .activities h2{
-        height: 20px;
-        margin-bottom: 20px;
-        margin-top: 20px;
+        height: 1.25rem;
+        margin-bottom: 1.25rem;
+        margin-top: 1.25rem;
     }
     .activities-block ul{
-        padding-top: 8px;
+        padding-top: 0.5rem;
         row-gap: 0px;
     }
     .activities-block .single-item{
-        padding: 13px 16px;
+        padding: 13px 1rem;
     }
     .achievements-block ul.achievements__list{
         width: calc(100% + 32px);
         
     }
     .partners{
-        padding-top: 16px;
-        padding-bottom: 24px;
+        padding-top: 1rem;
+        padding-bottom: 1.5rem;
     }
     .partners .single-item{
         height: 128px;
@@ -1015,7 +1015,7 @@ gap: 14px;  }
     }
     .partners .slick-dots{
         margin-right: auto;
-        margin-top: 38px;
+        margin-top: 2.375rem;
     }
     #myMap,
     .ymaps-map{
@@ -1024,17 +1024,17 @@ gap: 14px;  }
     footer .bottom{
         padding-left: 0;
         padding-right: 0;
-        gap: 24px;
+        gap: 1.5rem;
     }
     footer .socials{
-        top: 16px;
+        top: 1rem;
     }
     footer .buttons{
-        gap: 12px;
+        gap: 0.75rem;
     }
     .inner-page .row-flex,
     .inner-page .department-page .banner-links{
-        gap: 16px;
+        gap: 1rem;
     }
     .news-all .content__buttons{
         align-self: flex-end;
@@ -1042,8 +1042,8 @@ gap: 14px;  }
     .news-all .read-more{
         font-size: 0;
         line-height: 0;
-        width: 48px;
-        height: 48px;
+        width: 3rem;
+        height: 3rem;
         padding: 12px !important;
         margin-bottom: -12px;
         
@@ -1052,8 +1052,8 @@ gap: 14px;  }
         content: '';
         background-image: url(../images/icons/double-right.svg);
         display: flex;
-        width: 24px;
-        height: 24px;
+        width: 1.5rem;
+        height: 1.5rem;
         background-repeat: no-repeat;
         background-size: contain;
         flex-shrink: 0;
@@ -1092,7 +1092,7 @@ gap: 14px;  }
         height: 60px;
     }
     .header__top{
-        padding-top: 16px;
+        padding-top: 1rem;
     }
     
     .services .single-item__description p{
@@ -1109,8 +1109,8 @@ gap: 14px;  }
     .activities .activities__list,
     .partners{
         max-width: calc(100% + 32px);
-        margin-right: -16px;
-        margin-left: -16px;
+        margin-right: -1rem;
+        margin-left: -1rem;
     }
     .main-news .ads-block .single-item{
         right: 0;
@@ -1120,6 +1120,6 @@ gap: 14px;  }
         width: 264px;
     }
     .inner-page .department-page .services__list{
-        gap: 8px;
+        gap: 0.5rem;
     }
 }
