@@ -26,7 +26,7 @@
       .gallery-block .slick-list{
         width: 760px;
       }
-      .products .ads-block .single-item{
+      .products .benefits .single-item{
   max-width: 477px;
   min-width: 300px;
     width: 100%;
@@ -68,7 +68,7 @@
     .products .container-wrapper{
         flex-direction: column;
     }
-    .products .ads-block{
+    .products .benefits{
         flex-direction: row;
         width: 100%;
     }
@@ -93,10 +93,10 @@
       .main-news .container-wrapper{
         flex-wrap: wrap;
       }
-      .main-news .ads-block{
+      .main-news .benefits{
         flex-wrap: nowrap;
       }
-      .main-news .ads-block .single-item{
+      .main-news .benefits .single-item{
         max-width: 477px;
         width: 100%;
       }
@@ -106,7 +106,7 @@
       .about .single-item .slider{
 max-width: unset;
       }
-      .products .ads-block .single-item{
+      .products .benefits .single-item{
   max-width: 50%;
   min-width: 300px;
     width: 100%;
@@ -325,21 +325,21 @@ max-width: unset;
     .about .slider{
         max-width: unset;
     }
-    /* .main-news .ads-block .single-item{
+    /* .main-news .benefits .single-item{
         width: 48%;
     } */
-    .main-news .ads-block .single-item__title{
+    .main-news .benefits .single-item__title{
         font-size: 19px;
         line-height: 1.5rem;
     }
-    .main-news .ads-block .advertisement__item:first-child .single-item__description{
+    .main-news .benefits .advertisement__item:first-child .single-item__description{
         font-size: 1.25rem;
         line-height: 26px;
     }
-    .ads-block .buttons{
+    .benefits .buttons{
         flex-wrap: wrap;
     }
-    .main-news .ads-block .advertisement__item:nth-child(2) .single-item__image{
+    .main-news .benefits .advertisement__item:nth-child(2) .single-item__image{
         width: 114px;
     }
     .products .slick-list{
@@ -410,14 +410,14 @@ max-width: unset;
     .services-all .single-item ul.single-item__description{
         gap: unset;
     }
-    .main-news .ads-block{
+    .main-news .benefits{
         gap: 1rem;
     }
     .news .content__text{
         padding-top: 0;
     padding-bottom: 0;
     }
-    .main-news .ads-block .advertisement__item .single-item__title{
+    .main-news .benefits .advertisement__item .single-item__title{
         padding-left: 0;
     }
     .row-grid ul .single-item{
@@ -445,10 +445,10 @@ max-width: unset;
     
 }
 @media(max-width: 768px){
-    .main-news .ads-block .single-item{
+    .main-news .benefits .single-item{
         width: 100%;
     }
-    .main-news .ads-block{
+    .main-news .benefits{
         flex-wrap: wrap;
     }
     .page .banner-links .single-item__title{
@@ -522,13 +522,13 @@ max-width: unset;
     .about .single-item__content{
     gap: 30px;
     }
-    .main-news .ads-block .advertisement__item:first-child .single-item__title{
+    .main-news .benefits .advertisement__item:first-child .single-item__title{
         padding-top: 0;
     }
-    .main-news .ads-block .advertisement__item:first-child .single-item__image{
+    .main-news .benefits .advertisement__item:first-child .single-item__image{
         width: 80px;
     }
-    .main-news .ads-block .advertisement__item:first-child .single-item__description{
+    .main-news .benefits .advertisement__item:first-child .single-item__description{
         padding-top: 0.5rem;
     }
     .button--secondary,
@@ -543,11 +543,11 @@ max-width: unset;
         padding-bottom: 17px;
     }
     section{padding-top: 16px}
-    .products .ads-block{
+    .products .benefits{
         flex-direction: column;
         width: 100%;
     }
-    .products .ads-block .single-item{
+    .products .benefits .single-item{
         max-width: unset;
     }
     .departments .buttons{
@@ -703,22 +703,22 @@ max-width: unset;
      .news .buttons{
         margin-bottom: 0;
      }
-     .main-news .ads-block .advertisement__item:nth-child(2) .buttons{
+     .main-news .benefits .advertisement__item:nth-child(2) .buttons{
         position: initial;
         flex-direction: column;
      }
-     .main-news .ads-block .advertisement__item:nth-child(2){
+     .main-news .benefits .advertisement__item:nth-child(2){
         padding-bottom: 1rem;
         padding-top: 13px;
      }
-     .main-news .ads-block .advertisement__item:nth-child(2) .single-item__image{
+     .main-news .benefits .advertisement__item:nth-child(2) .single-item__image{
         max-height: 160px;
         display: block;
         float: right;
         margin-top: 54px;
         margin-left: 1rem;
      }
-     .main-news .ads-block .advertisement__item:nth-child(2) .content__text{
+     .main-news .benefits .advertisement__item:nth-child(2) .content__text{
         justify-content: initial;
         height: auto;
      }
@@ -805,7 +805,7 @@ max-width: unset;
         padding-top: 17.5rem;;
         padding-bottom: 250px;
      }
-     .main-news .ads-block .single-item{
+     .main-news .benefits .single-item{
         position: absolute !important;
         width: 95%;
         /* right: 0;
@@ -815,19 +815,19 @@ max-width: unset;
         font-size: 1.25rem;
         line-height: 22px;
     }
-    .main-news .ads-block .single-item:first-child{
+    .main-news .benefits .single-item:first-child{
         top: 0;
         gap: 1rem;
     }
-    .main-news .ads-block .single-item:last-child{
+    .main-news .benefits .single-item:last-child{
         bottom: 0;
         /* flex-direction: row-reverse; */
         display: block;
     }
-    .main-news .ads-block .advertisement__item:first-child .single-item__image{
+    .main-news .benefits .advertisement__item:first-child .single-item__image{
         height: 253px;
     }
-    .main-news .ads-block .advertisement__item:first-child .single-item__description{
+    .main-news .benefits .advertisement__item:first-child .single-item__description{
         font-size: 1.25rem;
         font-weight: 700;
         line-height: 26px;
@@ -882,21 +882,21 @@ max-width: unset;
     
   }
   .products .container-wrapper,
-  .products .ads-block{
+  .products .benefits{
     gap: 1rem;
   }
   .products .buttons{
     margin-bottom: 0.5rem;
   }
-  .products .ads-block .single-item__image{
+  .products .benefits .single-item__image{
     width: 129px;
     height: 129px;
     flex-shrink: 0;
   }
-  .products .ads-block .single-item{
+  .products .benefits .single-item{
     height: 161px;
   }
-  .products .ads-block .single-item__title{
+  .products .benefits .single-item__title{
     font-size: 0.875rem;
     font-weight: 800;
     line-height: 18px;
@@ -1112,7 +1112,7 @@ gap: 0.875rem;  }
         margin-right: -1rem;
         margin-left: -1rem;
     }
-    .main-news .ads-block .single-item{
+    .main-news .benefits .single-item{
         right: 0;
         left: 0;
     }
