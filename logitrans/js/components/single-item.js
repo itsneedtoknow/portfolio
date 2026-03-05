@@ -1,7 +1,7 @@
 import { createElement } from "../utils/dom.js";
 
-export async function renderPreviewCard(JSON) {
-   return JSON.map(item => {
+export async function renderPreviewCard(item) {
+//    return JSON.map(item => {
         let cardItem = createElement('div', 'single-item');
 // img
         if(item.img){
@@ -27,7 +27,7 @@ export async function renderPreviewCard(JSON) {
                 cardTitleLink.href = item.link;
                 cardTitleLink.textContent = item.title;
 
-                let cardTitleDate = createElement('span');
+                let cardTitleDate = createElement('span', 'date');
                 cardTitleDate.textContent = item.date;
 
                 cardTitle.append(cardTitleLink, cardTitleDate);
@@ -54,7 +54,7 @@ export async function renderPreviewCard(JSON) {
             }
             
                return cardItem;
-    });
+    // });
 
 
 }

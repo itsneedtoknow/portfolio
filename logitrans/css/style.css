@@ -203,15 +203,16 @@
     gap: 16px;
  }
  .news .single-item__content{
-    align-items: center;
+  flex-direction: column;
  }
  .news .single-item__title,
- .news-all .single-item__title{
+ .news-all .single-item__title,
+ .news .single-item .content__title{
   display: flex;
   flex-direction: column;
   gap: 4px;
  }
-  .news .single-item__title .header{
+  .news .single-item .content__title a{
     font-weight: 700;
   }
  
@@ -227,7 +228,7 @@
     padding-top: 21px;
     padding-bottom: 16px;
   }
-  .news .single-item__title .date,
+  .news .single-item .date,
   .lenta__list .single-item__title .date{
     font-size: 12px;
     font-weight: 400;
