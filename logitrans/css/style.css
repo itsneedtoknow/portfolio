@@ -211,6 +211,8 @@
  }
  .news .single-item__content{
   flex-direction: column;
+  justify-content: center;
+    padding: 8px 0;
  }
  .news .single-item__title,
  .news-all .single-item__title,
