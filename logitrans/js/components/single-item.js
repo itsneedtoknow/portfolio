@@ -23,19 +23,27 @@ export async function renderPreviewCard(item) {
             if(item.title){
                 let cardTitle = createElement('h3', 'content__title');
 
-                let cardTitleLink = createElement('a');
+                let cardTitleLink;
+
+                if(item.link){
+                cardTitleLink = createElement('a');
                 cardTitleLink.href = item.link;
                 cardTitleLink.textContent = item.title;
+                cardTitle.append(cardTitleLink)
+                }else{
+                    cardTitle.textContent = item.title;
+                }
+
 
                 let cardTitleDate = createElement('span', 'date');
                 cardTitleDate.textContent = item.date;
 
-                cardTitle.append(cardTitleLink, cardTitleDate);
+                cardTitle.append(cardTitleDate);
                 cardContentWrapper.append(cardTitle)
             }
 // intro-text
             if(item.intro){
-                let cardIntro = createElement('div', 'single-item__description');
+                let cardIntro = createElement('div', 'content__description');
 
                 cardIntro.textContent = item.intro;
 
