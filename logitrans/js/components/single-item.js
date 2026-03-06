@@ -6,7 +6,7 @@ export async function renderPreviewCard(item) {
 // img
         if(item.img){
             let cardImgWrapper = createElement('div', 'single-item__image');
-            let cardImg = createElement('img', 'single-item__image');
+            let cardImg = createElement('img', '');
 
             cardImg.src = item.img;
             cardImg.alt = item.title;
@@ -24,6 +24,7 @@ export async function renderPreviewCard(item) {
                 let cardTitle = createElement('h3', 'content__title');
 
                 let cardTitleLink;
+                let cardTitleDate
 
                 if(item.link){
                 cardTitleLink = createElement('a');
@@ -34,11 +35,11 @@ export async function renderPreviewCard(item) {
                     cardTitle.textContent = item.title;
                 }
 
-
-                let cardTitleDate = createElement('span', 'date');
+                if(item.date){
+                cardTitleDate = createElement('span', 'date');
                 cardTitleDate.textContent = item.date;
-
                 cardTitle.append(cardTitleDate);
+                }
                 cardContentWrapper.append(cardTitle)
             }
 // intro-text

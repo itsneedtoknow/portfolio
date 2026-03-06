@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Контейнерные перевозки опасных грузов",
+    "img": "./images/img/cargo_1.jpg",
+    "link": "product-details.html"
+  },
+  {
+    "title": "Контейнерные перевозки наливных грузов",
+    "img": "./images/img/cargo_2.jpg",
+    "link": "product-details.html"
+  },
+  {
+    "title": "Контейнерные перевозки грузов с температурным режимом",
+    "img": "./images/img/cargo_3.jpg",
+    "link": "product-details.html"
+  }
+]

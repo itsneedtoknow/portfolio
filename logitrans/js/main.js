@@ -4,6 +4,7 @@ import { LoadJSON } from "./utils/api.js";
 import { renderAbout } from "./modules/about.js";
 import { renderMainNews } from "./modules/news.js";
 import { renderBenefits } from "./modules/benefits.js";
+import { renderProducts } from "./modules/products.js";
 
 
 async function init() {
@@ -35,7 +36,6 @@ async function init() {
         let benefitsContainer = document.querySelector('.benefits-block');
         let benefits = await renderBenefits();
         benefitsContainer.append(benefits);
-
 
         // --- Intersection Observer (Анимация при скролле) ---
         //         let carsCount = document.querySelector('.benefit-item.accent .single-item__title')
@@ -94,6 +94,10 @@ async function init() {
 
     }, 100);
   
+    // PRODUCTS BANNERS
+    let productsTitle = document.querySelector('.products-block h2');
+    let products = await renderProducts();
+    productsTitle.after(products)
     } catch (e) {
         console.error("Ошибка в init:", e);
     }

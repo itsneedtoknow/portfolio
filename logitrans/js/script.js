@@ -29,22 +29,22 @@ document.addEventListener('DOMContentLoaded', function(){
 //     easing: 'ease',
 //     arrows: true,
 //   });
-  $('.products .banner-links').slick({
-    infinite: true,
-    slidesToShow: 2,
-    autoplay: true,
-    slidesToScroll: 2,
-    easing: 'ease',
-    arrows: true,
-    responsive:[
-      {
-        breakpoint: 870,
-        settings:{
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        }
-    }]
-  });
+  // $('.products .banner-links').slick({
+  //   infinite: true,
+  //   slidesToShow: 2,
+  //   autoplay: true,
+  //   slidesToScroll: 2,
+  //   easing: 'ease',
+  //   arrows: true,
+  //   responsive:[
+  //     {
+  //       breakpoint: 870,
+  //       settings:{
+  //         slidesToShow: 1,
+  //         slidesToScroll: 1,
+  //       }
+  //   }]
+  // });
 
   $('.services .services__list').slick({
     infinite: true,
@@ -572,12 +572,6 @@ registrationForm.addEventListener('submit', submitForm);
     }
     )
 
-document.addEventListener("DOMContentLoaded", function(){
-  
-
-  
-
-});
 
 
 
