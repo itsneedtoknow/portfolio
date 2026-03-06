@@ -59,5 +59,6 @@ export function renderHeader(menuItems) {
             </nav>
         </div>
     `;
-    document.body.prepend(header);
+    return header
+    // document.body.prepend(header);
 }

@@ -8,7 +8,6 @@ export async function renderMainNews(){
     let newsCardsContainer = createElement('ul', 'news__list');
 
     let newsData = await LoadJSON('./data/news.json');
-    console.log(newsData);
     
     for(let item of newsData){
        let card = await renderPreviewCard(item);

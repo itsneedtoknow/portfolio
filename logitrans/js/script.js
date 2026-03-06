@@ -572,8 +572,12 @@ registrationForm.addEventListener('submit', submitForm);
     }
     )
 
+document.addEventListener("DOMContentLoaded", function(){
+  
 
-    
+  
+
+});
 
 
 

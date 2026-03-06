@@ -22,7 +22,7 @@ export async function renderAbout(){
         let aboutInformation = await LoadJSON('./data/about.json');
         aboutDescriptionWrapper.innerHTML=`<div class="content__text">
                             <h2 class="about__title single-item__title">${aboutInformation.title}</h2>
-                            <div class="single-item__description">
+                            <div class="content__description">
                                 <p>${aboutInformation.description}</p>
                                     <!-- Контакты -->
                                     <ul class="contacts about__contacts">

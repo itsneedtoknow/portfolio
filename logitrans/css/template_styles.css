@@ -111,14 +111,24 @@ body h4{
   font-weight: 400;
 }
 body h2{
-  font-size: 3rem;
+  font-size: 2.6rem;
   font-style: normal;
-  font-weight: 400;
-  line-height: 68px; /* 141.667% */
-  letter-spacing: -0.1.5rem;
+  font-weight: 600;
+  line-height: 4.25rem;
   text-transform: uppercase;
 }
-
+section h2{
+  color: var(--neitral-2);
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  width: 100%;
+}
+main section h2{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
 form input:not(input.btn){
   border: 1px solid var(--Neitral--1);
   padding: 16px 12px 16px 1rem;
@@ -128,9 +138,6 @@ form input:not(input.btn){
   color: var(--neitral-1);
 }
 section.about{
-  /* margin-bottom: 2rem;
-  margin-top: 2rem; */
-  /* margin-bottom: 0;*/
     padding-top: 2rem; 
 }
 section.page{
@@ -304,6 +311,7 @@ background: transparent;
 .single-item{
   transition: 0.4 ease;
 }
+
 .single-item,
 .item__content,
 .content__text,
