@@ -26,7 +26,7 @@
       .gallery-block .slick-list{
         width: 760px;
       }
-      .products .benefits .single-item{
+      .auto-block .single-item{
   max-width: 477px;
   min-width: 300px;
     width: 100%;
@@ -68,7 +68,7 @@
     .products .container-wrapper{
         flex-direction: column;
     }
-    .products .benefits{
+    .auto-block{
         flex-direction: row;
         width: 100%;
     }
@@ -106,7 +106,7 @@
       .about .single-item .slider{
 max-width: unset;
       }
-      .products .benefits .single-item{
+      .auto-block .single-item{
   max-width: 50%;
   min-width: 300px;
     width: 100%;
@@ -543,11 +543,11 @@ max-width: unset;
         padding-bottom: 17px;
     }
     section{padding-top: 16px}
-    .products .benefits{
+    .auto-block{
         flex-direction: column;
         width: 100%;
     }
-    .products .benefits .single-item{
+    .auto-block .single-item{
         max-width: unset;
     }
     .departments .buttons{
@@ -882,21 +882,21 @@ max-width: unset;
     
   }
   .products .container-wrapper,
-  .products .benefits{
+  .auto-block{
     gap: 1rem;
   }
   .products .buttons{
     margin-bottom: 0.5rem;
   }
-  .products .benefits .single-item__image{
+  .auto-block .single-item__image{
     width: 129px;
     height: 129px;
     flex-shrink: 0;
   }
-  .products .benefits .single-item{
+  .auto-block .single-item{
     height: 161px;
   }
-  .products .benefits .single-item__title{
+  .auto-block .single-item__title{
     font-size: 0.875rem;
     font-weight: 800;
     line-height: 18px;

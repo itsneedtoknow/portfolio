@@ -1,0 +1,22 @@
+[
+    {
+        "title": "Низкорамные площадки",
+        "img": "./images/img/truck_4_active.svg"
+    },
+    {
+        "title": "Мегатрейлеры и стандартные полуприцепы",
+        "img": "./images/img/truck_2_active.svg"
+    },
+    {
+        "title": "Рефрижераторные полуприцепы",
+        "img": "./images/img/truck_3_active.svg"
+    },
+    {
+        "title": "Длинномерные полуприцепы",
+        "img": "./images/img/truck_5_active.svg"
+    },
+    {
+        "title": "Полуприцепы Double‑Deck",
+        "img": "./images/img/truck_1_active.svg"
+    }
+]

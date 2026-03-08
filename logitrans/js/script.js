@@ -121,7 +121,10 @@ document.addEventListener('DOMContentLoaded', function(){
     arrows: true,
     
   });
+  
 })
+
+
 // Яндекс Карта (использован API ключ с сайта https://roo.mozyrroo.by/)
   ymaps.ready(init);
 

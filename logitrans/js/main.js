@@ -5,7 +5,7 @@ import { renderAbout } from "./modules/about.js";
 import { renderMainNews } from "./modules/news.js";
 import { renderBenefits } from "./modules/benefits.js";
 import { renderProducts } from "./modules/products.js";
-
+import { renderAuto } from "./modules/auto.js";
 
 async function init() {
     try {
@@ -98,6 +98,25 @@ async function init() {
     let productsTitle = document.querySelector('.products-block h2');
     let products = await renderProducts();
     productsTitle.after(products)
+
+    // AUTOPARK
+    let autoparkContainer = document.querySelector('.auto-block');
+    let auto = await renderAuto();
+    autoparkContainer.append(auto)
+    // Инициализация слайдера (Slick)
+        $('.auto__list').slick({
+            vertical: true,
+            verticalSwiping: true,
+            slidesToShow: 2,
+            autoplay: false,
+            arrows: false,
+            draggable: true,
+            swipeToSlide: true
+        });
+        let autoItems = Array.from(document.querySelectorAll('.auto-block .single-item'));
+
+
+       
     } catch (e) {
         console.error("Ошибка в init:", e);
     }
