@@ -6,6 +6,7 @@ import { renderMainNews } from "./modules/news.js";
 import { renderBenefits } from "./modules/benefits.js";
 import { renderProducts } from "./modules/products.js";
 import { renderAuto } from "./modules/auto.js";
+import { renderServices } from "./modules/services.js";
 
 async function init() {
     try {
@@ -115,6 +116,34 @@ async function init() {
         });
         let autoItems = Array.from(document.querySelectorAll('.auto-block .single-item'));
 
+        // SERVICES
+        let services = await renderServices();
+        let servicesTitle = document.querySelector('.services h2');
+        servicesTitle.after(services);
+
+         $('.services .services__list').slick({
+    infinite: true,
+    slidesToShow: 3,
+    autoplay: true,
+    slidesToScroll: 1,
+    easing: 'ease',
+    arrows: true,
+    responsive:[
+      {
+        breakpoint: 992,
+        settings:{
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        }
+      },
+        {
+          breakpoint: 620,
+          settings:{
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          }
+    }]
+  });
 
        
     } catch (e) {

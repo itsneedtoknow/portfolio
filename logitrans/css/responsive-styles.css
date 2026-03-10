@@ -462,7 +462,7 @@ max-width: unset;
         width: 40px;
         padding: 0.5rem;
     }
-    .services .single-item__title{
+    .services .content__title{
         font-size: 20px !important;
         line-height: 32px !important;
     }

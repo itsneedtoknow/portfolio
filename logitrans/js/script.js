@@ -46,29 +46,7 @@ document.addEventListener('DOMContentLoaded', function(){
   //   }]
   // });
 
-  $('.services .services__list').slick({
-    infinite: true,
-    slidesToShow: 3,
-    autoplay: true,
-    slidesToScroll: 1,
-    easing: 'ease',
-    arrows: true,
-    responsive:[
-      {
-        breakpoint: 992,
-        settings:{
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        }
-      },
-        {
-          breakpoint: 620,
-          settings:{
-            slidesToShow: 1,
-            slidesToScroll: 1,
-          }
-    }]
-  });
+ 
   $('.activities .achievements__list').slick({
     infinite: true,
     slidesToShow: 1,

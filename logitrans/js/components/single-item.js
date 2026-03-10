@@ -7,11 +7,22 @@ export async function renderPreviewCard(item) {
         if(item.img){
             let cardImgWrapper = createElement('div', 'single-item__image');
             let cardImg = createElement('img', '');
+            let cardImgLink=createElement('a');
 
             cardImg.src = item.img;
             cardImg.alt = item.title;
 
+            if(item.link){
+                cardImgLink.href = item.link;
+                cardImgLink.append(cardImg);
+                cardImgWrapper.append(cardImgLink)
+                
+            }else{
+            
             cardImgWrapper.append(cardImg);
+            
+            }
+            // cardImgWrapper.append(cardImg);
             cardItem.append(cardImgWrapper);
 
         }
