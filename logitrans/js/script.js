@@ -55,41 +55,7 @@ document.addEventListener('DOMContentLoaded', function(){
     easing: 'ease',
     arrows: true,
   });
-  $('.partners .partners__list').slick({
-    infinite: true,
-    slidesToShow: 6,
-    autoplay: true,
-    slidesToScroll: 1,
-    easing: 'ease',
-    arrows: false,
-    dots: true,
-    responsive:[
-      {
-        breakpoint: 1340,
-        settings:{
-          slidesToShow: 5,
-        }
-      },
-        {
-          breakpoint: 1160,
-          settings:{
-            slidesToShow: 4,
-          }
-    },
-    {
-      breakpoint: 870,
-      settings:{
-        slidesToShow: 3,
-      }
-    },
-    {
-      breakpoint: 640,
-      settings:{
-        slidesToShow: 1,
-      }
-    },
-   ]
-  });
+  
   $('.gallery-slider').slick({
     infinite: true,
     slidesToShow: 1,
@@ -103,8 +69,9 @@ document.addEventListener('DOMContentLoaded', function(){
 })
 
 
-// Яндекс Карта (использован API ключ с сайта https://roo.mozyrroo.by/)
-  ymaps.ready(init);
+// Яндекс Карта
+setTimeout(()=>{
+ymaps.ready(init);
 
     function init() {
         var myMap = new ymaps.Map ('myMap', {
@@ -177,6 +144,8 @@ document.addEventListener('DOMContentLoaded', function(){
         console.error('Ошибка загрузки:', err);
       }
     }
+}, 1000)
+  
     
     document.addEventListener('DOMContentLoaded', function(){
 

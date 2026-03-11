@@ -7,6 +7,7 @@ import { renderMainNews } from "./modules/news.js";
 import { createElement } from "./utils/dom.js";
 import { renderPreviewCard } from "./components/single-item.js";
 import { createSection } from "./utils/section.js";
+import { renderFooter } from "./components/footer.js";
 
 let sections = [
     {
@@ -51,20 +52,36 @@ let sections = [
         "dataURL": "./data/departments.json",
         "wrapperClass": ".departments-wrapper"
     },
+    {
+        "tagname": "ul",
+        "className": "partners__list",
+        "dataURL": "./data/partners.json",
+        "wrapperClass": ".partners-wrapper"
+    },
 ]
 
 async function init() {
     try {
-        createSection(sections);
+        setTimeout(()=>{
+for(let sectionItem of sections){
+            let tagName = sectionItem.wrapperClass;
+            if(document.querySelector(tagName)){
+                createSection(sectionItem);
+            }
+        }
+        }, 1000)
+        
+        
+        
         let menuItems = await LoadJSON('./data/menu.json');
         let header = renderHeader(menuItems);
         document.body.prepend(header);
         
         let aboutSectionContainer = document.querySelector('#about');
+        if(aboutSectionContainer){
         let aboutSection = await renderAbout();
         aboutSectionContainer.append(aboutSection);
-
-
+        }
         // Инициализация слайдера (Slick)
         $('.about .slider').slick({
             infinite: true,
@@ -150,8 +167,13 @@ async function init() {
 
          let allProducts = document.querySelectorAll('.banners__list .single-item');
          let allRoutes = document.querySelectorAll('.routes__list .single-item');
+         let allPartners = document.querySelectorAll('.partners__list .single-item');
+         if(allProducts || allRoutes || allPartners){
             removeBtn(allProducts);
             removeBtn(allRoutes);
+            removeBtn(allPartners);
+         }
+
     }, 1000);
   
     
@@ -240,8 +262,48 @@ $('.banners__list').slick({
             }
         ]
         });
-       
-    }, 1000)
+    //    PARTNERS
+    $('.partners .partners__list').slick({
+    infinite: true,
+    slidesToShow: 6,
+    autoplay: true,
+    slidesToScroll: 1,
+    easing: 'ease',
+    arrows: false,
+    dots: true,
+    responsive:[
+      {
+        breakpoint: 1340,
+        settings:{
+          slidesToShow: 5,
+        }
+      },
+        {
+          breakpoint: 1160,
+          settings:{
+            slidesToShow: 4,
+          }
+    },
+    {
+      breakpoint: 870,
+      settings:{
+        slidesToShow: 3,
+      }
+    },
+    {
+      breakpoint: 640,
+      settings:{
+        slidesToShow: 1,
+      }
+    },
+   ]
+  });
+  
+    }, 2000)
+
+    let footer = document.querySelector('footer');
+    let footerContent = await renderFooter();
+    footer.append(footerContent);
     } catch (e) {
         console.error("Ошибка в init:", e);
     }

@@ -1,0 +1,44 @@
+[
+    {
+        "title": "Maersk",
+        "titleTag": "p",
+        "link": "#",
+        "img": "./images/img/partner-1.png"
+    },
+    {
+        "title": "TLS",
+        "titleTag": "p",
+        "link": "#",
+        "img": "./images/img/partner-2.png"
+    },
+    {
+        "title": "Grada logistics",
+        "titleTag": "p",
+        "link": "#",
+        "img": "./images/img/partner-3.png"
+    },
+    {
+        "title": "Unistore",
+        "titleTag": "p",
+        "link": "#",
+        "img": "./images/img/partner-.png"
+    },
+    {
+        "title": "MSC",
+        "titleTag": "p",
+        "link": "#",
+        "img": "./images/img/partner-.jpg"
+    },
+    {
+        "title": "БелДорТяжТранс",
+        "titleTag": "p",
+        "link": "#",
+        "img": "./images/img/partner-7.png"
+    },
+    {
+        "title": "Светлогорский целлюлозно-картонный комбинат",
+        "titleTag": "p",
+        "link": "#",
+        "img": "./images/img/partner-8.png"
+    }
+]

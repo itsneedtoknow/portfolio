@@ -376,7 +376,7 @@
         flex-direction: column-reverse;
     }
     header .header__logo{
-        height: 8rem;
+        height: 6rem;
     }
     header .header__options .search{
         position: absolute;
