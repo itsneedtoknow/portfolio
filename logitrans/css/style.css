@@ -424,12 +424,12 @@
 }
 
 @media(hover: hover){
-    .banners__wrapper:hover .banners__list {
+    .banners-wrapper:hover .banners__list {
     animation-play-state: paused;
 }
 }
 @media(hover: none){
-    .banners__wrapper:active .banners__list {
+    .banners-wrapper:active .banners__list {
     animation-play-state: paused;
 }
 }
@@ -698,10 +698,6 @@
       max-width: 100%;
       width: 100%;
     }
-    /* img{
-      max-width: 100%;
-      object-fit: cover;
-    } */
 }
 .routes__list .single-item:hover{
   box-shadow: none;
@@ -756,12 +752,6 @@
   padding-top: 1rem;
 }
 
-/* .departments .department-block .single-item .single-item__content{
-  max-width: 330px;
-} */
-.department-block:first-child .services__list .single-item{
-  /* width: 485px; */
-}
 .department-block:first-child .services__list .single-item,
 .inner-page .department-page .services__list .single-item,
 .inner-page .departments__list .single-item {
@@ -791,7 +781,6 @@
 .activities .block-header{
   color: var(--neitral-2);
   text-align: center;
-  /* Заголовок 4 */
   font-family: "Syncopate", sans-serif;
   font-size: 1.5rem;
   font-weight: 400;

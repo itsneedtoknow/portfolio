@@ -32,7 +32,7 @@ export async function renderPreviewCard(item) {
             let cardContentWrapper = createElement('div', 'single-item__content content');
 // title
             if(item.title){
-                let cardTitle = createElement('h3', 'content__title');
+                let cardTitle = createElement(item.titleTag ? item.titleTag : 'div', 'content__title');
 
                 let cardTitleLink;
                 let cardTitleDate

@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Отдел логистики и транспортировки",
+    "titleTag": "h5",
+    "link": "department-details.html",
+    "img": "./images/img/department-1.jpg"
+  },
+  {
+    "title": "Отдел клиентской поддержки",
+    "titleTag": "h5",
+    "link": "department-details.html",
+    "img": "./images/img/department-2.jpg"
+  },
+  {
+    "title": "Отдел международных перевозок",
+    "titleTag": "h5",
+    "link": "department-details.html",
+    "img": "./images/img/department-3.jpg"
+  },
+  {
+    "title": "Отдел складской логистики",
+    "titleTag": "h5",
+    "link": "department-details.html",
+    "img": "./images/img/department-4.jpg"
+  },
+  {
+    "title": "Отдел IT и инноваций",
+    "titleTag": "h5",
+    "link": "department-details.html",
+    "img": "./images/img/department-5.jpg"
+  },
+  {
+    "title": "Отдел маркетинга и продаж",
+    "titleTag": "h5",
+    "link": "department-details.html",
+    "img": "./images/img/technical-information.png"
+  }
+]

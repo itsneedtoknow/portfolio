@@ -1,41 +1,49 @@
 [
   {
     "title": "Сборные перевозки",
+    "titleTag": "h3",
     "img": "./images/img/dostavka_sbornih_gruzov-main.jpg",
     "link": "transportation-details.html"
   },
   {
     "title": "Автомобильные перевозки",
+    "titleTag": "h3",
     "img": "./images/img/dostavka_sbornih_gruzov-main.jpg",
     "link": "transportation-details.html"
   },
   {
     "title": "Контейнерные перевозки",
+    "titleTag": "h3",
     "img": "./images/img/konteinernie_gruzoperevozki_main.jpg",
     "link": "transportation-details.html"
   },
   {
     "title": "Морские перевозки",
+    "titleTag": "h3",
     "img": "./images/img/morskie_perevozki.jpg",
     "link": "transportation-details.html"
   },
   {
     "title": "Авиа перевозки",
+    "titleTag": "h3",
     "img": "./images/img/vozdushnie_perevozki.jpg",
     "link": "transportation-details.html"
   },
   {
     "title": "Мультимодальные перевозки",
+    "titleTag": "h3",
     "img": "./images/img/multimodalnie_perevozki.jpg",
     "link": "transportation-details.html"
   },
   {
     "title": "Негабаритные перевозки",
+    "titleTag": "h3",
     "img": "./images/img/dostavka_krupnogabaritnih_gruzov-main.jpg",
     "link": "transportation-details.html"
   },
   {
     "title": "Железнодорожные перевозки",
+    "titleTag": "h3",
     "img": "./images/img/perevozka_jd.jpg",
     "link": "transportation-details.html"
   }

@@ -45,7 +45,12 @@ let sections = [
         "dataURL": "./data/routes.json",
         "wrapperClass": ".routes-wrapper"
     },
-
+    {
+        "tagname": "ul",
+        "className": "departments__list",
+        "dataURL": "./data/departments.json",
+        "wrapperClass": ".departments-wrapper"
+    },
 ]
 
 async function init() {

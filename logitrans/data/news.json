@@ -3,6 +3,7 @@
     "id": 1,
     "img": "./images/img/news_logistics.jpg",
     "title": "Участие в международном форуме «Цифровая логистика 2024»",
+    "titleTag": "h3",
     "link": "news-details.html",
     "date": "15.06.2024",
     "intro": [
@@ -14,6 +15,7 @@
     "id": 2,
     "img": "./images/img/news_training.jpg",
     "title": "Повышение квалификации: тренинг по управлению цепочками поставок",
+    "titleTag": "h3",
     "link": "news-details.html",
     "date": "02.06.2024",
     "intro": [
@@ -25,6 +27,7 @@
     "id": 3,
     "img": "./images/img/news_eco.jpg",
     "title": "Запуск экологической инициативы «Green Delivery»",
+    "titleTag": "h3",
     "link": "news-details.html",
     "date": "22.05.2024",
     "intro": [

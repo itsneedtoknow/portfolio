@@ -1,21 +1,25 @@
 [
     {
         "title": "Страны СНГ",
+        "titleTag": "h5",
         "link": "product-details.html",
         "img": "./images/img/route_2.png"
     },
     {
         "title": "Европа",
+        "titleTag": "h5",
         "link": "product-details.html",
         "img": "./images/img/route_1.png"
     },
     {
         "title": "Америка",
+        "titleTag": "h5",
         "link": "product-details.html",
         "img": "./images/img/route_4.png"
     },
     {
         "title": "Азия",
+        "titleTag": "h5",
         "link": "product-details.html",
         "img": "./images/img/route_3.png"
     }
