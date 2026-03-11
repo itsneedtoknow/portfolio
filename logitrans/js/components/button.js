@@ -26,8 +26,11 @@ export function renderBtn(
     if (dataModal){
         btn.dataset.modal = dataModal;
     } 
-    if(icon || text){
-        btn.innerHTML=`<img src=${icon}>${text}`
+    if (icon || text) {
+        btn.innerHTML = `
+            ${icon ? `<img src="${icon}" alt="">` : ''}
+            ${text ? `<span>${text}</span>` : ''}
+        `.trim();
     }
     return btn;
 }

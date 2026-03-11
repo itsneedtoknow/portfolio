@@ -38,9 +38,9 @@ export async function renderAbout(){
         `
         let calendarBtn = renderBtn({
             tagName: 'button',
-            className: 'button button--secondary button--icon button--open-modal',
-            icon: './images/icons/calendar.svg',
-            text: 'Мероприятия'
+            className: 'button button--primary button--open-modal',
+            icon: '',
+            text: 'Запрос ставки'
         })
 
         aboutDescriptionWrapper.querySelector('.content__buttons').append(calendarBtn);

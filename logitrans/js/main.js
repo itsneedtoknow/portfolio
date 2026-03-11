@@ -74,8 +74,20 @@ async function init() {
             speed: 5000,
             easing: 'ease',
             arrows: true,
+            responsive:[
+                {
+                breakpoint: 768,
+                settings:{
+                        swipeToSlide: true,
+                        draggable: true,
+                        autoplay: false,
+                        speed: 2000
+                }
+            }
+        ]
         });
 
+        
         // Наши преимущества
         
         setTimeout(() => {
@@ -155,7 +167,33 @@ async function init() {
                     autoplay: false,
                     arrows: false,
                     draggable: true,
-                    swipeToSlide: true
+                    swipeToSlide: true,
+                    responsive:[
+                        {
+                            breakpoint: 992,
+                            settings:{
+                                vertical: false,
+                                verticalSwiping: false,
+                                slidesToShow: 3,
+                            }
+                        },
+                        {
+                            breakpoint: 640,
+                            settings:{
+                                vertical: false,
+                                verticalSwiping: false,
+                                slidesToShow: 2,
+                            }
+                        },
+                        {
+                            breakpoint: 500,
+                            settings:{
+                                vertical: false,
+                                verticalSwiping: false,
+                                slidesToShow: 1.5,
+                            }
+                        }
+                    ]
                 });
 
         // SERVICES
@@ -182,7 +220,26 @@ async function init() {
                 }
             }]
         });
-
+$('.banners__list').slick({
+            infinite: true,
+            slidesToShow: 2.5,
+            autoplay: true,
+            speed: 5000,
+            easing: 'ease',
+            arrows: false,
+            responsive:[
+                {
+                breakpoint: 1350,
+                settings:{
+                        slidesToShow: 2,
+                },
+                 breakpoint: 640,
+                settings:{
+                        slidesToShow: 1,
+                }
+            }
+        ]
+        });
        
     }, 1000)
     } catch (e) {

@@ -368,23 +368,41 @@ document.addEventListener('DOMContentLoaded', function(){
 });
       });
       
-      // МОБИЛЬНАЯ ФОРМА ПОИСКА
-    let searchBtn = document.querySelector('.btn-search');
-    let searchform = document.querySelector('.search');
-
-
+     
 
     function checkWidth() {
       let windowWidth = jQuery("body").innerWidth();
 
       if (windowWidth < 992) {
         // перепозиционирование формы поиска в мобильной версии
-        document.querySelector('.mobile-search').appendChild(searchform);
-        searchform.querySelector('button').textContent = 'Искать';
-        searchform.classList.add('mobile');
+        // document.querySelector('.mobile-search').appendChild(searchform);
+        // searchform.querySelector('button').textContent = 'Искать';
+        // searchform.classList.add('mobile');
         // searchform.style.left='-9999px';
 
         
+ // МОБИЛЬНАЯ ФОРМА ПОИСКА
+    
+setTimeout(()=>{
+let searchBtn = document.querySelector('.btn-search');
+        let searchform = document.querySelector('.search');
+
+        console.log(searchBtn)
+// открытие мобильной формы поиска
+searchBtn.addEventListener('click',function(){
+  searchBtn.classList.add('hidden');
+  searchform.querySelector('.search-form').classList.add('open');
+})
+
+// закрытие мобильной формы поиска
+  jQuery(document).on("click", function (e) {
+    if (!jQuery(e.target).closest(searchBtn).length && !jQuery(e.target).closest(".search").length) {
+      searchBtn.classList.remove('hidden');
+      searchform.querySelector('.search-form').classList.remove('open');
+  }
+  })
+}, 1000)
+  
         // динамическое позиционирование внизу бокового меню внутренних страниц в мобильной версии
           if(document.querySelector('.grid-and-form') || document.querySelector('.lenta-and-form')){
 
@@ -407,8 +425,8 @@ document.addEventListener('DOMContentLoaded', function(){
         
       }else{
          // перепозиционирование формы поиска в десктопной версии
-        searchform.classList.remove('mobile')
-        searchform.querySelector('button').textContent = '';
+        // searchform.classList.remove('mobile')
+        // searchform.querySelector('button').textContent = '';
         // searchform.style.left = '0';
         document.querySelector('.social').after(searchform);
 
@@ -490,19 +508,7 @@ $(document).click(function(event) {
 
 
 
-// открытие мобильной формы поиска
-searchBtn.addEventListener('click',function(){
-  searchBtn.classList.add('hidden');
-  searchform.querySelector('.search-form').classList.add('open');
-})
 
-// закрытие мобильной формы поиска
-  jQuery(document).on("click", function (e) {
-    if (!jQuery(e.target).closest(searchBtn).length && !jQuery(e.target).closest(".search").length) {
-      searchBtn.classList.remove('hidden');
-      searchform.querySelector('.search-form').classList.remove('open');
-  }
-  })
 const registrationForm = document.getElementById('conferenceForm')
 
 function validateForm(formData) {
