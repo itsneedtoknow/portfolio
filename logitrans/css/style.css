@@ -289,7 +289,7 @@
   /* --------------
     BENEFITS MAIN
   ---------- */
-   .main-news .benefits{
+   .main-news .benefits__list{
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -300,34 +300,34 @@
    max-width: 466px;
     width: 100%;
 }
-   .main-news .benefits .benefit-item .content__title{
+   .main-news .benefits-block .single-item .content__title{
     border-bottom: 1px solid var(--Neitral--1);
     padding-bottom: 0.75rem;
     padding-top: 1rem;
     width: 100%;
   }
-  .main-news .benefit-item.single-item:nth-child(odd){
+  .main-news .benefits-block .single-item:nth-child(odd){
       background: #b02f41 !important;
       *{
         color: #fff;
     }
   }
-  .main-news .benefit-item{
+  .main-news .benefits__list .single-item{
     min-height: 170px;
   }
-  .main-news .benefit-item.single-item:nth-child(even){
+  .main-news .benefits__list .single-item.single-item:nth-child(even){
     background: #4d545a !important;
     *{
       color: #fff;
     }
   }
-  .main-news .benefits .benefit-item .single-item__title{
+  .main-news .benefits-block .single-item .single-item__title{
     padding-left: 1rem;
   }
   .main-news .benefits .buttons{
     margin-bottom: 0;
   }
-   .main-news .benefits .benefit-item .content__description{
+   .main-news .benefits .single-item .content__description{
     padding-top: 0.75rem;
   }
    .main-news .benefits .single-item{
@@ -365,11 +365,11 @@
     font-weight: 400;
     line-height: 2rem;
   }
-  .main-news .benefits .benefit-item:nth-child(2) .content__text{
+  .main-news .benefits .single-item:nth-child(2) .content__text{
     gap: 1rem;
     justify-content: center;
   }
-   .main-news .benefits .benefit-item:nth-child(2) .buttons{
+   .main-news .benefits .single-item:nth-child(2) .buttons{
     position: absolute;
     bottom: 1rem;
     left: 1rem;
@@ -398,7 +398,7 @@
     background: var(--Neitral--3);
     padding-bottom: 1rem;
   }
-  .banners__wrapper{
+  .banners-wrapper{
     overflow: hidden;
     white-space: nowrap;
     box-sizing: border-box;
@@ -456,7 +456,9 @@
     width: 100%;
   }
   .banners__list .content__title,
-  .banners__list .content__title a{
+  .banners__list .content__title a,
+  .routes__list .content__title,
+  .routes__list .content__title a{
     font-size: 1.5rem;
     font-weight: 700;
     line-height: 2rem;
@@ -507,7 +509,7 @@
     height: 21.5rem;
     min-height: 21.5rem;
   }
-  .auto-block{
+  .auto-wrapper{
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -682,7 +684,57 @@
     /* padding-top: 40px; */
     padding-bottom: 2rem;
 }
-/* .departments .container-wrapper, */
+/* ----ROUTES
+------------ */
+.routes__list .single-item{
+    height: 350px;
+    flex: 1 1 25%;
+    position: relative;
+    filter: lightgray;
+    filter: grayscale(1);
+    -webkit-filter: grayscale(1);
+    transition: 0.4s;
+    .single-item__image{
+      max-width: 100%;
+      width: 100%;
+    }
+    /* img{
+      max-width: 100%;
+      object-fit: cover;
+    } */
+}
+.routes__list .single-item:hover{
+  box-shadow: none;
+  filter: none;
+  flex-basis: 90%;
+  .content__title{
+    background: linear-gradient(to top, rgba(133, 133, 133, 0), rgba(255, 255, 255, 0));
+    transition: 0.4s;
+  }
+}
+.routes__list .content{
+  display: flex;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  .content__title,
+  .content__title a{
+    max-width: 100%;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    text-align: center;
+    text-transform: uppercase;
+    max-height: 100%;
+  }
+  .content__title{
+    padding: 1rem;
+    background: linear-gradient(to top, rgba(133, 133, 133, 0.8), rgba(255, 255, 255, 0.1));
+    transition: 0.4s;
+  }
+}
 .activities .container-wrapper{
     gap: 1rem;
 }
@@ -694,14 +746,7 @@
     flex-direction: column;
 }
 
-/* .department-block:first-child ul{
-    -moz-column-count: 2;
-    -webkit-column-count: 2;
-    column-count: 2;
-    column-gap: 1rem;
-} */
-.activities-block ul,
-.department-block:first-child ul{
+.activities-block ul{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     row-gap: 40px;
@@ -710,12 +755,10 @@
 .activities-block ul{
   padding-top: 1rem;
 }
-.department-block:first-child ul{
-    gap: 1rem;
-}
-.departments .department-block .single-item .single-item__content{
+
+/* .departments .department-block .single-item .single-item__content{
   max-width: 330px;
-}
+} */
 .department-block:first-child .services__list .single-item{
   /* width: 485px; */
 }

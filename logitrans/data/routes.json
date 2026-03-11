@@ -1,0 +1,22 @@
+[
+    {
+        "title": "Страны СНГ",
+        "link": "product-details.html",
+        "img": "./images/img/route_2.png"
+    },
+    {
+        "title": "Европа",
+        "link": "product-details.html",
+        "img": "./images/img/route_1.png"
+    },
+    {
+        "title": "Америка",
+        "link": "product-details.html",
+        "img": "./images/img/route_4.png"
+    },
+    {
+        "title": "Азия",
+        "link": "product-details.html",
+        "img": "./images/img/route_3.png"
+    }
+]

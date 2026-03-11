@@ -1,15 +1,56 @@
 import { renderHeader } from "./components/header.js";
 import { renderSlider } from "./components/slider.js"; 
 import { LoadJSON } from "./utils/api.js";
+import { removeBtn } from "./utils/removebtn.js";
 import { renderAbout } from "./modules/about.js";
 import { renderMainNews } from "./modules/news.js";
-import { renderBenefits } from "./modules/benefits.js";
-import { renderProducts } from "./modules/products.js";
-import { renderAuto } from "./modules/auto.js";
-import { renderServices } from "./modules/services.js";
+import { createElement } from "./utils/dom.js";
+import { renderPreviewCard } from "./components/single-item.js";
+import { createSection } from "./utils/section.js";
+
+let sections = [
+    {
+        "tagname": "ul",
+        "className": "news__list",
+        "dataURL": "./data/news.json",
+        "wrapperClass": ".news-wrapper"
+    },
+    {
+        "tagname": "ul",
+        "className": "benefits__list column",
+        "dataURL": "./data/benefits.json",
+        "wrapperClass": ".benefits-wrapper"
+    },
+    {
+        "tagname": "ul",
+        "className": "banners__list",
+        "dataURL": "./data/products.json",
+        "wrapperClass": ".banners-wrapper"
+    },
+    {
+        "tagname": "ul",
+        "className": "auto__list",
+        "dataURL": "./data/auto.json",
+        "wrapperClass": ".auto-wrapper"
+    },
+    {
+        "tagname": "ul",
+        "className": "services__list",
+        "dataURL": "./data/services.json",
+        "wrapperClass": ".services-wrapper"
+    },
+    {
+        "tagname": "ul",
+        "className": "routes__list f-row",
+        "dataURL": "./data/routes.json",
+        "wrapperClass": ".routes-wrapper"
+    },
+
+]
 
 async function init() {
     try {
+        createSection(sections);
         let menuItems = await LoadJSON('./data/menu.json');
         let header = renderHeader(menuItems);
         document.body.prepend(header);
@@ -18,9 +59,6 @@ async function init() {
         let aboutSection = await renderAbout();
         aboutSectionContainer.append(aboutSection);
 
-        let newsContainer = document.querySelector('.news-block');
-        let newsSection = await renderMainNews();
-        newsContainer.append(newsSection);
 
         // Инициализация слайдера (Slick)
         $('.about .slider').slick({
@@ -34,14 +72,16 @@ async function init() {
         });
 
         // Наши преимущества
-        let benefitsContainer = document.querySelector('.benefits-block');
-        let benefits = await renderBenefits();
-        benefitsContainer.append(benefits);
+        
+        setTimeout(() => {
+            let benefits = Array.from(document.querySelectorAll('.benefits .single-item')) ;
+            benefits.forEach(item=>{
+                
+                if(!isNaN(parseFloat(item.querySelector('.content__title').innerHTML)) && isFinite(item.querySelector('.content__title').innerHTML)){
+                    item.classList.add('count')
+                }
+            })
 
-        // --- Intersection Observer (Анимация при скролле) ---
-        //         let carsCount = document.querySelector('.benefit-item.accent .single-item__title')
-        // let serviceCount = document.querySelector('.benefit-item.dark .single-item__title')
-    setTimeout(() => {
         function count(el){
             let num = parseInt(el.innerHTML.replace(/\D/g, ''));
             let current = 0;
@@ -85,67 +125,61 @@ async function init() {
         };
 
         const observer = new IntersectionObserver(callback, options);
-
-       
-        let animatedBenefits = document.querySelectorAll('.benefit-item');
+        let animatedBenefits = document.querySelectorAll('.benefits .single-item');
 
         animatedBenefits.forEach((item) => {
             observer.observe(item);
         });
 
-    }, 100);
+         let allProducts = document.querySelectorAll('.banners__list .single-item');
+         let allRoutes = document.querySelectorAll('.routes__list .single-item');
+            removeBtn(allProducts);
+            removeBtn(allRoutes);
+    }, 1000);
   
-    // PRODUCTS BANNERS
-    let productsTitle = document.querySelector('.products-block h2');
-    let products = await renderProducts();
-    productsTitle.after(products)
+    
 
-    // AUTOPARK
-    let autoparkContainer = document.querySelector('.auto-block');
-    let auto = await renderAuto();
-    autoparkContainer.append(auto)
+    
     // Инициализация слайдера (Slick)
+    setTimeout(()=>{
+        // AUTOPARK
         $('.auto__list').slick({
-            vertical: true,
-            verticalSwiping: true,
-            slidesToShow: 2,
-            autoplay: false,
-            arrows: false,
-            draggable: true,
-            swipeToSlide: true
-        });
-        let autoItems = Array.from(document.querySelectorAll('.auto-block .single-item'));
+                    vertical: true,
+                    verticalSwiping: true,
+                    slidesToShow: 2,
+                    autoplay: false,
+                    arrows: false,
+                    draggable: true,
+                    swipeToSlide: true
+                });
 
         // SERVICES
-        let services = await renderServices();
-        let servicesTitle = document.querySelector('.services h2');
-        servicesTitle.after(services);
-
          $('.services .services__list').slick({
-    infinite: true,
-    slidesToShow: 3,
-    autoplay: true,
-    slidesToScroll: 1,
-    easing: 'ease',
-    arrows: true,
-    responsive:[
-      {
-        breakpoint: 992,
-        settings:{
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        }
-      },
-        {
-          breakpoint: 620,
-          settings:{
-            slidesToShow: 1,
+            infinite: true,
+            slidesToShow: 3,
+            autoplay: true,
             slidesToScroll: 1,
-          }
-    }]
-  });
+            easing: 'ease',
+            arrows: true,
+            responsive:[
+                {
+                    breakpoint: 992,
+                    settings:{
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    }
+                },
+                {
+                breakpoint: 620,
+                settings:{
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            }]
+        });
 
        
+    }, 1000)
     } catch (e) {
         console.error("Ошибка в init:", e);
     }
