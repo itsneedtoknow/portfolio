@@ -5,18 +5,18 @@ import { createElement } from "../utils/dom.js";
 import { renderBtn } from "../components/button.js";
 
 export async function renderAbout(){
-    const aboutWrapper = createElement('div', 'about__wrapper single-item f-row g-32');
-    const sliderContainer = createElement('div', 'single-item__image slider');
+    const aboutWrapper = createElement('div', 'about-wrapper single-item f-row g-32');
+    // const sliderContainer = createElement('div', 'single-item__image slider about__list');
     const aboutDescriptionWrapper = createElement('div', 'single-item__content content');
 
     // слайдер
-    let sliderData = await LoadJSON('./data/slider.json');
-        let slider = renderSlider(sliderData);
+    // let sliderData = await LoadJSON('./data/slider.json');
+    //     let slider = renderSlider(sliderData);
         
-        if (sliderContainer) {
-            sliderContainer.innerHTML = '';
-            sliderContainer.append(...slider);
-        }
+    //     if (sliderContainer) {
+    //         sliderContainer.innerHTML = '';
+    //         sliderContainer.append(...slider);
+    //     }
    
         // описание компании
         let aboutInformation = await LoadJSON('./data/about.json');
@@ -44,7 +44,7 @@ export async function renderAbout(){
         })
 
         aboutDescriptionWrapper.querySelector('.content__buttons').append(calendarBtn);
-        aboutWrapper.append(sliderContainer);
+        // aboutWrapper.append(sliderContainer);
         aboutWrapper.append(aboutDescriptionWrapper)
         return aboutWrapper;
 }

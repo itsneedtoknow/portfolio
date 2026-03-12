@@ -417,7 +417,7 @@
         gap: 1rem;
         flex-direction: column;
     }
-    .about .slider__slide-item{
+    .about .single-item{
         height: 20rem;
     }
     .about .slider {
@@ -495,7 +495,7 @@
         font-weight: 700;
         line-height: 26px;
     }
-    .about .slider__slide-item .buttons{
+    .about .single-item .buttons{
         bottom: 1rem;
     }
     .about .content__description{
@@ -1034,7 +1034,7 @@
 }
 @media(max-width: 576px){
     .about .slider
-    .about .slider__slide-item{
+    .about .single-item{
         height: 20rem;
     }
     .row-grid ul{
@@ -1044,10 +1044,10 @@
         max-width: 328px;
         max-height: 328px;
     }
-    .about .slide-item__slogan{
+    .about .slider .single-item__content{
         top: 46px;
     }
-    .about .slide-item__slogan p{
+    .about .slider .single-item__content p{
         font-size: 18px;
     }
 }

@@ -10,12 +10,13 @@
 }
 /* ABOUT */
 
-.about .slider__slide-item{
+.about .single-item,
+.about .slider .single-item__image{
     position: relative;
     height: 30rem; 
 }
 
-.about .slider{
+.about .about__list{
     max-width: 605px;
     max-width: 45%;
     min-width: 45%;
@@ -30,7 +31,7 @@
   color: transparent;
 }
 
-.about .slide-item__slogan{
+.about .slider .single-item__content{
     position: absolute;
     z-index: 2;
     top: 85%;
@@ -40,7 +41,7 @@
     transform: translateX(-50%) translateY(-50%);
     object-fit: contain;
 }
-.about .slide-item__slogan p{
+.about .slider .single-item__content a{
   font-family: "Syncopate", sans-serif;
   color: #FFF;
   font-size: 1.5rem;
@@ -50,7 +51,7 @@
     letter-spacing: 0.06px;
     text-transform: uppercase;
 }
-.about .slider__slide-item .buttons{
+/* .about .single-item .buttons{
     position: absolute;
     z-index: 2;
     left: 50%;
@@ -58,7 +59,7 @@
     bottom: 37px;
     margin-bottom: 0;
     
-}
+} */
 .slick-arrow{
     font-size: 0;
     position: absolute;

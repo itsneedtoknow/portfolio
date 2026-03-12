@@ -81,3 +81,160 @@ export async function renderPreviewCard(JSON) {
 
 
 }
+const $ = window.jQuery;
+export function initSliders(){
+   
+        if ($('.auto__list').length){
+        // AUTOPARK
+        $('.auto__list').slick({
+                    vertical: true,
+                    verticalSwiping: true,
+                    slidesToShow: 2,
+                    autoplay: false,
+                    arrows: false,
+                    draggable: true,
+                    swipeToSlide: true,
+                    responsive:[
+                        {
+                            breakpoint: 992,
+                            settings:{
+                                vertical: false,
+                                verticalSwiping: false,
+                                slidesToShow: 3,
+                            }
+                        },
+                        {
+                            breakpoint: 640,
+                            settings:{
+                                vertical: false,
+                                verticalSwiping: false,
+                                slidesToShow: 2,
+                            }
+                        },
+                        {
+                            breakpoint: 500,
+                            settings:{
+                                vertical: false,
+                                verticalSwiping: false,
+                                slidesToShow: 1.5,
+                            }
+                        }
+                    ]
+                });
+            }
+
+        // SERVICES
+       
+        if($('.services .services__list').length){
+         $('.services .services__list').slick({
+            infinite: true,
+            slidesToShow: 3,
+            autoplay: true,
+            slidesToScroll: 1,
+            easing: 'ease',
+            arrows: true,
+            responsive:[
+                {
+                    breakpoint: 992,
+                    settings:{
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    }
+                },
+                {
+                breakpoint: 620,
+                settings:{
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            }]
+        });
+    }
+    // PRODUCTS
+        
+        if($('.products .banners__list').length){
+    $('.banners__list').slick({
+            infinite: true,
+            slidesToShow: 2.5,
+            autoplay: true,
+            speed: 5000,
+            easing: 'ease',
+            arrows: false,
+            responsive:[
+                {
+                breakpoint: 1350,
+                settings:{
+                        slidesToShow: 2,
+                },
+                 breakpoint: 640,
+                settings:{
+                        slidesToShow: 1,
+                }
+            }
+        ]
+        });
+    }
+    //    PARTNERS
+     
+        if($('.partners .partners__list').length){
+            $('.partners .partners__list').slick({
+            infinite: true,
+            slidesToShow: 6,
+            autoplay: true,
+            slidesToScroll: 1,
+            easing: 'ease',
+            arrows: false,
+            dots: true,
+            responsive:[
+            {
+                breakpoint: 1340,
+                settings:{
+                slidesToShow: 5,
+                }
+            },
+                {
+                breakpoint: 1160,
+                settings:{
+                    slidesToShow: 4,
+                }
+            },
+            {
+            breakpoint: 870,
+            settings:{
+                slidesToShow: 3,
+            }
+            },
+            {
+            breakpoint: 640,
+            settings:{
+                slidesToShow: 1,
+            }
+            },
+        ]
+        });
+        
+        }
+        if($('.about .slider').length){
+$('.about .slider').slick({
+            infinite: true,
+            slidesToShow: 1,
+            autoplay: true,
+            slidesToScroll: 1,
+            speed: 5000,
+            easing: 'ease',
+            arrows: true,
+            responsive:[
+                {
+                breakpoint: 768,
+                settings:{
+                        swipeToSlide: true,
+                        draggable: true,
+                        autoplay: false,
+                        speed: 2000
+                }
+            }
+        ]
+        });
+        }
+        
+    }

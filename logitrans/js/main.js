@@ -8,8 +8,15 @@ import { createElement } from "./utils/dom.js";
 import { renderPreviewCard } from "./components/single-item.js";
 import { createSection } from "./utils/section.js";
 import { renderFooter } from "./components/footer.js";
+import { initSliders } from "./utils/dom.js";
 
 let sections = [
+    {
+        "tagname": "ul",
+        "className": "slider",
+        "dataURL": "./data/slider.json",
+        "wrapperClass": ".about__list"
+    },
     {
         "tagname": "ul",
         "className": "news__list",
@@ -62,49 +69,38 @@ let sections = [
 
 async function init() {
     try {
-        setTimeout(()=>{
-for(let sectionItem of sections){
-            let tagName = sectionItem.wrapperClass;
-            if(document.querySelector(tagName)){
-                createSection(sectionItem);
+        let footer = document.querySelector('footer');
+            let footerContent = await renderFooter();
+            footer.append(footerContent);
+            
+        const renderSections = async ()=>{
+           const promises = sections
+            .filter(item => document.querySelector(item.wrapperClass))
+            .map(item => createSection(item))
+
+            await Promise.all(promises);
+
+            initSliders();
+
+            
+
+            let allProducts = document.querySelectorAll('.banners__list .single-item');
+            let allRoutes = document.querySelectorAll('.routes__list .single-item');
+            let allPartners = document.querySelectorAll('.partners__list .single-item');
+            let allSliders = document.querySelectorAll('.about__list .single-item');
+            if(allProducts || allRoutes || allPartners||allSliders){
+                removeBtn(allProducts);
+                removeBtn(allRoutes);
+                removeBtn(allPartners);
+                removeBtn(allSliders);
             }
         }
-        }, 1000)
-        
-        
+        renderSections()
         
         let menuItems = await LoadJSON('./data/menu.json');
         let header = renderHeader(menuItems);
         document.body.prepend(header);
-        
-        let aboutSectionContainer = document.querySelector('#about');
-        if(aboutSectionContainer){
-        let aboutSection = await renderAbout();
-        aboutSectionContainer.append(aboutSection);
-        }
-        // Инициализация слайдера (Slick)
-        $('.about .slider').slick({
-            infinite: true,
-            slidesToShow: 1,
-            autoplay: true,
-            slidesToScroll: 1,
-            speed: 5000,
-            easing: 'ease',
-            arrows: true,
-            responsive:[
-                {
-                breakpoint: 768,
-                settings:{
-                        swipeToSlide: true,
-                        draggable: true,
-                        autoplay: false,
-                        speed: 2000
-                }
-            }
-        ]
-        });
-
-        
+       
         // Наши преимущества
         
         setTimeout(() => {
@@ -165,145 +161,12 @@ for(let sectionItem of sections){
             observer.observe(item);
         });
 
-         let allProducts = document.querySelectorAll('.banners__list .single-item');
-         let allRoutes = document.querySelectorAll('.routes__list .single-item');
-         let allPartners = document.querySelectorAll('.partners__list .single-item');
-         if(allProducts || allRoutes || allPartners){
-            removeBtn(allProducts);
-            removeBtn(allRoutes);
-            removeBtn(allPartners);
-         }
+         
 
     }, 1000);
   
-    
 
     
-    // Инициализация слайдера (Slick)
-    setTimeout(()=>{
-        // AUTOPARK
-        $('.auto__list').slick({
-                    vertical: true,
-                    verticalSwiping: true,
-                    slidesToShow: 2,
-                    autoplay: false,
-                    arrows: false,
-                    draggable: true,
-                    swipeToSlide: true,
-                    responsive:[
-                        {
-                            breakpoint: 992,
-                            settings:{
-                                vertical: false,
-                                verticalSwiping: false,
-                                slidesToShow: 3,
-                            }
-                        },
-                        {
-                            breakpoint: 640,
-                            settings:{
-                                vertical: false,
-                                verticalSwiping: false,
-                                slidesToShow: 2,
-                            }
-                        },
-                        {
-                            breakpoint: 500,
-                            settings:{
-                                vertical: false,
-                                verticalSwiping: false,
-                                slidesToShow: 1.5,
-                            }
-                        }
-                    ]
-                });
-
-        // SERVICES
-         $('.services .services__list').slick({
-            infinite: true,
-            slidesToShow: 3,
-            autoplay: true,
-            slidesToScroll: 1,
-            easing: 'ease',
-            arrows: true,
-            responsive:[
-                {
-                    breakpoint: 992,
-                    settings:{
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                    }
-                },
-                {
-                breakpoint: 620,
-                settings:{
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                }
-            }]
-        });
-$('.banners__list').slick({
-            infinite: true,
-            slidesToShow: 2.5,
-            autoplay: true,
-            speed: 5000,
-            easing: 'ease',
-            arrows: false,
-            responsive:[
-                {
-                breakpoint: 1350,
-                settings:{
-                        slidesToShow: 2,
-                },
-                 breakpoint: 640,
-                settings:{
-                        slidesToShow: 1,
-                }
-            }
-        ]
-        });
-    //    PARTNERS
-    $('.partners .partners__list').slick({
-    infinite: true,
-    slidesToShow: 6,
-    autoplay: true,
-    slidesToScroll: 1,
-    easing: 'ease',
-    arrows: false,
-    dots: true,
-    responsive:[
-      {
-        breakpoint: 1340,
-        settings:{
-          slidesToShow: 5,
-        }
-      },
-        {
-          breakpoint: 1160,
-          settings:{
-            slidesToShow: 4,
-          }
-    },
-    {
-      breakpoint: 870,
-      settings:{
-        slidesToShow: 3,
-      }
-    },
-    {
-      breakpoint: 640,
-      settings:{
-        slidesToShow: 1,
-      }
-    },
-   ]
-  });
-  
-    }, 2000)
-
-    let footer = document.querySelector('footer');
-    let footerContent = await renderFooter();
-    footer.append(footerContent);
     } catch (e) {
         console.error("Ошибка в init:", e);
     }
