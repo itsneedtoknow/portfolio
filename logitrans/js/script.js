@@ -90,7 +90,7 @@ ymaps.ready(init);
 }, 1000)
   
     
-//     document.addEventListener('DOMContentLoaded', function(){
+document.addEventListener('DOMContentLoaded', function(){
 
 //       // КАЛЕНДАРЬ СОБЫТИЙ
 //       if(document.querySelector('#calendar')){
@@ -166,189 +166,189 @@ ymaps.ready(init);
       
 //       calendar.updateSize();
 
-//       $(function () {
-//         // Initialize the date picker
-//         $('#datepicker').datepicker({
-//           changeMonth: true,
-//           changeYear: true,
-//           showOtherMonths: true,
-//           selectOtherMonths: true,
-//           dateFormat: 'yy-mm-dd', // Ensures the date format matches what FullCalendar expects
+      $(function () {
+        // Initialize the date picker
+        $('#datepicker').datepicker({
+          changeMonth: true,
+          changeYear: true,
+          showOtherMonths: true,
+          selectOtherMonths: true,
+          dateFormat: 'yy-mm-dd', // Ensures the date format matches what FullCalendar expects
           
-//           onSelect: function (dateText) {
-//             // When a date is selected, change FullCalendar to that date
-//             var date = new Date(dateText);
-//             calendar.gotoDate(date);
-//           },
-//         });
+          onSelect: function (dateText) {
+            // When a date is selected, change FullCalendar to that date
+            var date = new Date(dateText);
+            calendar.gotoDate(date);
+          },
+        });
        
-//       });
+      });
       
-//  /* Russian (UTF-8) initialisation for the jQuery UI date picker plugin. */
-//  ( function( factory ) {
-//   "use strict";
+ /* Russian (UTF-8) initialisation for the jQuery UI date picker plugin. */
+ ( function( factory ) {
+  "use strict";
 
-//   if ( typeof define === "function" && define.amd ) {
+  if ( typeof define === "function" && define.amd ) {
 
-//     // AMD. Register as an anonymous module.
-//     define( [ "../widgets/datepicker" ], factory );
-//   } else {
+    // AMD. Register as an anonymous module.
+    define( [ "../widgets/datepicker" ], factory );
+  } else {
 
-//     // Browser globals
-//     factory( jQuery.datepicker );
-//   }
-// } )( function( datepicker ) {
-// "use strict";
+    // Browser globals
+    factory( jQuery.datepicker );
+  }
+} )( function( datepicker ) {
+"use strict";
 
-//     datepicker.regional.ru = {
-//       closeText: "Закрыть",
-//       prevText: "Пред",
-//       nextText: "След",
-//       currentText: "Сегодня",
-//       monthNames: [ "Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
-//       "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь" ],
-//       monthNamesShort: [ "Янв", "Фев", "Мар", "Апр", "Май", "Июн",
-//       "Июл", "Авг", "Сен", "Окт", "Ноя", "Дек" ],
-//       dayNames: [ "воскресенье", "понедельник", "вторник", "среда", "четверг", "пятница", "суббота" ],
-//       dayNamesShort: [ "вск", "пнд", "втр", "срд", "чтв", "птн", "сбт" ],
-//       dayNamesMin: [ "Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб" ],
-//       weekHeader: "Нед",
-//       dateFormat: "dd.mm.yy",
-//       firstDay: 1,
-//       isRTL: false,
-//       showMonthAfterYear: false,
-//       yearSuffix: "" };
-//     datepicker.setDefaults( datepicker.regional.ru );
+    datepicker.regional.ru = {
+      closeText: "Закрыть",
+      prevText: "Пред",
+      nextText: "След",
+      currentText: "Сегодня",
+      monthNames: [ "Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
+      "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь" ],
+      monthNamesShort: [ "Янв", "Фев", "Мар", "Апр", "Май", "Июн",
+      "Июл", "Авг", "Сен", "Окт", "Ноя", "Дек" ],
+      dayNames: [ "воскресенье", "понедельник", "вторник", "среда", "четверг", "пятница", "суббота" ],
+      dayNamesShort: [ "вск", "пнд", "втр", "срд", "чтв", "птн", "сбт" ],
+      dayNamesMin: [ "Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб" ],
+      weekHeader: "Нед",
+      dateFormat: "dd.mm.yy",
+      firstDay: 1,
+      isRTL: false,
+      showMonthAfterYear: false,
+      yearSuffix: "" };
+    datepicker.setDefaults( datepicker.regional.ru );
 
-//     return datepicker.regional.ru;
+    return datepicker.regional.ru;
 
-// } );
+} );
 
-//     }
+    })
 
 //       //ОТКРЫТИЕ МОДАЛЬНЫХ ОКОН
-//       let modalWindows = document.querySelectorAll('.modal');
-//       let openModalBtn = document.querySelectorAll('.button--open-modal');
-//       let closeModalBtn = document.querySelectorAll('.close-modal');
+      let modalWindows = document.querySelectorAll('.modal');
+      let openModalBtn = document.querySelectorAll('.button--open-modal');
+      let closeModalBtn = document.querySelectorAll('.close-modal');
 
-//       openModalBtn.forEach(button => {
-//       button.addEventListener('click', () => {
-//           const modalId = button.getAttribute('data-modal');
-//           const modal = document.getElementById(modalId);
-//           modal.querySelector('.close-modal').setAttribute('data-modal', modalId);
+      openModalBtn.forEach(button => {
+      button.addEventListener('click', () => {
+          const modalId = button.getAttribute('data-modal');
+          const modal = document.getElementById(modalId);
+          modal.querySelector('.close-modal').setAttribute('data-modal', modalId);
           
-//           modal.classList.add('open');
-//           modal.style.opacity = '1';
-//           document.querySelector('.overlay').classList.add('open');
-//           document.body.classList.add('modal-open');
-//       });
+          modal.classList.add('open');
+          modal.style.opacity = '1';
+          document.querySelector('.overlay').classList.add('open');
+          document.body.classList.add('modal-open');
+      });
 
 
 
-//       // Закрытие модального окна
-//       closeModalBtn.forEach(button => {
-//       button.addEventListener('click', () => {
-//           const modalId = button.getAttribute('data-modal');
-//           const modal = document.getElementById(modalId);
+      // Закрытие модального окна
+      closeModalBtn.forEach(button => {
+      button.addEventListener('click', () => {
+          const modalId = button.getAttribute('data-modal');
+          const modal = document.getElementById(modalId);
 
-//           modal.style.opacity = '0';
-//           setTimeout(() => {
-//             modal.classList.remove('open');
-//             document.querySelector('.overlay').classList.remove('open');
-//             document.body.classList.remove('modal-open');
-//         }, 300); 
+          modal.style.opacity = '0';
+          setTimeout(() => {
+            modal.classList.remove('open');
+            document.querySelector('.overlay').classList.remove('open');
+            document.body.classList.remove('modal-open');
+        }, 300); 
           
 
           
-//     });
+    });
 
 
-//       // Закрытие модального окна при клике вне его
-//     window.addEventListener('click', (event) => {
+      // Закрытие модального окна при клике вне его
+    window.addEventListener('click', (event) => {
       
-//       modalWindows.forEach(modal => {
-//           if (event.target === document.querySelector('.overlay')) {
-//             modal.style.opacity = '0';
-//           setTimeout(() => {
-//             modal.classList.remove('open');
-//             document.querySelector('.overlay').classList.remove('open');
-//             document.body.classList.remove('modal-open');
-//         }, 300); 
-//           }
-//       });
-//   });
-// });
-//       });
+      modalWindows.forEach(modal => {
+          if (event.target === document.querySelector('.overlay')) {
+            modal.style.opacity = '0';
+          setTimeout(() => {
+            modal.classList.remove('open');
+            document.querySelector('.overlay').classList.remove('open');
+            document.body.classList.remove('modal-open');
+        }, 300); 
+          }
+      });
+  });
+});
+      });
       
      
 
-//     function checkWidth() {
-//       let windowWidth = jQuery("body").innerWidth();
+    function checkWidth() {
+      let windowWidth = jQuery("body").innerWidth();
 
-//       if (windowWidth < 992) {
+      if (windowWidth < 992) {
        
 //  // МОБИЛЬНАЯ ФОРМА ПОИСКА
     
-// setTimeout(()=>{
-// let searchBtn = document.querySelector('.btn-search');
-//         let searchform = document.querySelector('.search');
+setTimeout(()=>{
+let searchBtn = document.querySelector('.btn-search');
+        let searchform = document.querySelector('.search');
 
-// // открытие мобильной формы поиска
-//   searchBtn.addEventListener('click',function(){
-//   searchBtn.classList.add('hidden');
-//   searchform.querySelector('.search-form').classList.add('open');
-// })
+// открытие мобильной формы поиска
+  searchBtn.addEventListener('click',function(){
+  searchBtn.classList.add('hidden');
+  searchform.querySelector('.search-form').classList.add('open');
+})
 
-// // закрытие мобильной формы поиска
-//   jQuery(document).on("click", function (e) {
-//     if (!jQuery(e.target).closest(searchBtn).length && !jQuery(e.target).closest(".search").length) {
-//       searchBtn.classList.remove('hidden');
-//       searchform.querySelector('.search-form').classList.remove('open');
-//   }
-//   })
-// }, 1000)
+// закрытие мобильной формы поиска
+  jQuery(document).on("click", function (e) {
+    if (!jQuery(e.target).closest(searchBtn).length && !jQuery(e.target).closest(".search").length) {
+      searchBtn.classList.remove('hidden');
+      searchform.querySelector('.search-form').classList.remove('open');
+  }
+  })
+}, 1000)
   
 //         // динамическое позиционирование внизу бокового меню внутренних страниц в мобильной версии
-//           if(document.querySelector('.grid-and-form') || document.querySelector('.lenta-and-form')){
+          if(document.querySelector('.grid-and-form') || document.querySelector('.lenta-and-form')){
 
-//             document.querySelector('.content-wrapper').style.flexWrap = 'wrap';
-//           }
-//           if(document.querySelector('.lenta-and-form')){
+            document.querySelector('.content-wrapper').style.flexWrap = 'wrap';
+          }
+          if(document.querySelector('.lenta-and-form')){
 
-//               let sideMenu = document.querySelector('.menu-sidebar');
-//               sideMenu.style.position = 'absolute';
-//               sideMenu.style.bottom = '0';
-//               sideMenu.style.right = '16px';
-//               sideMenu.style.left = '16px';
-//               let sideMenuHeight = sideMenu.getBoundingClientRect();
-//               let lentaContentNotMenu = document.querySelector('.lenta-and-form');
-//               lentaContentNotMenu.style.paddingBottom = sideMenuHeight.height +  "px";
+              let sideMenu = document.querySelector('.menu-sidebar');
+              sideMenu.style.position = 'absolute';
+              sideMenu.style.bottom = '0';
+              sideMenu.style.right = '16px';
+              sideMenu.style.left = '16px';
+              let sideMenuHeight = sideMenu.getBoundingClientRect();
+              let lentaContentNotMenu = document.querySelector('.lenta-and-form');
+              lentaContentNotMenu.style.paddingBottom = sideMenuHeight.height +  "px";
 
-//             }
+            }
 
         
         
-//       }else{
+      }else{
       
-// // динамическое позиционирование внизу бокового меню внутренних страниц в десктопной версии
-//       if(document.querySelector('.grid-and-form') || document.querySelector('.lenta-and-form')){
+// динамическое позиционирование внизу бокового меню внутренних страниц в десктопной версии
+      if(document.querySelector('.grid-and-form') || document.querySelector('.lenta-and-form')){
 
-//         document.querySelector('.content-wrapper').style.flexWrap = 'nowrap';
-//       }
-//       if(document.querySelector('.lenta-and-form')){
+        document.querySelector('.content-wrapper').style.flexWrap = 'nowrap';
+      }
+      if(document.querySelector('.lenta-and-form')){
 
-//           let sideMenu = document.querySelector('.menu-sidebar');
-//           sideMenu.style.position = 'initial';
-//         }
+          let sideMenu = document.querySelector('.menu-sidebar');
+          sideMenu.style.position = 'initial';
+        }
 
-//       }
+      }
 
-//     }
-//     checkWidth(); 
+    }
+    checkWidth(); 
 
-//     jQuery(window).resize(function () {
-//       checkWidth();
-//     });
+    jQuery(window).resize(function () {
+      checkWidth();
+    });
 
 
 // // мобильное меню
