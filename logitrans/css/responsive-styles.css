@@ -416,9 +416,14 @@
     .about .single-item{
         gap: 1rem;
         flex-direction: column;
+        height: max-content;
     }
-    .about .single-item{
-        height: 20rem;
+    .about .single-item__image,
+    .about .slick-slide{
+    height: 20rem;
+    }
+    .about .about__list{
+        max-width: 100%;
     }
     .about .slider {
         max-width: unset;

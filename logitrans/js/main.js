@@ -153,6 +153,7 @@ removeBtn(allItemsForRemoveBtn);
         let menuItems = await LoadJSON('./data/menu.json');
         let header = renderHeader(menuItems);
         document.body.prepend(header);
+        
     } catch (e) {
         console.error("Ошибка в init:", e);
     }

@@ -29,6 +29,11 @@ let menuItem;
             menuItem = `<li class="icon-to-text">
             <a href="${item.link}">${item.name}</a>
             </li>`
+        }
+        else if(!hasSubMenu){
+           menuItem = ` <li>
+                <a href="${item.link}">${item.name}</a>
+            </li>`;
         }else{
             menuItem = `<li class="${hasSubMenu ? 'drop-down' : ''}">
                 <span>${item.name}</span>${hasSubMenu ? `

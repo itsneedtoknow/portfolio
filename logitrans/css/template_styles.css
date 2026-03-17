@@ -441,13 +441,14 @@ header nav > div > ul > li.button--icon-to-text{
 header nav > div > ul > li.current{
   background: var(--Main-0);
 }
-header nav > div > ul > li span{
+header nav > div > ul > li span,
+header nav > div > ul > li > a{
   color: var(--neitral-3);
   font-weight: 700;
   letter-spacing: 0.01.5rem;
   position: relative;
 }
-header nav .button--icon-to-text > a{
+header nav .icon-to-text > a{
     font-size: 0;
     background: url(../images/icons/home.svg) center center no-repeat;
     width: 1.5rem;
@@ -455,7 +456,7 @@ header nav .button--icon-to-text > a{
     cursor: pointer;
     display: block;
 }
-header nav .button--icon-to-text{
+header nav .icon-to-text{
   background: var(--neitral-1);
 }
 .hamburger-menu{
