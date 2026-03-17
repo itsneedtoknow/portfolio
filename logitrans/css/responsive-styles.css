@@ -275,7 +275,9 @@
         right: 1px;
         display: none;
     }
-
+    .modal.open{
+        width: 95%;
+    }
     .main-news .benefits .single-item__title{
         font-size: 19px;
         line-height: 1.5rem;
@@ -589,6 +591,9 @@
     
     .modal{
         width: 95%;
+    }
+    .modal .form-block{
+        flex-direction: column;
     }
     .grid-and-form .row-grid ul{
         display: flex !important;
