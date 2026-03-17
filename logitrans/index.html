@@ -12,7 +12,6 @@
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <script src="https://api-maps.yandex.ru/2.0-stable/?apikey=d1c174a2-a5f2-4edb-914c-ff22a986da60&load=package.full&lang=ru-RU"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar/index.global.min.js'></script>
     <script src='fullcalendar/core/locales-all.global.js'></script>
     <link rel="stylesheet" href="css/eventCalendar.css">
@@ -70,7 +69,7 @@
                                         <li><a class="contacts__link contacts__link--email" href="mailto: globaltrans@globaltrans.by">globaltrans@globaltrans.by</a></li>
                                     </ul>
                                     <div class="content__buttons buttons">
-                                        <button class="button button--primary button--open-modal">
+                                        <button class="button button--primary button--open-modal" data-modal="requestPrice">
                                             Запрос ставки
                                         </button>
                                     
@@ -162,121 +161,8 @@
                     </div>
                 </div>
         </section>
-        <div class="modal " id="serviceApplication" >
-             <form action="#" id="serviceForm" method="POST" >
-                <h5 class="contact-form__title">Закажите услугу</h5>
-                
-                <div>
-                    <div>
-                        <input type="text" name="company" placeholder="Организация">
-                        <label>Укажите название организации</label>
-                    </div>
-                </div>
-                
-                <div>
-                    <div>
-                        <select name="departments" id="department-select">
-                            <option value="">Подразделение</option>
-                            <option value="Отраслевая дорожная лаборатория">Отраслевая дорожная лаборатория</option>
-                            <option value="Отдел стандартизации и метрологии">Отдел стандартизации и метрологии</option>
-                            <option value="Лаборатория охраны труда">Лаборатория охраны труда</option>
-                            <option value="Отраслевая мостовая лаборатория">Отраслевая мостовая лаборатория</option>
-                            <option value="Производственный участок «Мадикор»">Производственный участок «Мадикор»</option>
-                            <option value="Отдел научно-технической информации">Отдел научно-технической информации</option>
-                          </select>
-                    </div>
-                </div>
-                <div>
-                    <div>
-                        <select name="services" id="service-select">
-                            <option value="">Услуга</option>
-                            <option value="Разработка нормативной документации">Разработка нормативной документации</option>
-                            <option value="Разработка новых, совершенствование существующих технологий и материалов">Разработка новых, совершенствование существующих технологий и материалов</option>
-                            <option value="Проведение обучающих семинаров и консультаций">Проведение обучающих семинаров и консультаций</option>
-                            <option value="Контроль качества ">Контроль качества </option>
-                            <option value="Опытное производство">Опытное производство</option>
-                            <option value="Проведение испытаний">Проведение испытаний</option>
-                          </select>
-                    </div>
-                </div>
-                <div class="buttons">
-                    <button type="submit" class="button button--primary">
-                            Отправить заявку</button>
-                </div>
-            
-            </form> 
-            <div class="close-modal">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <g clip-path="url(#clip0_1814_6148)">
-                <path d="M1 1L23 23M23 1L1 23" stroke="#454545" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </g>
-                <defs>
-                <clipPath id="clip0_1814_6148">
-                <rect width="24" height="24" fill="white"/>
-                </clipPath>
-                </defs>
-                </svg></div>
-        </div>
-        <div class="modal" id="conferenceApplication">
-            <form action="#" id="conferenceForm" method="POST" >
-                <h5 class="contact-form__title">Форма записи на конференцию</h5>
-                <div>
-                    <fieldset>
-                        <legend>Выберите статус:</legend>
-                        <div class="radio">
-                            <input class="btn" type="radio" id="company" name="status" value="Юридическое лицо" checked />
-                            <label for="company">Юридическое лицо</label>
-                          </div>
-                        
-                          <div class="radio">
-                            <input class="btn" type="radio" id="person" name="status" value="Физическое лицо" />
-                            <label for="person">Физическое лицо</label>
-                          </div>
-                    </fieldset>
-                </div>
-                
-                <div>
-                    <div>
-                        <input type="text" name="fullname" placeholder="Ф. И. О.">
-                        <label>Укажите своё полное имя</label>
-                    </div>
-                    
-                    <div>
-                        <input type="text" name="company" placeholder="Организация">
-                        <label>Укажите название организации, которую представляете</label>
-                    </div>
-                </div>
-                
-                <div>
-                    <fieldset>
-                        <legend>Выберите тип участия:</legend>
-                        <div class="radio">
-                            <input class="btn" type="radio" id="perform" name="activity" value="Выступающий" checked />
-                            <label for="perform">Выступающий</label>
-                          </div>
-                        
-                          <div class="radio">
-                            <input class="btn" type="radio" id="listen" name="activity" value="Слушатель" />
-                            <label for="listen">Слушатель</label>
-                          </div>
-                    </fieldset>
-                </div>
-                <div>
-                    <div class="check">
-                        <input class="btn" type="checkbox" id="agreement" name="agreement">
-                        <label for="agreement">Ознакомлен с публичным договором оферты</label>
-                    </div>
-                </div>
-                
-                <div class="buttons">
-                    <button type="submit" class="button button--primary icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M13.7838 14.5468L11.34 15.75L10.118 13.3437L12.4836 4.60919L16.4843 5.68351L13.7838 14.5468ZM17.1556 3.48039L16.746 4.82464L12.778 3.52231L13.1091 2.2999C13.2558 1.75824 13.8194 1.44331 14.3576 1.60228L16.4823 2.22989C17.0151 2.38729 17.3175 2.94889 17.1556 3.48039ZM6.9868 12.8352C6.88636 12.7342 6.88636 12.5333 6.88636 12.1339C6.88636 11.3304 5.65909 11.3304 4.84091 11.7322C4.52839 11.8856 4.27556 12.0391 4.05961 12.1702C3.71021 12.3823 3.45738 12.5357 3.20455 12.5357C2.79545 12.5357 2.38636 12.1339 2.38636 10.9286C2.38636 8.11609 4.02273 6.10716 4.84091 6.10716C5.65909 6.10716 6.06818 6.80576 6.06818 7.31252V8.11609L7.29545 8.91966C7.32765 8.82481 7.36744 8.72996 7.40944 8.62983C7.54538 8.30579 7.70455 7.92639 7.70455 7.31252C7.70455 6.50895 6.88636 4.50002 4.84091 4.50002C2.79545 4.50002 0.75 7.31252 0.75 10.5268C0.75 13.7411 2.79545 14.1429 3.20455 14.1429C3.85112 14.1429 4.38014 13.6802 4.83603 13.2814C4.98093 13.1547 5.11845 13.0344 5.25 12.9375C5.25 13.6072 5.25 14.9464 6.06818 14.9464C6.44849 14.9464 6.7404 14.7728 6.98502 14.6274C7.26667 14.4598 7.48561 14.3296 7.70455 14.5447C8.11364 14.9464 8.93182 15.75 9.75 15.75C9.34091 14.8125 8.35909 12.9375 7.70455 12.9375C7.293 12.9375 7.08846 12.9375 6.9868 12.8352Z" fill="#f9f2f3"/>
-                            </svg>
-                            Отправить заявку</button>
-                </div>
-            
-            </form>
+        <div class="modal" id="requestPrice">
+           
             <div class="close-modal">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                 <g clip-path="url(#clip0_1814_6148)">

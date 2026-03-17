@@ -1,0 +1,77 @@
+[
+  
+    {
+        "tagName": "select",
+        "placeholder": "Выберите страну загрузки",
+        "title": "Страна загрузки",
+        "required": "true",
+        "name": "DEPARTMENT_COUNTRY"
+    },
+    {
+        "tagName": "select",
+        "placeholder": "Выберите город загрузки",
+        "required": "false",
+        "name": "DEPARTMENT_CITY"
+    },
+    {
+        "tagName": "select",
+        "placeholder": "Выберите страну разгрузки",
+        "required": "true",
+        "name": "DELIVERY_COUNTRY"
+    },
+    {
+        "tagName": "select",
+        "placeholder": "Выберите город разгрузки",
+        "required": "false",
+        "name": "DELIVERY_CITY"
+    },
+    {
+        "tagName": "select",
+        "required": "true",
+        "placeholder": "Выберите услугу",
+        "title": "Услуга",
+        "name": "SERVICE"
+    },
+    {
+        "tagName": "textarea",
+        "placeholder": "Описание груза и упаковки",
+        "required": "false",
+        "name": "CARGO_DESCRIPTION"
+    },
+    {
+        "tagName": "input",
+        "type": "date",
+        "placeholder": "Дата готовности груза",
+        "required": "false",
+        "name": "DATE"
+    },
+    {
+        "tagName": "input",
+        "type": "text",
+        "placeholder": "Объём поставок",
+        "required": "false",
+        "name": "VOLUME"
+    },
+    {
+        "tagName": "input",
+        "type": "text",
+        "placeholder": "Как к Вам обращаться?",
+        "required": "true",
+        "name": "fullname"
+    },
+    {
+        "tagName": "input",
+        "type": "tel",
+        "pattern": "\\+375 ?\\(?\\d{2}\\)? ?\\d{3} ?-?\\d{2} ?-?\\d{2}",
+        "placeholder": "Ваш номер телефона +375(29)111-11-11",
+        "required": "true",
+        "name": "phonenumber"
+    },
+    {
+        "tagName": "input",
+        "type": "email",
+        "placeholder": "Ваш email email@email.by",
+        "required": "false",
+        "name": "email"
+    }
+]

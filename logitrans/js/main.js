@@ -9,6 +9,9 @@ import { renderPreviewCard } from "./components/single-item.js";
 import { createSection } from "./utils/section.js";
 import { renderFooter } from "./components/footer.js";
 import { initSliders } from "./utils/dom.js";
+import { renderRequestForm } from "./components/request-form.js";
+import { updateCities } from "./utils/requestFormHandler.js";
+
 
 let sections = [
     {
@@ -72,7 +75,7 @@ async function init() {
         let footer = document.querySelector('footer');
             let footerContent = await renderFooter();
             footer.append(footerContent);
-            
+
         const renderSections = async ()=>{
            const promises = sections
             .filter(item => document.querySelector(item.wrapperClass))
@@ -82,28 +85,11 @@ async function init() {
 
             initSliders();
 
-            
+            const allItemsForRemoveBtn = document.querySelectorAll(
+                '.banners__list .single-item, .routes__list .single-item, .partners__list .single-item, .about__list .single-item'
+            );
+removeBtn(allItemsForRemoveBtn);
 
-            let allProducts = document.querySelectorAll('.banners__list .single-item');
-            let allRoutes = document.querySelectorAll('.routes__list .single-item');
-            let allPartners = document.querySelectorAll('.partners__list .single-item');
-            let allSliders = document.querySelectorAll('.about__list .single-item');
-            if(allProducts || allRoutes || allPartners||allSliders){
-                removeBtn(allProducts);
-                removeBtn(allRoutes);
-                removeBtn(allPartners);
-                removeBtn(allSliders);
-            }
-        }
-        renderSections()
-        
-        let menuItems = await LoadJSON('./data/menu.json');
-        let header = renderHeader(menuItems);
-        document.body.prepend(header);
-       
-        // Наши преимущества
-        
-        setTimeout(() => {
             let benefits = Array.from(document.querySelectorAll('.benefits .single-item')) ;
             benefits.forEach(item=>{
                 
@@ -161,15 +147,63 @@ async function init() {
             observer.observe(item);
         });
 
-         
-
-    }, 1000);
-  
-
-    
+        }
+        renderSections()
+        
+        let menuItems = await LoadJSON('./data/menu.json');
+        let header = renderHeader(menuItems);
+        document.body.prepend(header);
     } catch (e) {
         console.error("Ошибка в init:", e);
     }
 }
 
 init();
+
+
+let form = await renderRequestForm();
+document.querySelector('#requestPrice').append(form)
+let reqform = document.forms.requestForm;
+
+let countriesData = await LoadJSON('./data/countries.json');
+if (reqform) {
+    let departureCountryInput = reqform.elements.DEPARTMENT_COUNTRY;
+    let departureCityInput = reqform.elements.DEPARTMENT_CITY;
+    let deliveryCountryInput = reqform.elements.DELIVERY_COUNTRY;
+    let deliveryCityInput = reqform.elements.DELIVERY_CITY;
+
+    departureCountryInput.addEventListener('change', () =>{updateCities(departureCountryInput, departureCityInput, countriesData, 'Выберите город загрузки')})
+    deliveryCountryInput.addEventListener('change', () =>{updateCities(deliveryCountryInput, deliveryCityInput, countriesData, 'Выберите город разгрузки')})
+reqform.addEventListener('submit', function(e){
+    e.preventDefault();
+    let data = new FormData(form);
+    const dataInfo = Object.fromEntries(data.entries());
+    console.log(dataInfo)
+    let formBtn = reqform.querySelector(".button--primary");
+    let reqModal = reqform.closest('.modal');
+    let successMsg = createElement('div');
+    successMsg.innerHTML = `<div>
+<h3>Благодарим за Ваше обращение!</h3>
+<p>Наш менеджер свяжется с Вами в ближайшее время!</p></div>`
+    console.log(reqModal)
+    formBtn.disabled = "true";
+    formBtn.textContent = 'Отправка...';
+
+    setTimeout(() => {
+        form.reset();
+        reqform.style.display = 'none';
+        reqModal.classList.add('success');
+        reqModal.prepend(successMsg)
+        formBtn.disabled = false;
+        formBtn.textContent = 'Отправить';
+        
+    }, 2000)
+    reqModal.querySelector('.close-modal').addEventListener('click',function(){
+         reqModal.classList.remove('success');
+         successMsg.remove();
+         setTimeout(() => {
+         reqform.style.display = 'block';
+         }, 500)
+    })
+})
+}
