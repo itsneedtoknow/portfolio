@@ -391,6 +391,7 @@
         height: 6rem;
     }
     header .header__options .search{
+        height: 48px;
         position: absolute;
         bottom: 0;
         right: 0;

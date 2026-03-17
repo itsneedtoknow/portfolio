@@ -2,8 +2,6 @@ import { renderHeader } from "./components/header.js";
 import { renderSlider } from "./components/slider.js"; 
 import { LoadJSON } from "./utils/api.js";
 import { removeBtn } from "./utils/removebtn.js";
-import { renderAbout } from "./modules/about.js";
-import { renderMainNews } from "./modules/news.js";
 import { createElement } from "./utils/dom.js";
 import { renderPreviewCard } from "./components/single-item.js";
 import { createSection } from "./utils/section.js";
@@ -162,7 +160,7 @@ async function init() {
 
         mobileMenuBtn.addEventListener('click', openMobMenu);
         let navMenuBtns = Array.from(document.querySelectorAll('.nav-menu svg'));
-        console.log(navMenuBtns)
+        
         if(window.innerWidth < 992){
             navMenuBtns.forEach((btn)=>{
                 btn.addEventListener('click', openMobSubMenu)
