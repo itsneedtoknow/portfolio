@@ -11,7 +11,9 @@ import { renderFooter } from "./components/footer.js";
 import { initSliders } from "./utils/dom.js";
 import { renderRequestForm } from "./components/request-form.js";
 import { updateCities } from "./utils/requestFormHandler.js";
-
+import { openMobMenu } from "./utils/mobile-nav.js";
+import { closeMobMenu } from "./utils/mobile-nav.js";
+import { openMobSubMenu } from "./utils/mobile-nav.js";
 
 let sections = [
     {
@@ -88,7 +90,7 @@ async function init() {
             const allItemsForRemoveBtn = document.querySelectorAll(
                 '.banners__list .single-item, .routes__list .single-item, .partners__list .single-item, .about__list .single-item'
             );
-removeBtn(allItemsForRemoveBtn);
+            removeBtn(allItemsForRemoveBtn);
 
             let benefits = Array.from(document.querySelectorAll('.benefits .single-item')) ;
             benefits.forEach(item=>{
@@ -154,6 +156,20 @@ removeBtn(allItemsForRemoveBtn);
         let header = renderHeader(menuItems);
         document.body.prepend(header);
         
+
+        let mobileMenuBtn = document.querySelector('.hamburger-menu');
+        
+
+        mobileMenuBtn.addEventListener('click', openMobMenu);
+        let navMenuBtns = Array.from(document.querySelectorAll('.nav-menu svg'));
+        console.log(navMenuBtns)
+        if(window.innerWidth < 992){
+            navMenuBtns.forEach((btn)=>{
+                btn.addEventListener('click', openMobSubMenu)
+            })
+        }
+       
+        document.addEventListener('click', closeMobMenu);
     } catch (e) {
         console.error("Ошибка в init:", e);
     }

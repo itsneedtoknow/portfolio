@@ -171,9 +171,13 @@
         font-weight: 700;
         line-height: 1.25rem;
         letter-spacing: 0.01.5rem;
+        text-align: center;
     }
     header nav > div > ul > li > div > ul > li a{
-        padding: 8px 0;
+        /* padding: 8px 0; */
+        text-align: center;
+        display: flex;
+        justify-content: center;
     }
     header nav > div > ul > li.drop-down > .drop-down-menu{
         left: 0 !important;
@@ -223,6 +227,7 @@
         opacity: 1;
         visibility: visible;
         display: block;
+        padding: 1rem 0;
     }
     header nav > .menu > ul > li > div > ul{
         display: flex;

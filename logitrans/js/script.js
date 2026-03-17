@@ -100,28 +100,8 @@ ymaps.ready(init);
            {
             preset: 'twirl#pinkIcon'
         });
-        // var productionOffice = new ymaps.Placemark([53.812507, 28.842065], { 
-        //     balloonContentBody: [
-        //         '<div class="map__item">',
-        //         '<p class="item__header">',
-        //         'Склад Логитранс',
-        //         '</p>',
-        //         '<p class="address">',
-        //         'Минская область, Березинский район',
-        //         '</p>',
-        //         '<p class="phone">',
-        //         '+375 (17) 222-22-22',
-        //         '</p>',
-        //         '<p class="email">',
-        //         'logitrans@logitrans.by',
-        //         '</p>',
-        //         '</div>'
-        //     ].join('')
-        // }, {
-        //     preset: 'twirl#greenIcon'
-        // });
-        myMap.geoObjects.add(mainOffice)
-                        .add(productionOffice);
+        
+        myMap.geoObjects.add(mainOffice);
         if(window.innerWidth < 640){
           myMap.setZoom(9);
           myMap.setCenter([53.830219, 28.224168]);
@@ -343,13 +323,7 @@ ymaps.ready(init);
       let windowWidth = jQuery("body").innerWidth();
 
       if (windowWidth < 992) {
-        // перепозиционирование формы поиска в мобильной версии
-        // document.querySelector('.mobile-search').appendChild(searchform);
-        // searchform.querySelector('button').textContent = 'Искать';
-        // searchform.classList.add('mobile');
-        // searchform.style.left='-9999px';
-
-        
+       
  // МОБИЛЬНАЯ ФОРМА ПОИСКА
     
 setTimeout(()=>{
@@ -393,12 +367,7 @@ searchBtn.addEventListener('click',function(){
         
         
       }else{
-         // перепозиционирование формы поиска в десктопной версии
-        // searchform.classList.remove('mobile')
-        // searchform.querySelector('button').textContent = '';
-        // searchform.style.left = '0';
-        document.querySelector('.social').after(searchform);
-
+      
 // динамическое позиционирование внизу бокового меню внутренних страниц в десктопной версии
       if(document.querySelector('.grid-and-form') || document.querySelector('.lenta-and-form')){
 
@@ -423,18 +392,18 @@ searchBtn.addEventListener('click',function(){
 
 // МОБИЛЬНОЕ МЕНЮ 
 
-let mobileMenuBtn = document.querySelector('.hamburger-menu');
-let mobileMenu = document.querySelector('.nav-menu');
+// let mobileMenuBtn = document.querySelector('.hamburger-menu');
+// let mobileMenu = document.querySelector('.nav-menu');
 
 
-mobileMenuBtn.addEventListener('click',function(){
+// mobileMenuBtn.addEventListener('click',function(){
 
-  // $('.nav-menu').animate({width:'toggle'}, 50);
-  mobileMenu.classList.add('open');
-  document.querySelector('.overlay').classList.add('open');
-  document.body.classList.add('menu-open');
+//   // $('.nav-menu').animate({width:'toggle'}, 50);
+//   mobileMenu.classList.add('open');
+//   document.querySelector('.overlay').classList.add('open');
+//   document.body.classList.add('menu-open');
 
-});
+// });
 
 
 $(document).click(function(event) {
@@ -478,53 +447,53 @@ $(document).click(function(event) {
 
 
 
-const registrationForm = document.getElementById('conferenceForm')
+// const registrationForm = document.getElementById('conferenceForm')
 
-function validateForm(formData) {
-  for (let [key, value] of formData.entries()) {
-    if (value.trim() === '') return false; // пустое поле
-  }
-  return true;
-}
-async function submitForm(e) {
-  e.preventDefault();
+// function validateForm(formData) {
+//   for (let [key, value] of formData.entries()) {
+//     if (value.trim() === '') return false; // пустое поле
+//   }
+//   return true;
+// }
+// async function submitForm(e) {
+//   e.preventDefault();
 
-  const formData = new FormData(registrationForm);
-  if (!validateForm(formData)) {
-      alert('Заполните все поля');
-      return;
-    }
+//   const formData = new FormData(registrationForm);
+//   if (!validateForm(formData)) {
+//       alert('Заполните все поля');
+//       return;
+//     }
 
-  let hasValue = false;
-  for (let value of formData.values()) {
-    if (value.trim() !== '') {
-      hasValue = true;
-      break;
-    }
-  }
+//   let hasValue = false;
+//   for (let value of formData.values()) {
+//     if (value.trim() !== '') {
+//       hasValue = true;
+//       break;
+//     }
+//   }
 
-  if (!hasValue) {
-    alert('Заполните хотя бы одно поле');
-    return; // останавливаем функцию
-  }
-  try{
-    let response = await fetch('https://jsonplaceholder.typicode.com/posts', {
-          method: 'POST',
-          body: formData
-        });
-        if (!response.ok) throw new Error(`Ошибка: ${response.status}`);
-         let result = await response.json();
-         alert('Успешно')
+//   if (!hasValue) {
+//     alert('Заполните хотя бы одно поле');
+//     return; // останавливаем функцию
+//   }
+//   try{
+//     let response = await fetch('https://jsonplaceholder.typicode.com/posts', {
+//           method: 'POST',
+//           body: formData
+//         });
+//         if (!response.ok) throw new Error(`Ошибка: ${response.status}`);
+//          let result = await response.json();
+//          alert('Успешно')
          
-  }
-  catch(err){
+//   }
+//   catch(err){
     
-    alert('Ошибка при отправке формы');
-  }
+//     alert('Ошибка при отправке формы');
+//   }
    
-}
+// }
 
-registrationForm.addEventListener('submit', submitForm);
+// registrationForm.addEventListener('submit', submitForm);
     }
     )
 
