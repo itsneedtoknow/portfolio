@@ -6,7 +6,7 @@
             { "name": "Наша история", "link": "history.html" },
             { "name": "Отделы", "link": "departments.html" },
             { "name": "Медиацентр", "link": "mediagallery.html" },
-            { "name": "Наши новости", "link": "news.html" }
+            { "name": "Наши новости", "link": "news-all.html" }
          ] },
     { "name": "Услуги", "link": "services-all.html" },
     { "name": "Виды перевозок",
