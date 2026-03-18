@@ -3,49 +3,49 @@
     "title": "Управление складскими запасами",
     "titleTag": "h3",
     "link": "product-details.html",
-    "img": "./images/img/service_1.png",
+    "img": "./images/img/service_1.webp",
     "intro": "Комплексный аудит, оптимизация остатков и внедрение систем контроля для бесперебойной работы вашего склада."
   },
   {
     "title": "Авиационные перевозки",
     "titleTag": "h3",
     "link": "product-details.html",
-    "img": "./images/img/service_4.png",
+    "img": "./images/img/service_4.webp",
     "intro": "Максимально быстрая доставка грузов в любую точку мира с полным сопровождением и гарантией сохранности."
   },
   {
     "title": "Внутренние перевозки",
     "titleTag": "h3",
     "link": "product-details.html",
-    "img": "./images/img/service_2.png",
+    "img": "./images/img/service_2.webp",
     "intro": "Разработка оптимальных маршрутов и надежная транспортировка товаров по всей территории страны."
   },
   {
     "title": "Перевозка негабаритных грузов",
     "titleTag": "h3",
     "link": "product-details.html",
-    "img": "./images/img/service_3.png",
+    "img": "./images/img/service_3.webp",
     "intro": "Транспортировка тяжеловесного и крупногабаритного оборудования с использованием спецтехники и разрешений."
   },
   {
     "title": "Морские перевозки",
     "titleTag": "h3",
     "link": "product-details.html",
-    "img": "./images/img/service_6.png",
+    "img": "./images/img/service_6.webp",
     "intro": "Экономичные мультимодальные решения и доставка контейнеров через крупнейшие порты мира."
   },
   {
     "title": "Железнодорожные перевозки",
     "titleTag": "h3",
     "link": "product-details.html",
-    "img": "./images/img/service_7.png",
+    "img": "./images/img/service_7.webp",
     "intro": "Стабильные грузоперевозки по ЖД путям: высокая грузоподъемность и независимость от погодных условий."
   },
   {
     "title": "Экспресс-доставка",
     "titleTag": "h3",
     "link": "product-details.html",
-    "img": "./images/img/service_5.png",
+    "img": "./images/img/service_5.webp",
     "intro": "Срочная курьерская доставка «от двери до двери» в кратчайшие сроки для малого и среднего бизнеса."
   }
 ]

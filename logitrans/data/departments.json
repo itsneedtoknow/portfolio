@@ -3,31 +3,31 @@
     "title": "Отдел логистики и транспортировки",
     "titleTag": "h5",
     "link": "department-details.html",
-    "img": "./images/img/department-1.jpg"
+    "img": "./images/img/department-1.webp"
   },
   {
     "title": "Отдел клиентской поддержки",
     "titleTag": "h5",
     "link": "department-details.html",
-    "img": "./images/img/department-2.jpg"
+    "img": "./images/img/department-2.webp"
   },
   {
     "title": "Отдел международных перевозок",
     "titleTag": "h5",
     "link": "department-details.html",
-    "img": "./images/img/department-3.jpg"
+    "img": "./images/img/department-3.webp"
   },
   {
     "title": "Отдел складской логистики",
     "titleTag": "h5",
     "link": "department-details.html",
-    "img": "./images/img/department-4.jpg"
+    "img": "./images/img/department-4.webp"
   },
   {
     "title": "Отдел IT и инноваций",
     "titleTag": "h5",
     "link": "department-details.html",
-    "img": "./images/img/department-5.jpg"
+    "img": "./images/img/department-5.webp"
   },
   {
     "title": "Отдел маркетинга и продаж",

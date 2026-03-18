@@ -3,28 +3,28 @@
         "title": "Страны СНГ",
         "titleTag": "h5",
         "link": "product-details.html",
-        "img": "./images/img/route_2.png", 
+        "img": "./images/img/route_2.webp", 
         "value": "CIS"
     },
     {
         "title": "Европа",
         "titleTag": "h5",
         "link": "product-details.html",
-        "img": "./images/img/route_1.png", 
+        "img": "./images/img/route_1.webp", 
         "value": "Europe"
     },
     {
         "title": "Америка",
         "titleTag": "h5",
         "link": "product-details.html",
-        "img": "./images/img/route_4.png", 
+        "img": "./images/img/route_4.webp", 
         "value": "USA"
     },
     {
         "title": "Азия",
         "titleTag": "h5",
         "link": "product-details.html",
-        "img": "./images/img/route_3.png", 
+        "img": "./images/img/route_3.webp", 
         "value": "ASIA"
     }
 ]
