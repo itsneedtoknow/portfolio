@@ -70,7 +70,8 @@ export async function renderPreviewCard(JSON) {
             if(item.link){
                 let linkWrapper = createElement('div', 'content__buttons');
                 let cardLink = createElement('a', 'read-more');
-                cardLink.href = item.link
+                cardLink.href = item.link;
+                cardLink.setAttribute('aria-label', `Читать далее: ${item.title}`);
 
                 linkWrapper.append(cardLink);
                 cardItem.append(linkWrapper)
