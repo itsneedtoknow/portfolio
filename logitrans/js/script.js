@@ -351,33 +351,6 @@ let searchBtn = document.querySelector('.btn-search');
     });
 
 
-// // мобильное меню
-
-//   let navMenuBtns = document.querySelectorAll('svg');
-
-//   //  let dropDownMenu = document.querySelectorAll('.nav-menu-item');
-
-//   navMenuBtns.forEach((btn)=>{
-    
-//     btn.addEventListener('click',function(){
-      
-//       if(btn.closest('.drop-down')){
-//         if(btn.closest('.drop-down').querySelector('.drop-down-menu').classList.contains('open')){
-//           btn.closest('.drop-down').classList.remove('open')
-//           btn.closest('.drop-down').querySelector('.drop-down-menu').classList.remove('open');
-          
-//         }else if(!btn.closest('.drop-down').querySelector('.drop-down-menu').classList.contains('open')){
-//           btn.closest('.drop-down').querySelector('.drop-down-menu').classList.add('open')
-//           btn.closest('.drop-down').classList.add('open');
-          
-//         }
-      
-//     }
-    
-//   })
-//   })
-//     }
-//     )
 
 
 

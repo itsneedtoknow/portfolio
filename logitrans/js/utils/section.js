@@ -10,7 +10,9 @@ export async function createSection(arr){
   let container = createElement(arr.tagname, arr.className);
         let data = await LoadJSON(arr.dataURL);
         let wrapper = document.querySelector(arr.wrapperClass);
-    for(let dataItem of data){
+        let limit = wrapper.getAttribute('data-limit');
+        let displayData = limit ? data.slice(0, parseInt(limit)) : data;
+    for(let dataItem of displayData){
         let sectionElement = await renderPreviewCard(dataItem);
         container.append(sectionElement);
     }

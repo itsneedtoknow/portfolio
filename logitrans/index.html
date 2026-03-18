@@ -28,10 +28,6 @@
 <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
   <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
   <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
-  
-   
-  <script src="https://unpkg.com/@popperjs/core@2"></script>
-  <script src="https://unpkg.com/tippy.js@6"></script>
 <script>
   $(function () {
     $("select").selectize({
@@ -82,9 +78,9 @@
                 <div class="news-block ">
                     <div class="news">
                         <h2>Новости</h2>
-                        <div class="news-wrapper column"></div>
+                        <div class="news-wrapper column" data-limit="3"></div>
                         <div class="buttons">
-                            <a class="button button--secondary archive" href="novosti-all.html" title="Архив новостей">Архив новостей</a>
+                            <a class="button button--secondary archive" href="news-all.html" title="Архив новостей">Архив новостей</a>
                         </div>
                     </div>
                     
