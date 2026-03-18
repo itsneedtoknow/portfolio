@@ -9,16 +9,9 @@
     <link rel="stylesheet" href="./css/template_styles.css">
     <link rel="stylesheet" href="./css/responsive-styles.css">
     <link rel="stylesheet" type="text/css" href="./css/slick.css"/>
-
     <link href='https://use.fontawesome.com/releases/v5.8.1/css/all.css' rel='stylesheet'>
-    
-
     <script src="https://api-maps.yandex.ru/2.0-stable/?apikey=d1c174a2-a5f2-4edb-914c-ff22a986da60&load=package.full&lang=ru-RU" type="text/javascript"></script>
     <script src="./js/jquery-3.7.1.min.js"></script>
-
-
-    
-   
     <link
     rel="stylesheet"
     href="./css/selectize.default.min.css"
@@ -47,13 +40,7 @@
     <!-- Хлебные крошки (навигация) -->
 <div class="breadcrumbs">
     <div class="container-wrapper">
-        <div class="breadcrumbs-menu">
-            <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="o-predpriatii.html">Услуги</a></li>
-                <li class="active">Каталог услуг</li>
-            </ul>
-        </div>
+        <div class="breadcrumbs-menu"></div>
         </div>
     </div>
     <main>
@@ -63,55 +50,9 @@
                     <!-- Боковое меню -->
                     <nav class="menu-sidebar">
                         <ul>
-                            <li><a href="">Орган по сертификации</a></li>
                             <li class="current"><a href="services-all.html">Каталог услуг</a></li>
                         </ul>
                     </nav>
-                    <div class="application-form">
-                        <form action="services-all.html" id="serviceForm" method="POST" enctype="multipart/form-data">
-                            <h5 class="contact-form__title">Закажите услугу</h5>
-                            
-                            <div>
-                                <div>
-                                    <input type="text" name="company" placeholder="Организация">
-                                    <label>Укажите название организации</label>
-                                </div>
-                            </div>
-                            
-                            <div>
-                                <div>
-                                    <select name="departments" id="department-select">
-                                        <option value="">Подразделение</option>
-                                        <option value="Отраслевая дорожная лаборатория">Отраслевая дорожная лаборатория</option>
-                                        <option value="Отдел стандартизации и метрологии">Отдел стандартизации и метрологии</option>
-                                        <option value="Лаборатория охраны труда">Лаборатория охраны труда</option>
-                                        <option value="Отраслевая мостовая лаборатория">Отраслевая мостовая лаборатория</option>
-                                        <option value="Производственный участок «Мадикор»">Производственный участок «Мадикор»</option>
-                                        <option value="Отдел научно-технической информации">Отдел научно-технической информации</option>
-                                      </select>
-                                      <label for="department-select">Выберите подразделение</label>
-                                </div>
-                            </div>
-                            <div>
-                                <div>
-                                    <select name="services" id="service-select">
-                                        <option value="">Услуга</option>
-                                        <option value="Управление складскими запасами">Управление складскими запасами</option>
-                                        <option value="Разработка новых, совершенствование существующих технологий и материалов">Разработка новых, совершенствование существующих технологий и материалов</option>
-                                        <option value="Проведение обучающих семинаров и консультаций">Проведение обучающих семинаров и консультаций</option>
-                                        <option value="Контроль качества ">Контроль качества </option>
-                                        <option value="Опытное производство">Опытное производство</option>
-                                        <option value="Проведение испытаний">Проведение испытаний</option>
-                                      </select>
-                                      <label for="service-select">Выберите услугу из списка</label>
-                                </div>
-                            </div>
-                            <div class="buttons">
-                                <button type="submit" class="button primary-button">
-                                        Отправить заявку</button>
-                            </div>
-                        </form>
-                    </div>
                 </aside>
                 <div class="content">
                 <!-- Основной контент -->
@@ -119,89 +60,7 @@
                     <div class="content__body services-all lenta lenta-and-form content-list">
                         <h4>Каталог услуг</h4>
                         <div class="row">
-                                <ul class="lenta__list">
-                                    <li class="single-item">
-                                        <a class="single-item__image" href="product-details.html">
-                                            <img src="./images/img/documents-development.png" alt="documents-development">
-                                        </a>
-                                        <div class="single-item__content">
-                                            <div class="content__text">
-                                                <h5 class="item__header"><a href="product-details.html">Управление складскими запасами</a></h5>
-                                                <div class="item__description">
-                                                    <p>Оптимизация и контроль складских запасов для обеспечения бесперебойной работы</p>
-                                                </div>
-                                                <ul class="tag-links">
-                                                    <li><a href="department-details.html">Отдел складской логистики</a></li>
-                                                    <li><a href="department-details.html">Отдел клиентской поддержки</a></li>
-                                                    <li><a href="department-details.html">Отдел международных перевозок</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="content__buttons">
-                                                <a href="product-details.html" class="button read-more"></a>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="single-item">
-                                        <a href="product-details.html" class="single-item__image">
-                                            <img src="./images/img/technologies-development.png" alt="technologies-development">
-                                        </a>
-                                        <div class="single-item__content">
-                                            <div class="content__text">
-                                                <h5 class="item__header"> <a href="product-details.html">Перевозка негабаритных грузов</a></h5>
-                                                <div class="item__description">
-                                                    <p>Специализированные услуги по перевозке крупногабаритных и тяжеловесных грузов.</p>
-                                                </div>
-                                                <ul class="tag-links">
-                                                    <li><a href="department-details.html">Отдел международных перевозок</a></li>
-                                                    <li><a href="department-details.html">Отдел логистики и транспортировки</a></li>
-                                                    <li><a href="department-details.html">Отдел маркетинга и продаж</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="content__buttons">
-                                                <a href="product-details.html" class="button read-more"></a>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="single-item">
-                                        <a class="single-item__image" href="product-details.html">
-                                            <img src="./images/img/master-class.png" alt="master-class">
-                                        </a>
-                                        <div class="single-item__content">
-                                            <div class="content__text">
-                                                <h5 class="item__header"><a href="product-details.html">Проведение обучающих семинаров и консультаций</a></h5>
-                                                <ul class="item__description">
-                                                </ul>
-                                                <ul class="tag-links">
-                                                    <li><a href="department-details.html">Отдел логистики и транспортировки</a></li>
-                                                    <li><a href="department-details.html">Отдел клиентской поддержки</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="content__buttons">
-                                                <a href="product-details.html" class="button read-more"></a>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="single-item">
-                                        <a href="product-details.html" class="single-item__image">
-                                            <img src="./images/img/quality-control.png" alt="quality-control">
-                                        </a>
-                                        <div class="single-item__content">
-                                            <div class="content__text">
-                                                <h5 class="item__header"><a href="product-details.html">Внутренние перевозки</a></h5>
-                                                <div class="item__description">
-                                                    <p>Надежная доставка грузов по всей территории страны.</p>
-                                                </div>
-                                                <ul class="tag-links">
-                                                    <li><a href="department-details.html">Отдел логистики и транспортировки</a></li>
-                                                    <li><a href="department-details.html">Отдел клиентской поддержки</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="content__buttons">
-                                                <a href="product-details.html" class="button read-more"></a>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
+                                <ul class="lenta__list services-wrapper"></ul>
                         </div>
                      </div>
                  </section>

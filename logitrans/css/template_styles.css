@@ -550,7 +550,7 @@ header nav > div > ul > li > div > ul > li{
 header nav > div > ul > li > div > ul > li a{
   font-weight: 400;
 }
-.breadcrumbs ul{
+.breadcrumbs {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }

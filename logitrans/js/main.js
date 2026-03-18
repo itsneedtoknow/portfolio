@@ -12,6 +12,7 @@ import { updateCities } from "./utils/requestFormHandler.js";
 import { openMobMenu } from "./utils/mobile-nav.js";
 import { closeMobMenu } from "./utils/mobile-nav.js";
 import { openMobSubMenu } from "./utils/mobile-nav.js";
+import { renderBreadcrumbs } from "./utils/dom.js";
 
 let sections = [
     {
@@ -177,7 +178,10 @@ init();
 
 
 let form = await renderRequestForm();
+if(document.querySelector('#requestPrice')){
 document.querySelector('#requestPrice').append(form)
+}
+
 let reqform = document.forms.requestForm;
 
 let countriesData = await LoadJSON('./data/countries.json');
@@ -222,3 +226,18 @@ reqform.addEventListener('submit', function(e){
     })
 })
 }
+
+// Словарь соответствий URL -> Заголовок
+const pageNames = {
+    'news-all': 'Новости',
+    'news-details': 'Новость',
+    'product-details': 'Виды грузов',
+    'transportation-details': 'Перевозки',
+    'department-details': 'Подразделение',
+    'services-all': 'Услуги',
+    'about': 'О компании',
+    'contacts': 'Контакты'
+};
+
+// Вставляем, например, в контейнер .hero или специальный div
+renderBreadcrumbs('.breadcrumbs-menu', pageNames);

@@ -3,8 +3,7 @@
     {
          "name": "О компании", 
          "submenu": [
-            { "name": "Наша история", "link": "history.html" },
-            { "name": "Отделы", "link": "departments.html" },
+            { "name": "Отделы", "link": "department-details.html" },
             { "name": "Медиацентр", "link": "mediagallery.html" },
             { "name": "Наши новости", "link": "news-all.html" }
          ] },
@@ -21,11 +20,11 @@
      },
      { "name": "Виды грузов",
         "submenu": [
-            {"name": "Крупногабаритные", "link": "products-details.html"},
-            {"name": "Промышленные", "link": "products-details.html"},
-            {"name": "Продукты", "link": "products-details.html"},
-            {"name": "Техника", "link": "products-details.html"},
-            {"name": "Товары народного потребления", "link": "products-details.html"}
+            {"name": "Крупногабаритные", "link": "product-details.html"},
+            {"name": "Промышленные", "link": "product-details.html"},
+            {"name": "Продукты", "link": "product-details.html"},
+            {"name": "Техника", "link": "product-details.html"},
+            {"name": "Товары народного потребления", "link": "product-details.html"}
         ]
      }
 ]

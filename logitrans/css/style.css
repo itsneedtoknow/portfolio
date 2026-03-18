@@ -763,7 +763,7 @@
 .inner-page .departments__list .single-item .single-item__content{
   width: 100%;
   justify-content: space-between;
- 
+ display: flex;
 }
 .department-block:first-child .description{
     max-width: 987px;
@@ -1056,7 +1056,7 @@ footer .button{
   flex-wrap: wrap;
 }
 .inner-page .department-page .banners__list .single-item{
-  height: 21.5rem;
+  height: 12rem;
   width: 477px;
   background: var(--Neitral--3);
 }
@@ -1590,7 +1590,7 @@ form > div{
   margin-bottom: 1rem;
 }
 .product-page table{
-  max-width: 72rem;
+  max-width: 40rem;
   width: 100%;
 }
 .gallery-block{

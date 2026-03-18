@@ -239,3 +239,44 @@ $('.about .slider').slick({
         }
         
     }
+
+    /**
+ * Генерирует хлебные крошки на основе URL
+ * @param {string} containerSelector - Куда вставить крошки
+ * @param {Object} customLabels - Словарь для замены английских путей на русские названия
+ */
+export function renderBreadcrumbs(containerSelector, customLabels = {}) {
+    const container = document.querySelector(containerSelector);
+    if (!container) return;
+
+    // массив путей из URL
+    const pathArray = window.location.pathname.split('/').filter(path => path).slice(1);
+    console.log(pathArray)
+    
+    const nav = document.createElement('nav');
+    nav.className = 'breadcrumbs';
+    nav.setAttribute('aria-label', 'Хлебные крошки');
+
+    // cсылка на главную
+    let breadcrumbsHTML = `<a href="/">Главная</a>`;
+    let currentPath = '';
+
+    pathArray.forEach((path, index) => {
+        currentPath += `/${path}`;
+        
+        // название из словаря
+        const cleanName = path.replace('.html', '');
+        const label = customLabels[cleanName] || cleanName.charAt(0).toUpperCase() + cleanName.slice(1);
+
+        if (index === pathArray.length - 1) {
+            
+            breadcrumbsHTML += ` <span class="separator">></span> <span aria-current="page">${label}</span>`;
+        } else {
+           
+            breadcrumbsHTML += ` <span class="separator">></span> <a href="${currentPath}.html">${label}</a>`;
+        }
+    });
+
+    nav.innerHTML = breadcrumbsHTML;
+    container.append(nav);
+}
