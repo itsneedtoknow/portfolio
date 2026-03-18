@@ -250,7 +250,7 @@ export function renderBreadcrumbs(containerSelector, customLabels = {}) {
     if (!container) return;
 
     // массив путей из URL
-    const pathArray = window.location.pathname.split('/').filter(path => path).slice(1);
+    const pathArray = window.location.pathname.split('/').filter(path => path).slice(2);
     console.log(pathArray)
     
     const nav = document.createElement('nav');
