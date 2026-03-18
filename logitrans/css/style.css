@@ -760,6 +760,16 @@
   max-width: 605px;
   width: 100%;
 }
+.department-page .departments__list .single-item__image{
+  display: none;
+}
+.department-page .departments__list .content__title{
+  font-size: 1.25rem;
+  line-height: 26px;
+  right: 0;
+  left: 0;
+  padding: 0.5rem;
+}
 .inner-page .departments__list .single-item .single-item__content{
   width: 100%;
   justify-content: space-between;
