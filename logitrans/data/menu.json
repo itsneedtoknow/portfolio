@@ -20,11 +20,12 @@
      },
      { "name": "Виды грузов",
         "submenu": [
-            {"name": "Крупногабаритные", "link": "product-details.html"},
-            {"name": "Промышленные", "link": "product-details.html"},
-            {"name": "Продукты", "link": "product-details.html"},
-            {"name": "Техника", "link": "product-details.html"},
-            {"name": "Товары народного потребления", "link": "product-details.html"}
+            {"name": "Сельхозтехника", "link": "products-all.html"},
+            {"name": "Крупногабаритные", "link": "products-all.html"},
+            {"name": "Промышленные", "link": "products-all.html"},
+            {"name": "Продукты", "link": "products-all.html"},
+            {"name": "Техника", "link": "products-all.html"},
+            {"name": "Товары народного потребления", "link": "products-all.html"}
         ]
      }
 ]
